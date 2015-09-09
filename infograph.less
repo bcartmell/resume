@@ -200,9 +200,6 @@ header .contact-info {
 /*
  *  Skills
  */
-.skills dt {
-  /*display: none;*/
-}
 
 .skills dd {
   display: inline-block;
@@ -305,7 +302,7 @@ section div li:before {
 
 #work-examples img {
   display: inline-block;
-  height: 244px;
+  max-height: 244px;
   margin: .8em;
   box-shadow: 2px 3px 18px -6px;
 }
@@ -327,7 +324,6 @@ footer section {
   vertical-align: top;
 }
 footer section:last-child {
-  float: right;
   padding-right: 0;
 }
 
@@ -355,8 +351,91 @@ footer h4 {
 
   footer section {
     display: block;
-    float: none !important;
     width: 100%;
     padding-right: 0;
+  }
+}
+
+@media print {
+  body {
+    background: none;
+    font-size: 14px; 
+    padding: 0;
+  }
+
+  #container {
+    background: none;
+    max-width: none;
+    padding: none;
+    box-shadow: none;
+
+    width: 100%;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: @dark-gray;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  a:after {
+    display: none;
+  }
+
+  h4 a {
+    padding-left: 1em;
+  }
+
+  h4 {
+    color: @black;
+  }
+
+  .skills dd {
+    text-align: left !important;
+    width: 32%;
+  }
+
+  .skills i {
+    color: @dark-gray;
+    display: inline-block;
+    margin: .3em .6em;
+  }
+  
+  section ul,
+  section>dl,
+  section>div {
+    page-break-inside: avoid;
+  }
+
+  #work-examples img {
+    margin: 2% !important;
+    max-width: 46% !important;
+  }
+
+  .image-reel {
+    position: relative;
+    margin-bottom: none;
+  }
+
+  .image-reel:before,
+  .image-reel:after {
+    display: none;
+  }
+  .image-reel:before {
+    box-shadow: none;
+  }
+  .image-reel:after {
+    box-shadow: none;
+  }
+
+  .image-reel-window {
+    background: none;
+    box-shadow: none;
+    white-space: normal;
+    padding: none;
+    overflow: visible;
   }
 }
