@@ -9,6 +9,8 @@ exports.server = (function(listenOnPort) {
     filesys = require("fs"),
     mime = require("./serverModules/mime.js");
 
+  var reqCount = 0;
+
   listenOnPort = listenOnPort || 8080;
 
   var postHandler = function postHandler(request, response) {
@@ -18,54 +20,49 @@ exports.server = (function(listenOnPort) {
   };
 
   var fetchFile = function fetchFile(fullPath, response) {
-    console.log('fetching '+ fullPath);
     filesys.readFile(fullPath, "binary", function(err, file) {
-      if(err) {  
-        response.writeHeader(500, {"Content-Type": "text/plain"});  
-        response.write(err + "\n");  
-        response.end();  
-      }  
+      if(err) {
+        response.writeHeader(500, {"Content-Type": "text/plain"});
+        response.write(err + "\n");
+        response.end();
+      }
       else {
         var ext = fullPath.split('.').pop();
         var responseType = mime.mimeType[ext];
         if (responseType === undefined)
       responseType = "text/plain";
 
-    response.writeHeader(200, {"Content-Type": responseType});  
-    response.write(file, 'binary');  
+    response.writeHeader(200, {"Content-Type": responseType});
+    response.write(file, 'binary');
     response.end();
       }
     });
   };
 
   var serverInstance = http.createServer(function(request,response){
-    var requests = 0;
-    return function(request, response) {
-      var requestedPath = url.parse(request.url).pathname;
+    var requestedPath = url.parse(request.url).pathname;
 
-      if (request.method === 'POST') {
-        postHandler(request, response);
+    if (request.method === 'POST') {
+      postHandler(request, response);
+    }
+
+    if (requestedPath == "/") {
+      requestedPath = "resume.html";
+      reqCount = reqCount+1;
+      console.log('request '+ reqCount +' received from '+ request.connection.remoteAddress +'.');
+    }
+
+    var fullPath = path.join(process.cwd(),requestedPath);
+    path.exists(fullPath,function(exists){
+      if (!exists) {
+        response.writeHeader(404, {"Content-Type": "text/plain"});
+        response.write("404 Not Found\n");
+        response.end();
       }
-
-      if (requestedPath == "/") {
-        requestedPath = "resume.html";
-        requests = requests+1;
-        console.log('request '+ requests +'received. \n');
+      else {
+        fetchFile(fullPath, response);
       }
-
-      var fullPath = path.join(process.cwd(),requestedPath);
-      path.exists(fullPath,function(exists){
-        if (!exists) {
-          response.writeHeader(404, {"Content-Type": "text/plain"});  
-          response.write("404 Not Found\n");  
-          response.end();
-        }
-        else {
-          fetchFile(fullPath, response);
-        }
-      });
-
-    };
+    });
   });
 
   return {
