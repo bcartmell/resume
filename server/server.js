@@ -39,28 +39,33 @@ exports.server = (function(listenOnPort) {
   };
 
   var serverInstance = http.createServer(function(request,response){
-    var requestedPath = url.parse(request.url).pathname;
+    var requests = 0;
+    return function(request, response) {
+      var requestedPath = url.parse(request.url).pathname;
 
-    if (request.method === 'POST') {
-      postHandler(request, response);
-    }
-
-    if (requestedPath == "/") {
-      requestedPath = "resume.html";
-    }
-
-    var fullPath = path.join(process.cwd(),requestedPath);
-    path.exists(fullPath,function(exists){
-      if (!exists) {
-        response.writeHeader(404, {"Content-Type": "text/plain"});  
-        response.write("404 Not Found\n");  
-        response.end();
+      if (request.method === 'POST') {
+        postHandler(request, response);
       }
-      else {
-        fetchFile(fullPath, response);
-      }
-    });
 
+      if (requestedPath == "/") {
+        requestedPath = "resume.html";
+        requests = requests+1;
+        console.log('request '+ requests +'received. \n');
+      }
+
+      var fullPath = path.join(process.cwd(),requestedPath);
+      path.exists(fullPath,function(exists){
+        if (!exists) {
+          response.writeHeader(404, {"Content-Type": "text/plain"});  
+          response.write("404 Not Found\n");  
+          response.end();
+        }
+        else {
+          fetchFile(fullPath, response);
+        }
+      });
+
+    };
   });
 
   return {
