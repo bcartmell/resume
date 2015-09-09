@@ -1,2 +1,2 @@
 var server = require('./server/server.js');
-server.server.start(8080);
+server.server.start(80);
