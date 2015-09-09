@@ -1,0 +1,23 @@
+{% raw %}
+  <section id="pageTop">
+    <span class="close" data-exit-app></span>
+    <div class="clear"></div>
+  </section>
+
+  <div id="wrapper">
+    <div id="message_sent" class="scrollSplit" data-scroll-split ng-class="{celsiusBackground: UKLocale}">
+      <div class="vertical_center">
+        <h1>{{ translations.finder2_page4_message_sent_title }}</h1>
+        <p>
+        {{ translations.finder2_page4_message_sent_description_part1 }} {{ installer.organization.dba_or_name }} {{ translations.finder2_page4_message_sent_description_part2 }}
+        </p>
+        <p>
+        {{ translations.finder2_page4_message_sent_description_part3 }}
+        <a class="ui_action" href="http://support.nest.com/article/How-do-I-give-feedback-about-a-Nest-Certified-Professional-installation" target="_blank" >{{ translations.finder2_page4_message_sent_description_part4 }}<span></span></a>
+        </p>
+        <button class="imitationNextButton" data-exit-app>Close</button>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div><!-- End #wrapper -->
+{% endraw %}

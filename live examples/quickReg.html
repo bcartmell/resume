@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://whirlpool.registriastaging.com/? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Quick Reg</title>
+<meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="Qn9TdJglfhk59vCxybHIxi0EDqF2MtXCSudedNx3ekI="><link href="./quickReg_files/single_page_registration.css" rel="stylesheet" type="text/css" media="all"><script type="text/javascript" async="" src="./quickReg_files/ga.js"></script><script src="./quickReg_files/jquery.min.js"></script><script src="./quickReg_files/jquery-ui.min.js"></script><script src="./quickReg_files/jquery-ui-i18n.min.js"></script><script src="./quickReg_files/frontend_packaged.js" type="text/javascript"></script><link href="./quickReg_files/frontend_packaged.css" media="screen" rel="stylesheet" type="text/css"><script src="./quickReg_files/simplecart_packaged.js" type="text/javascript"></script><script src="./quickReg_files/page.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $.extraInfo = "";
+  $.queryParams = {"controller":"pages","default":"true","action":"show"};
+  $.returnTo = "";
+  $.IPInfo = {"longitude":-97.0,"country_name":"United States","country_code":"US","latitude":38.0,"country_code3":"USA"};
+  $.currencyCode = "USD";
+  $.currencyUnit = "$";
+  $.availableLocales = ['en','uk','de','de-de','fr','fr-fr','es','es-es','en-gb','nl','nl-nl','ca','nl-be','fr-be','it','it-it','ja','zh','ko','pt','pt-pt','pl','ru','da','no','sv','fi','ro','cs','hu','ro-ro','cs-cz','hu-hu','fr-ca','zh-cn','zh-tw','en-us','en-au','en-nz','en-ca','en-dk','en-ie','en-no','en-se','en-ch','en-gb','en_GB','en-uk','fr-fr','de-de','it-it','es-es','ja-jp','es-us','en-nl','en-pt','fr-lu','de-at','en-pl','de-ch'];
+  $.currentLocale = "en";
+  $.secure = true;
+  $.gender = null;
+  $.cim = false;
+
+  function Translator(){
+    var self = this;
+
+    self.items = {};
+    self.items["Please wait"] = "Please wait";self.items["country_prompt"] = "Select a country...";self.items["product_prompt"] = "product_prompt";self.items["product_family_prompt"] = "product_family_prompt";self.items["product_category_prompt"] = "product_category_prompt";self.items["state_prompt"] = "-- Please Select --";self.items["Added to cart"] = "Added to cart";self.items["Error"] = "Error";self.items["Name"] = "Name";self.items["Quantity"] = "Quantity";self.items["Total"] = "Total";self.items["Remove"] = "Remove";self.items["Your Cart is empty"] = "Your Cart is empty";
+  };
+
+  Translator.prototype.t =
+  function(key) {
+    var self = this;
+    return self.items[key];
+  };
+
+  $.translator = new Translator();
+
+  
+</script>
+</head>
+<body cz-shortcut-listen="true">
+<div class="container content">
+
+  <header>
+    <h1><i>Quick Reg</i></h1>
+    <button id="pop-form" type="button" autocomplete="off">
+      Populate Form
+    </button>
+    <hr>
+  </header>
+
+  <main class="row">
+
+    <div class="col-sm-10">
+      <form id="registria_form" enctype="multipart/form-data" autocomplete="false">
+        <ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li>
+      
+      <input class="registria_field  form-control" id="input_version" name="product[input_version]" placeholder="" title="" type="hidden" value="AI8" autocomplete="off">
+    </li>
+</ul>
+
+        <input class="registria_field" id="page_name" name="page[name]" type="hidden" value="single_page_registration" autocomplete="off">
+
+
+      <input name="extra_info" type="hidden" value="" class="registria_field" autocomplete="off"><input name="authenticity_token" type="hidden" value="Qn9TdJglfhk59vCxybHIxi0EDqF2MtXCSudedNx3ekI=" class="registria_field" autocomplete="off"><fieldset name="user" id="user-fieldset"><legend>User</legend><ul></ul><li>
+    <label class="first_name" for="first_name">First Name <span class="required">*</span></label>
+    <input class="registria_field  form-control touched" id="first_name" name="user[first_name]" placeholder="" title="" type="text" value="" autocomplete="off" required="">
+  <span class="messages"></span></li><li>
+    <label class="last_name" for="last_name">Last Name <span class="required">*</span></label>
+    <input class="registria_field  form-control" id="last_name" name="user[last_name]" placeholder="" title="" type="text" value="" autocomplete="off" required="">
+  <span class="messages"></span></li><li>
+    <label class="email" for="email">Email Address <span class="required">*</span></label>
+    <input class="registria_field  form-control" id="email" name="user[email]" placeholder="" title="" type="email" value="" autocomplete="off" required="" pattern="^[a-zA-Z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])+?$">
+  <span class="messages"></span><div class="tipper-dialog" style="display: none;"><p>press '\' to auto-fill a fake email address</p></div><span class="tipper-trigger"></span></li><li>
+    <label class="phone" for="phone">Phone</label>
+    <input class="registria_field  form-control" id="phone" name="user[phone]" placeholder="+1(   )   -" title="" type="tel" value="" autocomplete="off">
+  <span class="messages"></span></li><li>
+    <label class="address1" for="address1">Street Address <span class="required">*</span></label>
+    <input class="registria_field  form-control" id="address1" name="user[address_attributes][address1]" placeholder="" title="" type="text" value="" autocomplete="off" required="">
+  <span class="messages"></span></li><li>
+    <label class="address2" for="address2">Address 2</label>
+    <input class="registria_field  form-control" id="address2" name="user[address_attributes][address2]" placeholder="" title="" type="text" value="" autocomplete="off">
+  <span class="messages"></span></li><li>
+    <label class="city" for="city">City <span class="required">*</span></label>
+    <input class="registria_field  form-control" id="city" name="user[address_attributes][city]" placeholder="" title="" type="text" value="" autocomplete="off" required="">
+  <span class="messages"></span></li><li class="frauto-container">
+    <label class="state" for="state">State <span class="required">*</span></label>
+    
+  <span class="messages"></span><input id="frauto-state" class="registria_field  form-control" type="text" autocomplete="off" required=""><input id="state" name="user[address_attributes][state]" class="registria_field  form-control" type="hidden" autocomplete="off" required=""></li><li><label class="zip" for="zip">ZIP Code <span class="required">*</span></label>
+<input class="registria_field  form-control" id="zip" name="user[address_attributes][zip]" placeholder="" title="" type="text" value="" autocomplete="off" required="" pattern="^[0-9]{5}$"><span class="messages"></span></li><li>
+      <label class="receive_product_communication" for="receive_product_communication">I do not wish to receive special offers, promotions, or other e-mail marketing communications from Whirlpool brand and its affiliated brands. All information we gather is governed by our privacy policy. For more information and for a list of affiliated br</label>
+      <input class="registria_field " id="receive_product_communication" name="user[receive_product_communication]" title="" type="checkbox" value="1" autocomplete="off">
+    <span class="messages"></span></li></fieldset><fieldset name="product" id="product-fieldset"><legend>Product</legend><ul></ul><li class="frauto-container">
+      <label class="model" for="model">Model Number <span class="required">*</span></label>
+      
+    <span class="messages"></span><input id="frauto-model" class="registria_field  form-control" type="text" autocomplete="off"><input id="model" name="product[model]" class="registria_field  form-control" type="hidden"></li><li>
+      <label class="serial_number" for="serial_number">Serial Number</label>
+      <input class="registria_field  form-control" id="serial_number" name="product[serial_number]" placeholder="" title="" type="text" value="" autocomplete="off">
+    <span class="messages"></span></li><li>
+      <label class="purchase_date" for="purchase_date">Purchase Date <span class="required">*</span></label>
+      <input class="registria_field  form-control" id="purchase_date" name="product[purchase_date]" placeholder="" title="" type="date" value="" autocomplete="off" required="">
+    <span class="messages"></span></li><li class="list-field">
+      <label class="products_intend_to_buy" for="products_intend_to_buy">Are you planning on purchasing any major appliances in the next few months? If so, please indicate which ones.</label>
+      <ul>
+        <li>
+          <label for="products_intend_to_buy_197971320">Air Conditioner</label><input class="registria_field " id="products_intend_to_buy_197971320" name="product[products_intend_to_buy][]" type="checkbox" value="Air Conditioner" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197906620">Air Purifier</label><input class="registria_field " id="products_intend_to_buy_197906620" name="product[products_intend_to_buy][]" type="checkbox" value="Air Purifier" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197799300">Combo Washer/Dryer</label><input class="registria_field " id="products_intend_to_buy_197799300" name="product[products_intend_to_buy][]" type="checkbox" value="Combo Washer/Dryer" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197719240">Cooktop</label><input class="registria_field " id="products_intend_to_buy_197719240" name="product[products_intend_to_buy][]" type="checkbox" value="Cooktop" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197641200">Dehumidifier</label><input class="registria_field " id="products_intend_to_buy_197641200" name="product[products_intend_to_buy][]" type="checkbox" value="Dehumidifier" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197579440">Dishwasher</label><input class="registria_field " id="products_intend_to_buy_197579440" name="product[products_intend_to_buy][]" type="checkbox" value="Dishwasher" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197515640">Disposer</label><input class="registria_field " id="products_intend_to_buy_197515640" name="product[products_intend_to_buy][]" type="checkbox" value="Disposer" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197442080">Dryer</label><input class="registria_field " id="products_intend_to_buy_197442080" name="product[products_intend_to_buy][]" type="checkbox" value="Dryer" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197374120">Freestanding Range</label><input class="registria_field " id="products_intend_to_buy_197374120" name="product[products_intend_to_buy][]" type="checkbox" value="Freestanding Range" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197313040">Freezer</label><input class="registria_field " id="products_intend_to_buy_197313040" name="product[products_intend_to_buy][]" type="checkbox" value="Freezer" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197214340">Hood or Vent</label><input class="registria_field " id="products_intend_to_buy_197214340" name="product[products_intend_to_buy][]" type="checkbox" value="Hood or Vent" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197165840">Hot Water Dispenser</label><input class="registria_field " id="products_intend_to_buy_197165840" name="product[products_intend_to_buy][]" type="checkbox" value="Hot Water Dispenser" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197119440">Ice Maker</label><input class="registria_field " id="products_intend_to_buy_197119440" name="product[products_intend_to_buy][]" type="checkbox" value="Ice Maker" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197072280">Microwave Oven</label><input class="registria_field " id="products_intend_to_buy_197072280" name="product[products_intend_to_buy][]" type="checkbox" value="Microwave Oven" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_197021120">Other - Specialty Products</label><input class="registria_field " id="products_intend_to_buy_197021120" name="product[products_intend_to_buy][]" type="checkbox" value="Other - Specialty Products" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_196942780">Oven</label><input class="registria_field " id="products_intend_to_buy_196942780" name="product[products_intend_to_buy][]" type="checkbox" value="Oven" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_196853820">Refrigerator</label><input class="registria_field " id="products_intend_to_buy_196853820" name="product[products_intend_to_buy][]" type="checkbox" value="Refrigerator" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_196787640">Trash Compactor</label><input class="registria_field " id="products_intend_to_buy_196787640" name="product[products_intend_to_buy][]" type="checkbox" value="Trash Compactor" autocomplete="off">
+          
+        </li>
+        <li>
+          <label for="products_intend_to_buy_196743060">Washer</label><input class="registria_field " id="products_intend_to_buy_196743060" name="product[products_intend_to_buy][]" type="checkbox" value="Washer" autocomplete="off">
+          
+        </li>
+      </ul>
+    <span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span><span class="messages"></span></li></fieldset><input id="next_button" type="submit" value="Register" autocomplete="off"><input class="registria_field  form-control" id="country" name="user[address_attributes][country]" title="" type="hidden" value="UNITED STATES" autocomplete="off"></form>
+    </div>
+
+    <div id="quickQueue" class="col-sm-2">
+      <span class="count">0</span>
+      <button class="clear-queue btn btn-default pull-right" type="button" data-action="clear-queue" style="margin-top:-.5em" autocomplete="off">
+        clear queue
+      </button>
+      <div id="queue-list">
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<select style="display:none" id="countrystate" autocomplete="off"><option class="sub_UNITED_STATES" value="Alabama (AL)">Alabama (AL)</option><option class="sub_UNITED_STATES" value="Alaska (AK)">Alaska (AK)</option><option class="sub_UNITED_STATES" value="Arizona (AZ)">Arizona (AZ)</option><option class="sub_UNITED_STATES" value="Arkansas (AR)">Arkansas (AR)</option><option class="sub_UNITED_STATES" value="California (CA)">California (CA)</option><option class="sub_UNITED_STATES" value="Colorado (CO)">Colorado (CO)</option><option class="sub_UNITED_STATES" value="Connecticut (CT)">Connecticut (CT)</option><option class="sub_UNITED_STATES" value="Delaware (DE)">Delaware (DE)</option><option class="sub_UNITED_STATES" value="District of Columbia (DC)">District of Columbia (DC)</option><option class="sub_UNITED_STATES" value="Florida (FL)">Florida (FL)</option><option class="sub_UNITED_STATES" value="Georgia (GA)">Georgia (GA)</option><option class="sub_UNITED_STATES" value="Hawaii (HI)">Hawaii (HI)</option><option class="sub_UNITED_STATES" value="Idaho (ID)">Idaho (ID)</option><option class="sub_UNITED_STATES" value="Illinois (IL)">Illinois (IL)</option><option class="sub_UNITED_STATES" value="Indiana (IN)">Indiana (IN)</option><option class="sub_UNITED_STATES" value="Iowa (IA)">Iowa (IA)</option><option class="sub_UNITED_STATES" value="Kansas (KS)">Kansas (KS)</option><option class="sub_UNITED_STATES" value="Kentucky (KY)">Kentucky (KY)</option><option class="sub_UNITED_STATES" value="Louisiana (LA)">Louisiana (LA)</option><option class="sub_UNITED_STATES" value="Maine (ME)">Maine (ME)</option><option class="sub_UNITED_STATES" value="Maryland (MD)">Maryland (MD)</option><option class="sub_UNITED_STATES" value="Massachusetts (MA)">Massachusetts (MA)</option><option class="sub_UNITED_STATES" value="Michigan (MI)">Michigan (MI)</option><option class="sub_UNITED_STATES" value="Minnesota (MN)">Minnesota (MN)</option><option class="sub_UNITED_STATES" value="Mississippi (MS)">Mississippi (MS)</option><option class="sub_UNITED_STATES" value="Missouri (MO)">Missouri (MO)</option><option class="sub_UNITED_STATES" value="Montana (MT)">Montana (MT)</option><option class="sub_UNITED_STATES" value="Nebraska (NE)">Nebraska (NE)</option><option class="sub_UNITED_STATES" value="Nevada (NV)">Nevada (NV)</option><option class="sub_UNITED_STATES" value="New Hampshire (NH)">New Hampshire (NH)</option><option class="sub_UNITED_STATES" value="New Jersey (NJ)">New Jersey (NJ)</option><option class="sub_UNITED_STATES" value="New Mexico (NM)">New Mexico (NM)</option><option class="sub_UNITED_STATES" value="New York (NY)">New York (NY)</option><option class="sub_UNITED_STATES" value="North Carolina (NC)">North Carolina (NC)</option><option class="sub_UNITED_STATES" value="North Dakota (ND)">North Dakota (ND)</option><option class="sub_UNITED_STATES" value="Ohio (OH)">Ohio (OH)</option><option class="sub_UNITED_STATES" value="Oklahoma (OK)">Oklahoma (OK)</option><option class="sub_UNITED_STATES" value="Oregon (OR)">Oregon (OR)</option><option class="sub_UNITED_STATES" value="Pennsylvania (PA)">Pennsylvania (PA)</option><option class="sub_UNITED_STATES" value="Rhode Island (RI)">Rhode Island (RI)</option><option class="sub_UNITED_STATES" value="South Carolina (SC)">South Carolina (SC)</option><option class="sub_UNITED_STATES" value="South Dakota (SD)">South Dakota (SD)</option><option class="sub_UNITED_STATES" value="Tennessee (TN)">Tennessee (TN)</option><option class="sub_UNITED_STATES" value="Texas (TX)">Texas (TX)</option><option class="sub_UNITED_STATES" value="Utah (UT)">Utah (UT)</option><option class="sub_UNITED_STATES" value="Vermont (VT)">Vermont (VT)</option><option class="sub_UNITED_STATES" value="Virginia (VA)">Virginia (VA)</option><option class="sub_UNITED_STATES" value="Washington (WA)">Washington (WA)</option><option class="sub_UNITED_STATES" value="West Virginia (WV)">West Virginia (WV)</option><option class="sub_UNITED_STATES" value="Wisconsin (WI)">Wisconsin (WI)</option><option class="sub_UNITED_STATES" value="Wyoming (WY)">Wyoming (WY)</option></select></body><div></div></html>

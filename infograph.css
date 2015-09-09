@@ -1,0 +1,126 @@
+/*
+ *  Color Pallette ==
+ *    gray: 
+ *      light: #EFEFEF
+ *      mid: #B5B5B5
+ *      dark: #161616
+ *    neutrals: 
+ *      light: #FFF8EA
+ *      dark: #191100
+ *    blue: #0C0093
+ *    green: #317700
+ *    brown: #935600;
+ *
+ */
+
+
+body {
+  background: #EFEFEF;
+  color: #161616;
+  padding: 0 12px;
+  font-size: 14px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+}
+body>* {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+h1 {
+	font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+h3 {
+  border-top: 3px solid;
+  border-bottom: 3px dotted;
+  color: #0C0093;
+  font-size: 1.6em;
+  line-height: 2.5em;
+  margin: 1.6em 0 .8em 0;
+}
+
+p {
+  margin: 1.6em 0;
+}
+
+i,
+i.fa {
+  color: #935600;
+  font-size: 1.3em;
+  display: inline-block;
+  padding: 0 .3em;
+  vertical-align: middle;
+  width: 2.6em;
+}
+i:before,
+i::before {
+  display: inline-block !important;
+  font-size: 1.6em !important;
+  line-height: 2em !important;
+  vertical-align: middle !important;
+}
+
+/*
+ *  Heder Styles
+ */
+header {
+  border-top: 3px solid;
+  border-bottom: 3px dotted;
+  text-align: center;
+  padding: 1em 0;
+}
+
+header h2 {
+  color: #317700;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: normal;
+  line-height: 1.6em;
+}
+
+header li {
+  display: inline-block;
+  padding-right: 1.2em;
+}
+
+header .contact-info {
+  margin: .6em 0;
+}
+
+/*
+ *  Skills
+ */
+.skills dt {
+  display: none;
+}
+
+.skills dd {
+  display: inline-block;
+  width: 49%;
+}
+
+#personal-strengths {
+  display: none;
+}
+
+.skills i {
+  background: #0C0093;
+  border-radius: 3em;
+  color: #EFEFEF;
+  line-height: 3em;
+  margin: 0.6em 1.6em;
+  text-align: center;
+  width: 2.6em;
+}

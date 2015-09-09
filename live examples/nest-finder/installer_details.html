@@ -1,0 +1,136 @@
+{% raw %}
+  <section id="pageTop">
+    <span class="nav_back" data-ng-click="goBackHistory()"></span>
+    <span class="close" data-exit-app></span>
+    <div class="clear"></div>
+  </section>
+  
+
+  <div id="wrapper">
+    <main id="main">
+      <div class="scrollSplit" data-scroll-split>
+        <section class="installer_details" id="thermostat_install">
+
+          <h1>
+            <span>{{ installer.organization.dba_or_name }}</span>
+            <div class="installer_rating" data-scroll-to-reviews>
+              <div>
+                <span class="lit" data-show-star-rating></span>
+                <span></span>
+              </div>
+            </div>
+            <a scroll-to-reviews data-ng-show="installer_reviews.organization_reviews.length > 0">See reviews</a>
+          </h1>
+
+          <div class="row">
+            <section class="column">
+              <p>
+                <span>{{ installer.organization.phone }}</span><span><a href="http://{{ installer.organization.url }}" target="_blank">{{ installer.organization.url }}</a></span>
+              </p>
+              <p id="installer_description">
+                {{ installer.installer_description }}
+              </p>
+            </section>
+            <section class="column">
+              <h3>{{ translations.finder2_page2_thermostat_basic_install_title }}</h3>
+              <p id="installer_pricing_details" data-ng-bind-html-unsafe="installerServicePricing(installer.services.finder_thermostat_basic_install, installer.services.finder_thermostat_additional_install, installer.services.finder_topaz_basic_install, installer.services.finder_topaz_additional_install)">
+              </p>
+            </section>
+          </div>
+
+          <div class="row">
+            <section class="column">
+              <div id="thermostat_install_description" data-country-class>
+                <h3>{{ translations.finder2_page2_services_thermostat_install_title }}</h3>
+                <p class="installer_details_description">
+                  {{ translations.finder2_page2_thermostat_description }} 
+                  <a href="http://support.nest.com/article/How-much-will-it-cost-to-have-my-Nest-Learning-Thermostat-professionally-installed#advanced" class="ui_action" target="_blank" data-ng-hide="UKLocale">{{ translations.finder2_page2_thermostat_advanced_learn }}<span></span></a>
+                </p>
+              </div>
+            </section>
+            <section class="column">
+              <h3>{{ translations.finder2_page2_thermostat_basic_install_includes_title }}</h3>
+              <ul>
+                <li>{{ translations.finder2_page2_thermostat_basic_install_list_1 }}</li>
+                <li>{{ translations.finder2_page2_thermostat_basic_install_list_2 }}</li>
+                <li>{{ translations.finder2_page2_thermostat_basic_install_list_3 }}</li>
+                <li>{{ translations.finder2_page2_thermostat_basic_install_list_4 }}</li>
+              </ul>
+            </section>
+          </div>
+          <div class="row">
+            <section class="column">
+              <div id="topaz_install_description">
+                <h3>{{ translations.finder2_page2_services_topaz_install_title }}</h3>
+                <p class="installer_details_description">
+                  {{ translations.finder2_page2_topaz_description }}
+                </p>
+              </div>
+            </section>
+            <section class="column">
+              <h3>{{ translations.finder2_page2_topaz_install_title }}</h3>
+              <ul>
+                <li>{{ translations.finder2_page2_topaz_install_list_1 }}</li>
+                <li>{{ translations.finder2_page2_topaz_install_list_2 }}</li>
+                <li>{{ translations.finder2_page2_topaz_install_list_3 }}</li>
+                <li>{{ translations.finder2_page2_topaz_install_list_4 }}</li>
+                <li>{{ translations.finder2_page2_topaz_install_list_5 }}</li>
+              </ul>
+            </section>
+          </div>
+        </section><!-- End #installer_details -->
+
+        <section id="installer_reviews" class="installer_details" data-ng-show="installer_reviews.organization_reviews.length > 0">
+          <h2>{{ translations.finder2_page2_installer_number_of_reviews }}</h2>
+          <hr>
+          
+          <div class="column odd">
+            <div class="installer_review" class="installer_review" data-ng-repeat="review in installer_reviews.organization_reviews">
+              <article data-ng-class-even="'even'">
+                <div class="installer_rating">
+                  <div>
+                    <!-- <span class="lit" style="width:{{ review.organization_review.rating * 15.5 }}px;"></span> -->
+                    <span class="lit" data-show-review-rating></span>
+                    <span></span>
+                  </div>
+                </div>
+                <h3>{{ review.organization_review.name }}</h3>
+                <p>
+                  {{ review.organization_review.review }}
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="column even">
+            <div class="installer_review" class="installer_review" data-ng-repeat="review in installer_reviews.organization_reviews">
+              <article data-ng-class-odd="'odd'">
+                <div class="installer_rating">
+                  <div>
+                    <span class="lit" data-show-review-rating></span>
+                    <span></span>
+                  </div>
+                </div>
+                <h3>{{ review.organization_review.name }}</h3>
+                <p>
+                  {{ review.organization_review.review }}
+                </p>
+              </article>
+            </div>
+          </div>
+
+        </section><!-- End #installer_reviews -->
+
+      </div><!-- End .scrollSplit -->
+      
+    </main>
+      <div id="pageBottom" class="installer_details_page_bottom">
+        <a href="/certified_finder#/contact_installer" class="imitationNextButton">{{ translations.finder2_page2_contact_button }}</a>
+        <div class="clear"></div>
+      </div>
+    <div class="clear"></div>
+  </div><!-- End #wrapper -->
+{% endraw %}
+
+{{ "heap_analytics" | snippet }}
+

@@ -1,0 +1,121 @@
+{% raw %}
+  <section id="pageTop">
+    <span class="nav_back" data-ng-click="goBackHistory()"></span>
+    <span class="close" data-exit-app></span>
+    <div class="clear"></div>
+  </section>
+
+  <div id="wrapper">
+  <form novalidate id="installer_contact_form" name="installer_contact_form" data-ng-submit="sendReferral()">
+    <header>
+    <h1>{{ translations.finder2_page3_contact_title }} {{ installer.organization.dba_or_name }}</h1>
+    <p class="contact_description">Fill out this form to schedule your install. You&rsquo;ll hear back from them within three days.</p>
+    </header>
+
+    <div id="main" class="scrollSplit" data-scroll-split style="padding-bottom:0;">
+      <fieldset>
+        <div>
+          <label for="customer_name">{{ translations.finder2_page3_field_your_name }}</label>
+          <span class="error" ng-show="installer_contact_form.name.$error.required">{{ translations.finder2_page3_name_field_required }}</span>
+          <input id="customer_name" name="name" type="text" data-ng-model="message.name" data-validate required>
+        </div>
+
+        <div>
+          <label for="customer_email">{{ translations.finder2_page3_field_email_address }}</label>
+          <span class="error" data-ng-show="installer_contact_form.email.$error.required">{{ translations.finder2_page3_email_field_required }}</span>
+          <span class="ng-invalid" data-ng-show="installer_contact_form.email.$error.pattern">{{ translations.finder2_page3_field_invalid }}</span>
+          <input id="customer_email" name="email" type="email" data-ng-model="message.email" data-ng-pattern="/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/" data-validate required>
+          <span class="extra_field_info">{{ translations.finder2_page3_field_email_address_message }}</span>
+        </div>
+
+        <div>
+          <label for="customer_phone">{{ translations.finder2_page3_field_phone }}</label>
+          <span class="error" data-ng-show="installer_contact_form.phone.$error.required">{{ translations.finder2_page3_phone_field_required }}</span>
+          <input id="customer_phone" name="phone" type="text" data-ng-model="message.phone" data-validate required>
+        </div>
+      </fieldset>
+
+      <fieldset class="single_wide">
+        <div class="boolean_inputs">
+          <label>{{ translations.finder2_page3_what_products_need_installation }}</label>
+          <input id="install_thermostat" data-ng-true-value="DINSTALL001" name="install_thermostat" type="checkbox" data-assign-to="product_skus" data-ng-model="message.installThermostat" data-ng-checked="true">
+          <label for="install_thermostat">Thermostat</label>
+          <input id="install_smoke_alarm" data-ng-true-value="TINSTALL001" name="install_smoke_alarm" type="checkbox" data-assign-to="product_skus" data-ng-model="message.installSmokeAlarm">
+          <label for="install_smoke_alarm">Smoke + CO Alarm</label>
+        </div>
+
+        <div class="boolean_inputs">
+          <label>{{ translations.finder2_page3_field_need_to_buy_nest }}</label>
+          <span class="error" ng-show="installer_contact_form.already_purchased.$error.required">{{ translations.finder2_page3_field_required }}</span>
+          <input id="already_purchased_yes" name="already_purchased" type="radio" value="No" data-ng-model="message.buyFromInstaller" data-validate data-ng-required="(message.installThermostat || message.installSmokeAlarm) && message.buyFromInstaller != 'Yes'">
+          <label for="already_purchased_yes">{{ translations.finder2_page3_field_need_to_buy_nest_yes }}</label>
+          <input id="already_purchased_no" name="already_purchased" type="radio" value="Yes" data-ng-model="message.buyFromInstaller">
+          <label for="already_purchased_no">{{ translations.finder2_page3_field_need_to_buy_nest_no }}</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="double_wide">
+        <div class="wide_input">
+          <label for="additional_info">{{ translations.finder2_page3_field_additional_info }} <span>{{ translations.finder2_page3_field_optional_label }}</span></label><br>
+          <textarea id="additional_info" name="description" data-ng-model="message.description" data-placeholder-text-for-additional-info-field></textarea>
+        </div>
+      </fieldset>
+      <div class="clear"></div>
+
+      <div ng-show="message.installThermostat && UKLocale">
+        <fieldset>
+          <div class="boolean_inputs">
+            <label>Boiler Type</label>
+            <span class="error" ng-show="installer_contact_form.boiler_type.$error.required">required</span>
+            <input id="boiler_type_system" name="boiler_type" type="radio" value="Boiler" data-ng-model="message.boilerType" data-validate data-ng-required="message.boilerType != 'Combi' && message.installThermostat && UKLocale">
+            <label for="boiler_type_system" class="ng-binding">System</label>
+            <input id="boiler_type_combi" name="boiler_type" type="radio" value="Combi" data-ng-model="message.boilerType">
+            <label for="boiler_type_combi" class="ng-binding">Combi</label>
+          </div>
+
+          <div>
+            <label for="boiler_make" class="ng-binding">Boiler Make <span>{{ translations.finder2_page3_field_optional_label }}</span></label>
+            <select id="boiler_make" ng-init="boilerMake = brand[0]" ng-model="message.boilerMake" ng-options="brand.make for brand in makesModels">
+              <option value="">Select a make</option>
+            </select>
+            <span class="down-arrow"></span>
+          </div>
+
+          <div>
+            <label for="boiler_model" class="ng-binding">Boiler Model <span>{{ translations.finder2_page3_field_optional_label }}</span></label>
+            <select id="boilder_model" ng-model="message.boilerModel" ng-options="model.name for model in message.boilerMake.models" ng-disabled="!message.boilerMake">
+              <option value="">Select a model</option>
+            </select>
+            <span class="down-arrow"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="boolean_inputs">
+            <label>Do you have an existing programmer?</label>
+            <span class="error" ng-show="installer_contact_form.existing_thermostat.$error.required">{{ translations.finder2_page3_field_required }}</span>
+            <input id="existing_thermostat_yes" name="existing_thermostat" type="radio" value="Yes" data-ng-model="message.existingThermostat" data-validate data-ng-required="message.existingThermostat != 'No' && message.installThermostat && UKLocale">
+            <label for="existing_thermostat_yes">{{ translations.finder2_page3_field_need_to_buy_nest_yes }}</label>
+            <input id="existing_thermostat_no" name="existing_thermostat" type="radio" value="No" data-ng-model="message.existingThermostat">
+            <label for="existing_thermostat_no">{{ translations.finder2_page3_field_need_to_buy_nest_no }}</label>
+          </div>
+        </fieldset>
+      </div>
+
+    </div><!-- End #main -->
+    <div id="pageBottom" class="contact_page_bottom" style="height: 81px;">
+      <div class="our_promise">
+        <p>
+          <strong>{{ translations.finder2_page3_our_promise_part1 }}</strong> {{ translations.finder2_page3_our_promise_part2 }} <a data-help-link target="_blank" href="http://contact.nest.com/?varTopic=certifiedfeedback&varEmail={{ message.user.email }}&varFirstName={{ message.user.name.split(' ', 3)[0] }}&varLastName={{ messageLastName(message.user.name) }}&varPhone={{ message.user.phone }}&varOrgid={{ installer.organization.id }}&varCountry={{ varCountry }}" >{{ translations.finder2_page3_our_promise_part3 }}</a> {{ translations.finder2_page3_our_promise_part4 }} <a data-help-link target="_blank" href="{{ translations.finder2_page3_our_promise_terms_link }}">{{ translations.finder2_page3_our_promise_part5 }}</a>
+        </p>
+      </div>
+      <input id="request_type" value="{{ installer_id }}" type="hidden" data-ng-model="message.installer.id">
+      <input id="request_type" value="installation" type="hidden" data-ng-model="message.installation.type">
+      <input type="submit" value="{{ translations.finder2_page3_contact_button }}" data-valign>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    </form>
+  </div><!-- End #wrapper -->
+{% endraw %}
+

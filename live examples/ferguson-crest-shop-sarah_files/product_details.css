@@ -1,0 +1,556 @@
+/*------------------------------------*\
+  RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE:WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,abel,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+  display:block;
+}
+body{
+  line-height:1;
+}
+ol,ul{
+  list-style:none;
+}
+blockquote,q{
+  quotes:none;
+}
+
+blockquote:before,blockquote:after,
+q:before,q:after {
+  content:'';
+  content:none;
+}
+
+/* remember to define visible focus styles!
+:focus{
+  outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+  text-decoration:none;
+}
+
+del{
+  text-decoration:line-through;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+.clear {
+    clear: both;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/*------------------------------------*\
+  FONTS
+\*------------------------------------*/
+
+@font-face {
+    font-family: 'sackersGothLight';
+    src: url('/system/fonts/fergusoncrest/Sackers/ATSackersGothic-Light.otf');
+}
+
+@font-face {
+    font-family: 'sackersGoth';
+    src: url('/system/fonts/fergusoncrest/Sackers/ATSackersGothic-Medium.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'sackersGoth';
+    src: url('/system/fonts/fergusoncrest/Sackers/ATSackersHeavyGothic.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'sackersRoman';
+    src: url('/system/fonts/fergusoncrest/Sackers/ATSackersHeavyRoman.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'sackersRoman';
+    src: url('/system/fonts/fergusoncrest/Sackers/ATSackersLightRoman.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'sackersLig';
+    src: url('/system/fonts/fergusoncrest/Sackers/ATSacLigClaRom.otf');
+    font-weight: normal;
+}
+
+/*------------------------------------*\
+  MAIN
+\*------------------------------------*/
+
+body {
+    background: url(//d1ufx6x0elkyno.cloudfront.net/rel-1341534084/system/images/2333/original/bodyBG.png) left top repeat-x #ffffff;
+    color: #72635e;
+    line-height: 1.5em;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 1254px;
+}
+
+
+#sideBar {
+    background: #000000;
+    float: left;
+    height: 100%;
+    padding: 17px 30px;
+    width: 295px;
+    position: relative;
+
+    /* ensures that the sidebar extends the full height of the page */
+    padding-bottom: 15000px;
+    margin-bottom: -15000px;    
+}
+
+#sideBar #sessionMenu {
+    color: #AA9F81;
+    font-family: 'sackersGoth', verdana, arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    text-align: right;
+    text-transform: uppercase;
+    top: 200px;
+    right: 32px;
+}
+
+#sideBar #sessionMenu a {
+    color: #72635E;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+#sideBar #sessionMenu a:hover {
+    text-decoration: underline;
+}
+
+#moreDetails {
+    float: right;
+    padding-top: 175px;
+    width: 298px;
+}
+
+#sideBar .logo {
+    float: right;
+}
+
+#body {
+    float: left;
+    min-height: 100%;
+    margin-bottom: 188px;
+    padding: 30px 30px 30px 58px;
+    position: relative;
+    width: 513px;
+}
+
+header {
+    margin-bottom: 109px;
+}
+
+/* === Navigation === */
+
+#globalNav {
+    float: left;
+    font-size: 12px;
+    font-family: 'sackersGoth', verdana, arial, sans-serif;
+    font-weight: bold;
+    line-height: 18px;
+    margin-left: -20px;
+    padding-top: 2px;
+    text-transform: uppercase;
+}
+
+
+#globalNav li {
+    display: inline-block;
+    margin: 4px 20px 4px 20px;
+    position: relative;
+
+    /* IE7 hack for inline-block */
+    zoom:1;
+    *display: inline;
+}
+
+
+#globalNav a {
+    color: #403f3f;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+#globalNav li a:hover {
+    text-decoration: underline;
+}
+
+#globalNav li#current a {
+    color: #AA9F81;
+}
+
+#globalNav li ul {
+    background: url(//d1ufx6x0elkyno.cloudfront.net/rel-1341534084/system/images/2333/original/bodyBG.png) left -51px repeat-x #ffffff;
+    display: none;
+
+    padding-top: 4px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    z-index: 100;
+}
+
+#globalNav li ul li {
+    background: #fff
+    margin: 4px 6px;
+}
+
+#globalNav li:hover ul {
+    display: block;
+}
+
+/* === End Navigation === */
+
+#quick_cart {
+    color: #72635E;
+    float: right;
+}
+
+
+#social {
+    float: right;
+}
+
+h2 {
+    border-top: 5px solid #000000;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    font-family: 'sackersRoman', Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 44px;
+    margin: 18px 0;
+    padding: 18px 0 10px 0;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #000000;
+    font-family: 'sackersRoman', Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h4 {
+    border-top: 1px solid #000000;
+    color: #000000;
+    font-family: 'sackersRoman', Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+    padding-top: 6px;
+}
+
+p {
+    font-size: 14px;
+    font-family: Georgia, Times, serif;
+    line-height: 1.25em;
+    margin: 18px 0;
+}
+
+p.intro {
+    font-family: georgia;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+a {
+    color: #821f1f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    color: #000;
+    margin: 12px 0;
+}
+
+
+/* === Footer === */
+footer {
+    border-top: 1px solid #7f7f7f;
+    bottom: 0;
+    color: #7f7f7f;
+    float: left;
+    font-size: 12px;
+    margin-left: 413px;
+    margin-top: -60px;
+    padding: 9px 30px 30px 0;
+    position: absolute;
+    width: 483px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+footer ul {
+    float: left;
+    overflow: hidden;
+}
+
+footer li {
+    display:inline;
+    padding: 0 9px;
+    position: relative;
+    left: 1px;
+}
+
+footer li:first-child {
+    padding-left:0;
+}
+
+footer a {
+    color: #7f7f7f;
+}
+
+/* === End Footer === */
+
+.button,
+.item_add,
+input#next_button,
+#registria_checkout,
+.addressbook>a {
+    border: 1px solid #6e1a1a;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-shadow: 0 2px #430702;
+    text-transform: uppercase;
+    vertical-align: baseline;
+
+    background: #8a2121; /* Old browsers */
+    background: -moz-linear-gradient(top,  #8a2121 0%, #6e1a1a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8a2121), color-stop(100%,#6e1a1a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #8a2121 0%,#6e1a1a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #8a2121 0%,#6e1a1a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #8a2121 0%,#6e1a1a 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #8a2121 0%,#6e1a1a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a2121', endColorstr='#6e1a1a',GradientType=0 ); /* IE6-9 */
+
+}
+
+.shareThis a {
+    margin: 0 4px;
+}
+
+dl {
+    float: left;
+    margin-bottom: 20px;
+    width: 149px;
+}
+
+dt {
+    color: #aa9f81;
+}
+
+dd {
+    color: #000000;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+dd h3 {
+    color: #000000;
+    font-family: Georgia, Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* === Product Pages === */
+
+#productNav {
+    height: 19px;
+}
+
+#productNav a {
+    color: #72635E;
+}
+
+.productImage {
+    margin-top: -175px;
+}
+
+.buyProduct {
+    float: left;
+}
+
+.buyProduct select {
+    border: 1px solid #9e956f;
+    border-radius: 3px;
+    font-family: arial, helvetica, sans-serif
+    font-size: 12px;
+    outline: none;
+    height: 30px;
+    padding-left: 12px;
+    margin-right: 18px;
+
+    background: #e8e6de; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZTZkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU2ZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #e8e6de 0%, #ffffff 30%, #ffffff 70%, #e8e6de 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e6de), color-stop(30%,#ffffff), color-stop(70%,#ffffff), color-stop(100%,#e8e6de)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e8e6de 0%,#ffffff 30%,#ffffff 70%,#e8e6de 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e8e6de 0%,#ffffff 30%,#ffffff 70%,#e8e6de 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e8e6de 0%,#ffffff 30%,#ffffff 70%,#e8e6de 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e8e6de 0%,#ffffff 30%,#ffffff 70%,#e8e6de 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e6de', endColorstr='#e8e6de',GradientType=0 ); /* IE6-8 */
+
+}
+
+.buyProduct .item_add {
+    float: right;
+    line-height: 16px;
+}
+
+.price {
+    color: #515151;
+    float: left;
+    font-family: 'sackersRoman', Georgia, Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    position: relative;
+    top: 1px;
+    margin-right: 18px;
+}
+
+/* === Photos === */
+.photo_gallery {
+    width: 600px;
+}
+
+.photo_gallery li {
+    float: left;
+    height: 158px;
+    margin-right: 79px;
+    width: 118px;
+}
+
+.photo_gallery .gallery_count {
+    display: block;
+    color: #b4b4b4;
+}
+
+/* === News === */
+article {
+    margin-bottom: 87px;
+}
+
+.article-meta {
+    float: left;
+    font-size; 12px;
+    line-height: 30px;
+    margin-top: -9px;
+}
+
+.pub-date {
+    padding-right: 6px;
+}
+
+.tags {
+    border-left: 1px solid #72635E;
+    padding: 0 6px;
+}
+
+article img {
+    margin: 0 auto;
+    margin-top: 16px;
+    max-width: 513px;
+}
+
+article .shareThis {
+    float: right;
+    margin: -9px 0 0 0;
+}
+
+article .shareThis img {
+    margin: 0;
+}
+
+article p {
+    clear: both;
+}
+
+.fb-like {
+    position: relative;
+    top: -4px;
+}
+
+.fb-like,
+.fb-like span,
+.fb_ltr {
+    width: 51px !important;
+}
+
+.st_sharethis_large {
+    background: url(//d2uru7posb5v6m.cloudfront.net/rel-1341534350/system/images/2339/original/share.png) top left no-repeat;
+    width: 74px;
+    height: 21px;
+}

@@ -1,0 +1,143 @@
+{% raw %}
+  <div id="searchWrapper">
+    <header id="installer_search_header">
+      <span class="close" data-exit-app></span>
+      <h1>{{ translations.finder2_page1_title }}</h1>
+      <h2>
+        {{ translations.finder2_page1_subtitle }}
+      </h2>
+      <form id="installer_search_form" data-ng-class="{uk: UKLocale}" name="installer_search_form" data-ng-submit="initiateInstallerSearch(searchTerm)">
+        <label for="installer_search_input">{{ translations.finder2SearchLabel }}:</label>
+        <span id="search-help-text" data-ng-show="installer_search_form.zip.$error.pattern" data-ng-show="UKLocale">Please enter a complete postcode including the space.</span>
+        <input id="installer_search_input" name="zip" type="text" data-ng-model="searchTerm" placeholder="{{ translations.finder2_search_placeholder }}" data-ng-pattern="searchRegex" data-search-input-directive />
+          <input type="submit" value="Search">
+      </form>
+    </header>
+
+    <main>
+
+    <div id="installer_list_container" class="scrollSplit" data-scroll-split>
+    <table id="installer_list" height="{{ angular.element('#installer_list_container').height() }}" style="height:{{ angular.element('#installer_list_container').height() }}">
+      <thead data-position-thead>
+        <tr>
+
+          <th class="table_padding current">
+            <div></div>
+            <!-- To give the appearance that the thead is wider than the tbody -->
+          </th>
+
+          <th class="installer_name current" id="sort_by_rating" data-ng-click="sortSearchResults('sort_by_rating', 'location.organization.integer_rating', 'false')">
+            <div>
+              {{ translations.finder2_page1_column_title_installer }} 
+              <span class="sort_order_icon"></span>
+              <!--
+              <ul>
+                <li>{{ translations.finder2_page1_column_sort_by_rating }}</li>
+                <li id="sort_by_name" data-ng-click="sortSearchResults('sort_by_name', 'location.organization.dba_or_name', 'false')">{{ translations.finder2_page1_column_sort_by_name }}</li>
+              </ul>
+              -->
+            </div>
+          </th>
+
+          <th class="installer_services" id="sort_by_price" data-ng-click="sortSearchResults('sort_by_price', 'location.services.finder_thermostat_basic_install', 'true')">
+            <div>
+              {{ translations.finder2_page1_column_title_services }}
+              <span class="sort_order_icon"></span>
+            </div>
+          </th>
+
+          <th id="sort_by_distance" class="installer_location">
+            <div data-ng-click="sortSearchResults('sort_by_distance', 'location.distance', 'false')">
+              {{ translations.finder2_page1_column_title_distance }}
+              <span class="sort_order_icon"></span>
+            </div>
+          </th>
+
+          <th class="installer_contact">
+            <div></div>
+          </th>
+
+          <th class="table_padding">
+            <div></div>
+            <!-- To give the appearance that the thead is wider than the tbody -->
+          </th>
+        </tr>
+      </thead>
+
+      <tbody style="height:{{ $('#installer_list_container').height() }}px;">
+
+        <tr class="installer_listing" data-ng-repeat="installer in localInstallers.locations">
+          <td class="table_padding">
+            <!-- To give the appearance that the thead is wider than the tbody -->
+          </td>
+          <td class="installer_name">
+            <h3 class="ui_action" data-ng-click="viewInstallerDetails(installer.location.id)">
+              {{ installer.location.organization.dba_or_name }}
+            </h3>
+            <div class="installer_rating">
+              <div>
+                <span class="lit" data-show-star-rating data-installer-rating="{{ installer.location.organization.integer_rating }}"></span>
+                <span></span>
+              </div>
+            </div>
+            <span data-ng-hide="!installer.location.organization.reviews_count">{{ reviewsCount(installer.location.organization.reviews_count) }}</span>
+            <span data-ng-show="!installer.location.organization.reviews_count">{{ translations.finder2_page1_installer_not_reviewed }}</span>
+          </td>
+
+          <td class="installer_services">
+            <p data-ng-bind-html-unsafe="installerServicePricing(installer.location.services.finder_thermostat_basic_install, installer.location.services.finder_thermostat_additional_install, installer.location.services.finder_topaz_basic_install, installer.location.services.finder_topaz_additional_install)">
+            </p>
+            <!-- 
+            <p data-ng-hide="!installer.location.services.certified_topaz_installer" data-ng-bind="installerServicePricing(installer.location.services.finder_topaz_basic_install, installer.location.services.finder_topaz_additional_install, 'Topaz basic install')">
+            </p>
+            -->
+          </td>
+
+          <td class="installer_location" data-ng-switch="UKLocale">
+            <h3 data-ng-show="installer.location.organization.dba_or_name!='Brolley Property Group' && installer.location.organization.dba_or_name!='Integral' && installer.location.organization.dba_or_name!='Homeserve'">{{ installer.location.distance | number:2 }} {{ translations.finder2_page1_distance_away }}</h3>
+            <p data-ng-switch-when="true">
+              {{ installer.location.address.zip }}
+            </p>
+            <p data-ng-switch-default>
+              {{ installer.location.address.csz }}
+            </p>
+          </td>
+
+          <td class="installer_contact">
+            <span class="imitationNextButton" data-ng-click="contactInstaller(installer.location.id)">{{ translations.finder2_page1_contact_button }}</span>
+          </td>
+          <td class="table_padding">
+            <!-- To give the appearance that the thead is wider than the tbody -->
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    <div class="no_results" data-no-installers-message>
+      {{ translations.finder2_no_installers }}
+    </div>
+
+    </div><!-- End #scrollSplit -->
+
+    </main>
+    <div id="pageBottom"></div>
+
+  </div><!-- End #wrapper -->
+{% endraw %}
+
+<!-- place holder text on IE -->
+    <!--[if lt IE 10]>
+      <script type="text/javascript">
+        $(':input:not(:hidden)').not('[type="submit"]').focus(function() {
+          if ($(this).val() == $(this).attr('placeholder')) {
+            $(this).val('');
+          }
+        });
+        $(':input:not(:hidden)').not('[type="submit"]').blur(function() {
+          if ($(this).val() == '') {
+            $(this).val($(this).attr('placeholder'));
+          }
+        });
+      </script>
+    <![endif]-->
+
