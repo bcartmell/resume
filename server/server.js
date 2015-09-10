@@ -13,6 +13,12 @@ exports.server = (function(listenOnPort) {
 
   listenOnPort = listenOnPort || 8080;
 
+  var respond404 = function(response) {
+    response.writeHeader(404, {"Content-Type": "text/plain"});
+    response.write("404 Not Found\n");
+    response.end();
+  };
+
   var postHandler = function postHandler(request, response) {
     request.on('data', function(data) {
       console.log('received post data: \n'+ data);
@@ -22,9 +28,7 @@ exports.server = (function(listenOnPort) {
   var fetchFile = function fetchFile(fullPath, response) {
     filesys.readFile(fullPath, "binary", function(err, file) {
       if(err) {
-        response.writeHeader(500, {"Content-Type": "text/plain"});
-        response.write(err + "\n");
-        response.end();
+        respond404(response);
       }
       else {
         var ext = fullPath.split('.').pop();
@@ -53,15 +57,7 @@ exports.server = (function(listenOnPort) {
     }
 
     var fullPath = path.join(process.cwd(),requestedPath);
-    path.exists(fullPath,function(exists){
-      if (!exists) {
-        response.writeHeader(404, {"Content-Type": "text/plain"});
-        response.write("404 Not Found\n");
-        response.end();
-      }
-      else {
-        fetchFile(fullPath, response);
-      }
+      fetchFile(fullPath, response);
     });
   });
 
