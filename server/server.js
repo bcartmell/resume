@@ -57,8 +57,7 @@ exports.server = (function(listenOnPort) {
     }
 
     var fullPath = path.join(process.cwd(),requestedPath);
-      fetchFile(fullPath, response);
-    });
+    fetchFile(fullPath, response);
   });
 
   return {
