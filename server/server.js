@@ -21,7 +21,7 @@ exports.server = (function(listenOnPort) {
 
   var postHandler = function postHandler(request, response) {
     request.on('data', function(data) {
-      console.log('received post data: \n'+ data);
+      process.stdout.write('received post data: \n'+ data);
     });
   };
 
@@ -53,7 +53,7 @@ exports.server = (function(listenOnPort) {
     if (requestedPath == "/") {
       requestedPath = "resume.html";
       reqCount = reqCount+1;
-      console.log('request '+ reqCount +' received from '+ request.connection.remoteAddress +'.');
+      process.stdout.write('request '+ reqCount +' received from '+ request.connection.remoteAddress +'.');
     }
 
     var fullPath = path.join(process.cwd(),requestedPath);
