@@ -124,3 +124,18 @@ header .contact-info {
   text-align: center;
   width: 2.6em;
 }
+
+/*
+ *  Plug-ins
+ */
+
+/* Modaller */
+#modal-curtain {
+  background: rgba(255,255,255,.7);
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}

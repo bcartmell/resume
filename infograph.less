@@ -205,6 +205,17 @@ header .contact-info {
   display: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
+.transition {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 /*
  *  Skills
  */
@@ -505,4 +516,32 @@ footer h4 {
   footer section {
     margin-bottom: 0;
   }
+}
+
+/*
+ *  Plug-ins
+ */
+
+/* Modaller */
+#modal-curtain {
+  background: rgba(0,0,0,.618);
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.modal {
+  background: #fff;
+  border-radius: .3em;
+  box-shadow: 1px 0 16px -2px;
+  display: block;
+  padding: 1.6em;
+  position: absolute;
+    top: 20%;
+    left: 30%;
+  height: 60%;
+  width: 40%;
 }
