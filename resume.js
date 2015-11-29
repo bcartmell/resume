@@ -4,27 +4,54 @@ var helpers = {
   },
 
   addClass: function(target, newClass) {
-    newClass = helpers.cleanSpaces(target.className +' '+ newClass);
     target.className = newClass;
   },
 
   removeClass: function(target, className) {
+    target.classList.remove(target);
   }
 }
 
 
 var modaller = (function() {
-  function createCurtain() {
-    curtain = document.createElement('div');
-    curtain.id = 'modal-curtain';
-    curtain.className = 'hidden transition';
-    document.getElementsByTagName('body')[0].appendChild(curtain);
-    return curtain;
+
+  var Curtain = function(options) {
+    if (!this instanceof Curtain) return new Curtain(options);
+    var self = this;
+
+    this.modals = [];
+
+    this.element = document.createElement('div');
+    this.element.id = 'modal-curtain';
+    this.element.className = 'hidden transition';
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+
+    this.element.addEventListener('click', function(event) {
+      self.hideModals();
+      hideElement(self.element);
+    });
+    return this;
+  };
+  Curtain.prototype = {
+    addModal: function(modal) {
+      this.modals.push(modal);
+      this.element.appendChild(modal.element)
+    },
+    hideModals: function() {
+      var i;
+      for (i=0; i<this.modals.length; i++) {
+        hideElement(this.modals[i].element);
+      }
+    }
   }
 
   function getCurtain() {
     var curtain = document.getElementById('modal-curtain'); 
-    return (curtain === null)? createCurtain() : curtain;
+    if (curtain === null) {
+      curtain = new Curtain();
+    }
+    curtain
+    return curtain;
   }
 
   function hideElement(element) {
@@ -69,12 +96,15 @@ var modaller = (function() {
 
     // add close button
     this.closeButton = document.createElement('i');
-    helpers.addClass(this.closeButton, 'fa fa-close');
-    this.element.prependChild(this.closeButton);
+    helpers.addClass(this.closeButton, 'fa fa-close modal-close');
+    this.element.insertBefore(this.closeButton, this.element.firstChild);
+    this.closeButton.addEventListener('click', function(){
+      self.hide();
+    });
 
     // attach to curtain
     this.curtain = getCurtain();
-    this.curtain.appendChild(this.element);
+    this.curtain.addModal(this);
 
     // return
     return this;
@@ -82,13 +112,13 @@ var modaller = (function() {
 
   Modal.prototype = {
     show: function() {
-      showElement(this.curtain);
+      showElement(this.curtain.element);
       showElement(this.element);
       return this;
     },
     hide: function() {
       hideElement(this.element);
-      hideElement(this.curtain);
+      hideElement(this.curtain.element);
       return this;
     }
   }
@@ -102,5 +132,5 @@ var modaller = (function() {
 
 var newModal;
 window.onload = function() {
-  newModal = new modaller.newModal({ content: '<h1>New Modal<h2><p>I made a modal</p>' });
+  newModal = modaller.newModal({ content: '<h1>New Modal<h2><p>I made a modal</p>' });
 };

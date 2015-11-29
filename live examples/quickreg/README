@@ -1,0 +1,23 @@
+This code was provided to Registria Inc.
+This code is not licensced for use by anyone other than Registria Inc.
+It is provided here only to serve as a sample of code developed by Brady Cartmell.
+
+To run, open quickreg.html with your web browser.
+
+This code is for a system called 'quick-reg'.
+It is a simple product and user registration app for internal use.
+It allows agents of the company to quickly process multiple registrations
+from paper-cards without page refreshes.
+Because some customers prefer to fill out a paper card 
+and send it in the mail to using the website.
+It makes server calls Asyncronously so that users can immediatly begin 
+the next registration after clicking the submit button for the last.
+It also provides some helper functions like a fake-email-generator
+bound to a hot-key because the customer may not have provided one,
+but the Registria platform requires it.
+
+'Frauto' is short for 'Front-end Autocomplete' 
+it's a front-end auto-complete module that I also built,
+It can be seen in action at my.nordictrack.com, it is used
+on the 'Model Number' and 'Purchased at' fields.
+

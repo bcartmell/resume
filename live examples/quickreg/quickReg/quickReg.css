@@ -1,0 +1,138 @@
+.frauto-list {
+  border: 1px solid #999;
+  background: #FFF;
+  cursor: default;
+  padding: 0;
+  overflow: auto;
+  -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+  -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+  box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+
+  max-height: 350px;
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+}
+
+.frauto-list span {
+  font-weight: bold;
+  color: #39F;
+}
+
+.frauto-list li {
+  cursor: pointer;
+  display: block;
+  padding: .6em 5px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.frauto-list li.selected {
+  background: #cecece;
+}
+
+/*
+ *  Structural Elements
+ */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/*
+ *  Form Style
+ */
+form {
+  width: auto;
+}
+
+input[type=checkbox] {
+  float: left;
+  margin-right: .3em;
+}
+
+input.touched:invalid,{
+ background: #f2dede;
+ position: relative;
+ overflow: visible;
+}
+input.touched:invalid+.messages:before,
+label.invalid[generated="true"] {
+  content: 'required';
+  color: #a94442;
+  position: absolute;
+}
+label.invalid[generated="true"] {
+  font-weight: normal;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0 .6em;
+  margin: 1.3em 0;
+  width: 32%;
+  vertical-align: bottom;
+
+  /* for validations */
+  position: relative;
+  overflow: visible;
+}
+
+.list-field {
+  display: block;
+  width: 100%;
+}
+
+/*
+ *  Quick-Queue Styles
+ */
+#quickQueue .queueItem {
+  padding: .6em;
+  margin: 1em 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/*
+ *  Registria Modules Tipper styles
+ */
+.tipper-trigger {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: .7em;
+}
+.tipper-trigger:before {
+  content: 'i';
+  border: .2em solid;
+  border-radius: 1em;
+  font-weight: bold;
+  padding: .1em .6em;
+}
+
+.tipper-dialog {
+  background: #FDFDFD;
+  border-radius: 3px;
+  bottom: 115%;
+  padding: .3em .6em;
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  -webkit-box-shadow: 0 0 8px 0;
+  -moz-box-shadow: 0 0 8px 0;
+  -ms-box-shadow: 0 0 8px 0;
+  box-shadow: 0 0 8px 0;
+}

@@ -65,7 +65,7 @@ function frautoInput(field, optionList, frautoOptions) {
   filterField.setAttribute('type', 'text');
 
   container.classList.add('frauto-container');
-  field.remove();
+  container.removeChild(field);
   container.appendChild(filterField);
   container.appendChild(targetField);
 

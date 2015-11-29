@@ -1,0 +1,45 @@
+﻿Hi Maestro,
+
+
+I came across this job posting on Stack Overflow, and I'd be your perfect fit.  I have over 6 years of professional experience building and maintaining client-side apps, and a strong desire to use JavaScript on the server as well:
+
+- Collaborating with designers and developers to solve complex problems
+
+- Building, testing, deploying and maintaining client-side web applications
+
+- Participating in feature estimation
+
+- Manage time appropriately and clearly communicate changes in effort or scope
+
+- Writing maintainable, standards-driven code
+
+- Providing guidance to younger developers
+
+
+Over 5 years of my experience comes from Registria, a silicon-valley based company specializing in user-facing product registration portals and professional services scheduling apps.  It was my job to build and maintain client-side apps hosted on the Registria Platform, our in-house Ruby on Rails CMS.
+
+At Registria, I delivered client-side app for industry leaders such as:
+
+- Nest (the learning thermostat)
+
+- NordicTrack, Proform Fitnesss, and Freemotion Fitness
+
+- Whirlpool
+
+- Astro Gaming
+
+- Bushnell Outdoor Products
+
+
+We used liquid for our templating (very similar to handlebars), I implemented an Angular single-page web app for the Nest Learning Thermostat. We used Bootstrap and jQuery extensively to produce responsive implementations.  I've used the audio and local storage APIs in some of these apps as well.
+
+Through my own personal study I have some familiarity with NodeJS, NPM and Bower, MongoDB, Jasmine, Git, and Canvas, and server management and hosting (on Linux).
+
+I have a very strong dedication to producing quality work, that is accessible, standard-compliant, and a joy for the user to use (I've even delayed the delivery of a couple projects over this).
+
+I think we'd be a great fit.  Please let me know if you thinks so too.
+
+
+Thanks,
+
+Brady

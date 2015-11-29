@@ -1,3 +1,32 @@
+/*
+ *
+ *README:
+ *This code was provided to Registria Inc.
+ *This code is not licensed for production use by anyone other than Registria Inc.
+ *It is provided here only to serve as a sample of code developed by Brady Cartmell.
+ *
+ *This code is for a system called 'quick-reg'.
+ *It is a simple product and user registration app for internal use.
+ *It allows agents of the company to quickly process multiple registrations
+ *from paper-cards without page refreshes.
+ *Because some customers prefer to fill out a paper card 
+ *and send it in the mail to using the website.
+ *It makes server calls Asyncronously so that users can immediatly begin 
+ *the next registration after clicking the submit button for the last.
+ *It also provides some helper functions like a fake-email-generator
+ *bound to a hot-key because the customer may not have provided one,
+ *but the Registria platform requires it.
+ *
+ *The modules Frauto and registriaModules were were also developed
+ *by me, Brady Cartmell, but live in different files not provided here.
+ *
+ *'Frauto' is short for 'Front-end Autocomplete' 
+ *it's a front-end auto-complete module that I also built,
+ *It can be seen in action at my.nordictrack.com, it is used
+ *on the 'Model Number' and 'Purchased at' fields.
+ *
+ */
+
 (function() {
   var frautoSelects;
   'use strict';
@@ -130,7 +159,11 @@
     };
 
     var disableCommPrefs = function() {
-      $('#receive_product_communication').prop('checked', false).attr('disabled', '');
+      $('#receive_product_communication').prop('checked', true).attr('disabled', '');
+    }
+
+    var marketingOptOut = function() {
+      $('#receive_product_communication').prop('checked', true);
     }
 
     var attachHandler = function(field, activationKey) {
@@ -140,7 +173,8 @@
       $(field).keydown(function(event) {
         if (event.keyCode == activationKey) {
           setEmail(field);
-          disableCommPrefs();
+          //disableCommPrefs();
+          marketingOptOut();
           $(field).parent().next().find(':input').focus();
           return false;
         }
@@ -226,6 +260,7 @@
 
   /*
    *  Find all selects and make them a Frauto instance.
+   *  
    */
   var autoFrauto = function() {
     var frautos = {};
@@ -245,10 +280,9 @@
     var productField = $('#model');
     filterOptions = filterOptions || {};
     if (productField.length > 0) {
-      return services.requestProductList(filterOptions, function(data) {
-        var optionList = data.products.sort(helpers.skuSort);
-        return new frautoInput(productField, optionList);
-      });
+      // Server call removed for demo
+      var optionList = demo.productList.products;
+      return new frautoInput(productField, optionList);
     } 
   };
 
@@ -296,7 +330,7 @@
   }
 
   /*
-   *  This function attaches the jQuery datepicker to all date fields if the
+   *  Attaches the jQuery datepicker to all date fields if the
    *  browser does not support the HTML5 date type.
    */
   var fallbackOnDatepicker = function() {
@@ -318,10 +352,10 @@
   $(function() {
     var frautoSelects = {};
     setFieldTypes();
-    removeLabelsForHiddenFields();
+    //removeLabelsForHiddenFields();
     emailFaker.init($('#email'));
     styleLists();
-    arrangeForm();
+    //arrangeForm();
     setCountry();
     frautoSelects.autoFrautos = autoFrauto();
     frautoSelects.product = createProductFrauto();
