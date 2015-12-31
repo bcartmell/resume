@@ -15,6 +15,7 @@ var helpers = {
   removeClass: function(target, className) {
     target.classList.remove(target);
   }
+
 }
 
 
@@ -143,14 +144,24 @@ var modaller = (function() {
     show: function() {
       showElement(this.curtain.element);
       showElement(this.element);
+
+      // so that keyboard events are detected immediately
       this.element.focus();
+
       return this;
     },
     hide: function() {
       hideElement(this.element);
       hideElement(this.curtain.element);
       return this;
+    },
+
+    resizeHeight(newHeight) {
+      this.element.setAttribute('style', function() {
+        debugger;
+      });
     }
+
   }
 
   return {
@@ -172,6 +183,8 @@ var Slideshow = function(contentSet) {
   function makeSlide(content) {
     if (content instanceof HTMLElement) {
       var slide = document.createElement('li');
+      var contentIndex = content.getAttribute('data-slide-index');
+      if (contentIndex) slide.setAttribute('data-slide-index', contentIndex);
       slide.appendChild(content.cloneNode(true));
       return slide;
     }
@@ -188,12 +201,32 @@ var Slideshow = function(contentSet) {
     }
   }
 
+  function indexSlides(contentSet, slideTag) {
+    // adds indexes to slides as data-attribute
+    // this ensures that indexes are consistent
+    // between page view and modal view.
+    //
+    // slideTag is the tagName for slides and defaults to 'img'
+    // this prevents erroneous indexing of things 
+    // like textNodes in between inline-block elements
+    var children = contentSet.childNodes;
+    var i, max=children.length;
+    var index = 0;
+    slideTag = slideTag || 'IMG';
+    for (i=0; i<max; i++) {
+      if (children[i].tagName === slideTag) {
+        children[i].setAttribute('data-slide-index', index++);
+      }
+    }
+  }
+
   this.contentSource = contentSet;
 
   this.element = document.createElement('ul');
   this.element.classList.add('slideshow');
   this.element.classList.add('transition');
 
+  indexSlides(contentSet);
   makeSlides(contentSet);
 
   // setup element
@@ -212,33 +245,53 @@ var Slideshow = function(contentSet) {
     self.previous();
   }, false);
 
+  this.contentSource.addEventListener('click', function(event) {
+    var targetIndex = event.target.getAttribute('data-slide-index');
+    self.toIndex(targetIndex);
+  }, false);
+
 };
 Slideshow.prototype = {
-  findIndent: function(index) {
+  // find indent from index
+  findIndent: function(index) {  
     return (index)*-100;
   },
-  findIndex: function(indent) {
+
+  // find index from indent
+  findIndex: function(indent) { 
     return (indent/-100);
   },
-  currentIndent: function() {
+
+  // discover the current indent level
+  currentIndent: function() {   
     return parseInt(this.element.style.textIndent || 0);
   },
-  currentIndex: function() {
+
+  // discover current index
+  currentIndex: function() {    
     return this.findIndex(this.currentIndent());
   },
+
+  // discover if current slide is the last one
   hasNext: function() {
     return (this.currentIndex() < (this.length-1));
   },
+
+  // Go to specific slide by index
   toIndex: function(index) {
     var newIndent = this.findIndent(index);
     this.element.setAttribute('style', 'text-indent:'+ newIndent +'%');
   },
+
+  // navigate to next slide
   next: function() {
     var newIndex;
     if (!this.hasNext()) newIndex = '0';
     else newIndex = this.currentIndex()+1;
     this.toIndex(newIndex);
   },
+
+  // navigate to previous slide
   previous: function() {
     var newIndex;
     if (this.currentIndex() === 0) newIndex = this.length-1; 
