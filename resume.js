@@ -146,7 +146,10 @@ var modaller = (function() {
       showElement(this.element);
 
       // so that keyboard events are detected immediately
-      this.element.focus();
+      // if our content is another object, we'll let it's element 
+      // have focus so that it can also respond to keyboard events
+      if (this.content.element) this.content.element.focus();
+      else this.content.focus();
 
       return this;
     },
@@ -248,6 +251,19 @@ var Slideshow = function(contentSet) {
   this.contentSource.addEventListener('click', function(event) {
     var targetIndex = event.target.getAttribute('data-slide-index');
     self.toIndex(targetIndex);
+  }, false);
+
+  this.element.setAttribute('tabIndex', 0); 
+  this.element.addEventListener('keyup', function(event) {
+    switch(event.keyCode) {
+      default: break; // do nothing
+      case 39:  // right arrow
+        self.next();
+        break;
+      case 37:
+        self.previous();
+        break;
+    }
   }, false);
 
 };
