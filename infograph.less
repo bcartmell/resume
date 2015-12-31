@@ -595,8 +595,7 @@ i.modal-close:before {
   width: 100%;
 }
 
-.slideshow .next-button,
-.slideshow .prev-button {
+.slideshow button {
   background: @dark-gray;
   border: none;
   height: 100%;
@@ -605,6 +604,10 @@ i.modal-close:before {
   position: absolute;
     top: 0;
   width: 1.6em;
+}
+button::-moz-focus-inner {
+  border: none;
+  outline: none;
 }
 
 .slideshow .next-button {

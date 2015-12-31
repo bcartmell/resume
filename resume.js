@@ -114,6 +114,7 @@ var modaller = (function() {
     this.closeButton = document.createElement('i');
     helpers.addClass(this.closeButton, 'fa fa-close modal-close');
     this.element.insertBefore(this.closeButton, this.element.firstChild);
+
     this.closeButton.addEventListener('click', function(){
       self.hide();
     });
@@ -129,12 +130,20 @@ var modaller = (function() {
       }, false);
     }
 
+    // so we can capture keyboard events
+    this.element.setAttribute('tabIndex', 0); 
+
+    this.element.addEventListener('keyup', function(event) {
+      if (event.keyCode === 27) self.hide();
+    }, false);
+
   };
 
   Modal.prototype = {
     show: function() {
       showElement(this.curtain.element);
       showElement(this.element);
+      this.element.focus();
       return this;
     },
     hide: function() {
@@ -153,7 +162,6 @@ var modaller = (function() {
 
 var Slideshow = function(contentSet) {
   var self = this;
-
 
   function makeButton(btnClass) {
     var button = document.createElement('button');
@@ -239,10 +247,7 @@ Slideshow.prototype = {
   }
 };
 
-
-var newModal;
 window.onload = function() {
-
   var imageReels = document.getElementsByClassName('image-reel-window');
   pageModals = Array.prototype.map.call(imageReels, function(reel) {
     modaller.newModal({
@@ -250,10 +255,4 @@ window.onload = function() {
       target: reel
     });
   });
-
-  //var contentSource = document.getElementsByClassName('image-reel-window')[0];
-  //newModal = modaller.newModal({
-    //content: new Slideshow(contentSource),
-    //target: contentSource
-  //});
 };
