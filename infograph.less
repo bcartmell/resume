@@ -47,6 +47,11 @@ body {
   vertical-align: baseline;
 }
 
+// prevent scrolling while modals are open
+body.modal-open {
+  overflow: hidden;
+}
+
 #container  {
   background: @white;
   max-width: 768px;
@@ -587,6 +592,7 @@ i.modal-close:before {
   height: inherit;
   max-height: 100%;
   overflow: auto;
+  text-align: center;
   text-indent: 0;
   vertical-align: top;
 }

@@ -142,6 +142,7 @@ var modaller = (function() {
 
   Modal.prototype = {
     show: function() {
+      document.body.classList.add('modal-open');
       showElement(this.curtain.element);
       showElement(this.element);
 
@@ -154,6 +155,7 @@ var modaller = (function() {
       return this;
     },
     hide: function() {
+      document.body.classList.remove('modal-open');
       hideElement(this.element);
       hideElement(this.curtain.element);
       return this;
