@@ -163,7 +163,7 @@
         hideElement(this.curtain.element);
 
         // undo prevent body scroll while modal is open
-        document.body.classList.add('modal-open');
+        document.body.classList.remove('modal-open');
 
         return this;
       },
