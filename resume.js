@@ -327,7 +327,7 @@
     }
   };
 
-  window.onload = function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var imageReels = document.getElementsByClassName('image-reel-window');
     Array.prototype.forEach.call(imageReels, function(reel) {
       modaller.newModal({
@@ -335,5 +335,5 @@
         target: reel
       });
     });
-  };
+  }, false);
 }());
