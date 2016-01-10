@@ -1,35 +1,26 @@
 /*
  *
- *README:
- *This code was provided to Registria Inc.
- *This code is not licensed for production use by anyone other than Registria Inc.
- *It is provided here only to serve as a sample of code developed by Brady Cartmell.
- *
- *This code is for a system called 'quick-reg'.
- *It is a simple product and user registration app for internal use.
- *It allows agents of the company to quickly process multiple registrations
- *from paper-cards without page refreshes.
- *Because some customers prefer to fill out a paper card 
- *and send it in the mail to using the website.
- *It makes server calls Asyncronously so that users can immediatly begin 
- *the next registration after clicking the submit button for the last.
- *It also provides some helper functions like a fake-email-generator
- *bound to a hot-key because the customer may not have provided one,
- *but the Registria platform requires it.
- *
- *The modules Frauto and registriaModules were were also developed
- *by me, Brady Cartmell, but live in different files not provided here.
- *
- *'Frauto' is short for 'Front-end Autocomplete' 
- *it's a front-end auto-complete module that I also built,
- *It can be seen in action at my.nordictrack.com, it is used
- *on the 'Model Number' and 'Purchased at' fields.
+ *  README:
+ *  This code was provided to Registria Inc.
+ *  This code is not licensed for production use by anyone other than Registria Inc.
+ *  
+ *  This code is for a system called 'quick-reg'.
+ *  It is a simple product and user registration app for internal use.
+ *  It allows agents of the company to quickly process multiple registrations
+ *  from paper-cards without page refreshes.
+ *  Because some customers prefer to fill out a paper card 
+ *  and send it in the mail to using the website.
+ *  It makes server calls Asyncronously so that users can immediatly begin 
+ *  the next registration after clicking the submit button for the last.
+ *  It also provides some helper functions like a fake-email-generator
+ *  bound to a hot-key because the customer may not have provided one,
+ *  but the Registria platform requires it.
  *
  */
 
 (function() {
-  var frautoSelects;
   'use strict';
+  var frautoSelects;
   var helpers = registriaModules.helpers,
       services = registriaModules.services,
       formHelpers = registriaModules.formHelpers;
@@ -58,7 +49,7 @@
         var id = $(this).attr('id');
         if (fieldTypes[id] !== undefined) {
           $(this).get(0).type = fieldTypes[id];
-          if (fieldTypes[id] == 'hidden') {
+          if (fieldTypes[id] === 'hidden') {
             $('label[for="'+ $(this).attr('id') +']"').remove();
           }
         }
@@ -71,7 +62,7 @@
    *  via Ajax and reset the form so we can process more registrations without
    *  waiting for the last submission to finish or reloading the page.
    *  RapidFire facilitates this behavior and keeps record of all registrations
-   *  submitted during the user's session.
+   *  submitted during the users session.
    */
   var rapidFire = (function() {
     var stopEvent = function(event) {
@@ -81,7 +72,7 @@
     };
 
     var onFormSubmit = function(form) {
-      var form = form || document.getElementById('registria_form');
+      form = form || document.getElementById('registria_form');
       var formData = helpers.objectify($(form).serialize());
       if (!$(form).valid()) {
         $(':input.invalid').first().focus();
@@ -160,11 +151,11 @@
 
     var disableCommPrefs = function() {
       $('#receive_product_communication').prop('checked', true).attr('disabled', '');
-    }
+    };
 
     var marketingOptOut = function() {
       $('#receive_product_communication').prop('checked', true);
-    }
+    };
 
     var attachHandler = function(field, activationKey) {
       field = field || $('#email');
@@ -327,7 +318,7 @@
         $(this).click();
       });
     });
-  }
+  };
 
   /*
    *  Attaches the jQuery datepicker to all date fields if the
@@ -345,7 +336,7 @@
    *  Add mask to phone to make input more intuitive
    */
   var maskPhone = function() {
-    $('#phone').attr('placeholder', '+1(   )   -')
+    $('#phone').attr('placeholder', '+1(   )   -');
     if($.mask) $('#phone').mask('+1(999)999-9999', {placeholder:' '});
   };
 

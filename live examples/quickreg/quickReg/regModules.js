@@ -10,11 +10,12 @@ var registriaModules = (function() {
        *  If a matching field is found, it's value is updated to that of the paramater
        */
       populateFields: function(input) {
-        paramString = registriaModules.helpers.convertUrlCodes(input);
-        params = registriaModules.helpers.objectify(paramString);
+        var paramString = registriaModules.helpers.convertUrlCodes(input);
+        var params = registriaModules.helpers.objectify(paramString);
+        var param, field;
         for (param in params) {
           if (params.hasOwnProperty(param)) {
-            var field = document.getElementsByName(param);
+            field = document.getElementsByName(param);
             if (field && $(field).attr('type') !== 'hidden') {
               $(field).val(params[param]);
             } 

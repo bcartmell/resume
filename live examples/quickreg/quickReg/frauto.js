@@ -45,9 +45,9 @@
 function frautoInput(field, optionList, frautoOptions) {
   var targetField,
       filterField,
-      container,
-      frautoOptions = frautoOptions || {};
+      container;
 
+  frautoOptions = frautoOptions || {};
   if (!optionList || !optionList.length) return new Error('option list must be provided');
   if (field instanceof jQuery) field = field[0];
 
@@ -75,8 +75,8 @@ function frautoInput(field, optionList, frautoOptions) {
 }
 
 function FrautoSelect(field, frautoOptions) {
-  var optionList,
-      frautoOptions = frautoOptions || {};
+  var optionList;
+  frautoOptions = frautoOptions || {};
 
   if ($(field).is(':not(select)')) return new Error('field must be a select');
 
