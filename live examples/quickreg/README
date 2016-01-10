@@ -1,8 +1,8 @@
 This code was provided to Registria Inc.
-This code is not licensced for use by anyone other than Registria Inc.
-It is provided here only to serve as a sample of code developed by Brady Cartmell.
+This code is not licensced for production use by anyone other than Registria Inc.
 
 To run, open quickreg.html with your web browser.
+(As this system is for internal use, IE has not been tested).
 
 This code is for a system called 'quick-reg'.
 It is a simple product and user registration app for internal use.
@@ -21,3 +21,6 @@ it's a front-end auto-complete module that I also built,
 It can be seen in action at my.nordictrack.com, it is used
 on the 'Model Number' and 'Purchased at' fields.
 
+Code developed by me is in the 'quickReg' folder.  
+The 'quickReg_files' folder contains libraries and packaged code that is
+standard for all Registria projects.
