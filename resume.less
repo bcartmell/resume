@@ -231,18 +231,36 @@ header .contact-info {
 .skills dd {
   display: inline-block;
   margin: 0;
-  width: 32%;
+  width: 49%;
 }
 
 #personal-strengths {
   display: none;
 }
 
-.skills i {
+.skills .icon-container {
   color: @green;
   border-radius: 3em;
-  padding: 2px .3em 0 .3em;
+  display: inline;
+  padding: 2px .3em 0 0;
+  position: relative;
   text-align: center;
+}
+
+.skills .icon-container i {
+  background: @white;
+  color: @green;
+  padding-left: 0;
+  padding-right: .3em;
+  width: auto;
+}
+
+.skills .icon-container .overlay {
+  position: absolute;
+    left: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 0;
 }
 
 /*
