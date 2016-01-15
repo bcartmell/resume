@@ -1,11 +1,32 @@
+// JavaScript code for Brady Cartmell's Resumes site.
+// There is a lot here that jQuery and other tools
+// could simplify, but in addition to being a resume
+// site, it is also an exercise in practicing my JS skills
+// on a non-commercial project where time and compatibility
+// would warrant using known and tested libraries and frameworks
+
+
 (function() {
   'use strict';
+
   var helpers = {
+  // Some utility function that I needed at least once
+  // but are general enough to warrant extraction from
+  // the relevant code for reusability.
+
     cleanSpaces: function(str) {
+      // given a string, make sure that each instance of 
+      // white-space is only one space.  This way,
+      // you can append strings together without worrying
+      // about whether or not you should prepending/appending
+      // spaces will help or hurt, just add the spaces and use this function.
       return str.replace(/\W+/g,' ').trim();
     },
 
     addClass: function(target, newClass) {
+      // Add a classList to an element
+      // arg one is the target element, arg two
+      // is that class list (space-separated).
       var i, max;
       var classArray = newClass.split(' ');
       max = classArray.length;
@@ -15,6 +36,7 @@
     },
 
     removeClass: function(target, className) {
+      // remove a class from an element.
       target.classList.remove(target);
     }
 
@@ -22,7 +44,6 @@
 
 
   var modaller = (function() {
-
     var Curtain = function(options) {
       if (!(this instanceof Curtain)) return new Curtain(options);
       var self = this;
