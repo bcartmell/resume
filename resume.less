@@ -209,7 +209,8 @@ header .contact-info {
 /*
  *  Helpers
  */
-.print-show {
+.print-show-block,
+.print-show-inline-block {
   display: none;
 }
 
@@ -530,7 +531,7 @@ button::-moz-focus-inner {
   a:visited {
     color: @dark-gray;
     font-weight: normal;
-    text-decoration: none;
+    text-decoration: underline;
     text-shadow: none;
   }
 
@@ -555,8 +556,16 @@ button::-moz-focus-inner {
     padding-right: 0;
   }
 
-  .print-show {
+  h3 small {
+    font-weight: normal;
+  }
+
+  .print-show-block {
     display: block;
+  }
+
+  .print-show-inline-block {
+    display: inline-block;
   }
 
   .skills dd {
@@ -564,7 +573,7 @@ button::-moz-focus-inner {
     text-align: left !important;
     padding: 0;
     margin: 0;
-    width: 32%;
+    width: 49%;
     vertical-align: baseline;
   }
 
@@ -607,6 +616,7 @@ button::-moz-focus-inner {
   }
 
   .image-reel {
+    display:none;
     position: relative;
     margin: 1.6em 0 3em 0;
   }
@@ -633,10 +643,11 @@ button::-moz-focus-inner {
 
   footer li {
     display: inline-block;
-    width: 40%;
+    width: 32%;
   }
 
   footer section {
     margin-bottom: 0;
   }
+
 }
