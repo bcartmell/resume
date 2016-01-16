@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://certified.registriastaging.com/dashboard -->
+<html lang="en" style="overflow: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Nest | Dashboard</title>
+  <script type="text/javascript" async="" src="./Nest _ Dashboard_files/saved_resource"></script><script type="text/javascript" async="" src="./Nest _ Dashboard_files/ga_debug.js"></script><script src="./Nest _ Dashboard_files/js" type="text/javascript"></script>
+  <meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="HOC6gVL7EUUTRKJi/1rnTA+lEo8waLpM4VhBbSP1ZEQ="><link href="./Nest _ Dashboard_files/dashboard.css" rel="stylesheet" type="text/css" media="all"><script src="./Nest _ Dashboard_files/jquery.min.js"></script><script src="./Nest _ Dashboard_files/jquery-ui.min.js"></script><script src="./Nest _ Dashboard_files/jquery-ui-i18n.min.js"></script><script src="./Nest _ Dashboard_files/frontend_packaged.js" type="text/javascript"></script><link href="./Nest _ Dashboard_files/frontend_packaged.css" media="screen" rel="stylesheet" type="text/css"><script src="./Nest _ Dashboard_files/simplecart_packaged.js" type="text/javascript"></script><script src="./Nest _ Dashboard_files/page.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $.extraInfo = "";
+  $.queryParams = {"controller":"pages","page_name":"dashboard","users_certification_hook_ran":"true","action":"show"};
+  $.returnTo = "";
+  $.IPInfo = {"country_code":"US","country_name":"United States","latitude":38.0,"country_code3":"USA","longitude":-97.0};
+  $.currencyCode = "USD";
+  $.currencyUnit = "$";
+  $.availableLocales = ['en','uk','de','de-de','fr','fr-fr','es','es-es','en-gb','nl','nl-nl','ca','nl-be','fr-be','it','it-it','ja','zh','ko','pt','pt-pt','pl','ru','da','no','sv','fi','ro','cs','hu','ro-ro','cs-cz','hu-hu','fr-ca','zh-cn','zh-tw','en-us','en-au','en-nz','en-ca','en-dk','en-ie','en-no','en-se','en-ch','en-gb','en_GB','en-uk','fr-fr','de-de','it-it','es-es','ja-jp','es-us','en-nl','en-pt','fr-lu','de-at','en-pl','de-ch'];
+  $.currentLocale = "en";
+  $.secure = false;
+  $.gender = '';
+  $.cim = true;
+
+  function Translator(){
+    var self = this;
+
+    self.items = {};
+    self.items["Please wait"] = "Please wait";self.items["country_prompt"] = "Select";self.items["product_prompt"] = "Select a product";self.items["product_family_prompt"] = "Select a product family";self.items["product_category_prompt"] = "Select a product category";self.items["state_prompt"] = "Select";self.items["Added to cart"] = "Added to cart";self.items["Error"] = "Error";self.items["Name"] = "Name";self.items["Quantity"] = "Quantity";self.items["Total"] = "Total";self.items["Remove"] = "Remove";self.items["Your Cart is empty"] = "Your Cart is empty";
+  };
+
+  Translator.prototype.t =
+  function(key) {
+    var self = this;
+    return self.items[key];
+  };
+
+  $.translator = new Translator();
+
+  
+</script>
+  <link rel="icon" href="http://d27js68pcj6627.cloudfront.net/rel-1447664308/system/images/1563/original/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!--[if lt IE 10]>
+
+  <style type="text/css">
+    input[type="file"] {
+      z-index: 4;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#loginForm #login_username').before('<label for="login_username" style="position:relative; top:8px;">Username</label>');
+      $('#loginForm #login_password').before('<label for="login_password" style="position:relative; top:8px;">Password</label>');
+    });
+  </script>
+<![endif]-->
+
+<script>
+  
+
+  $(function() {
+    var currentPage = 'dashboard';
+    $('nav.certified-nav a[href="/'+ currentPage +'"]').addClass('current').parent('li').addClass('current');
+  });
+</script>
+
+  <style>
+    aside ul { display: block; }
+    #banner { background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664527/system/images/2653/original/image004.png); }
+
+    #dashboard-links {
+      border-collapse: separate;
+      border-spacing: 1px;
+      margin-bottom: 2em;
+    }
+    #dashboard-links td {
+      padding: 1em 25px;
+      border: none;
+    }
+    .notice {
+      background-color: #F0F3F5;
+      padding: 0.6em 1.2em;
+      border-radius: 1em;
+      margin-bottom: 1em;
+    }
+    .float-left {
+      float: left;
+      position: relative;
+      margin: 1.5em 1.2em 1.5em 0;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function() {
+      // do not allow non-admins access to dashboard
+      var org_approved = true;
+      var role = true;
+      if (org_approved === false) {
+        document.location.href='/process_overview_ind';
+      } else if (role == 'false') {
+        document.location.href='/organization_training';
+      }
+
+      $('.read_more').prev('p').hide();
+
+      $('.read_more').click(function() {
+        var event_source = $(this);
+        $(this).prev('p').slideToggle(200).promise().done(function() {
+          if ($(this).is(':visible')) {
+            $(event_source).html('Close<span></span>');
+          }
+          else {
+            $(event_source).html('Read more<span></span>');
+          }
+        });
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+   var heap=heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement("script");b.type="text/javascript",b.async=!0,b.src=("https:"===document.location.protocol?"https:":"http:")+"//d36lvucg9kzous.cloudfront.net";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=["identify","track"];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])};
+   heap.load("916562662");
+</script>
+
+  
+<style type="text/css">.star_rating span.partial:after {width:10.800000000000004px;}</style><script type="text/javascript" charset="UTF-8" src="./Nest _ Dashboard_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Nest _ Dashboard_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./Nest _ Dashboard_files/geocoder.js"></script><script async="true" type="text/javascript" src="./Nest _ Dashboard_files/roundtrip.js"></script><script async="true" type="text/javascript" src="./Nest _ Dashboard_files/KGZXPFXMWRH4HC3BT7ODTT"></script><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(1)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(2)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(3)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(4)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(5)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(6)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/out(7)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Nest _ Dashboard_files/saved_resource(1)">
+<img src="./Nest _ Dashboard_files/seg" width="1" height="1">
+</div><script type="text/javascript" charset="UTF-8" src="./Nest _ Dashboard_files/stats.js"></script></head>
+<body>
+  <div id="body_wrap">
+    <header>
+  
+
+  
+  <a href="http://certified.registriastaging.com/landing"><img class="i18n" src="./Nest _ Dashboard_files/nest_certified_logo5.png" alt="Nest Certified Program" data-i18n-en_gb="//d27js68pcj6627.cloudfront.net/rel-1447664425/system/images/3710/original/nest-certified-logo-uk.png" data-i18n-alt-en_gb="Nest Certified Programme"></a>
+  
+
+  
+  <div class="logout">
+    <a href="http://certified.registriastaging.com/my_profile">brady@registria.com</a>&nbsp;|&nbsp;<a href="http://certified.registriastaging.com/dashboard#" onclick="nestLogout();">Logout</a>
+  </div>
+
+
+
+  
+  <nav class="certified-nav">
+    <ul>
+      
+    </ul>
+  </nav>
+  
+</header>
+
+    <section id="banner">
+  <div id="tout">
+    <h1>Welcome to Nest Certified</h1>
+    You'll find everything you need to grow your business
+  </div>
+</section>
+
+
+    <div class="wrapper">
+      <aside>
+  <section class="organization_overvew">
+    <span id="user_greeting"><a href="http://certified.registriastaging.com/your_account">Hi, Brady<span></span></a></span>
+
+    <h1><a href="http://certified.registriastaging.com/your_account">Brady Super Shady Company</a></h1>
+
+    
+    <div class="star_rating organization_overvew" data-rating="3.45">
+      
+      <h1><a href="http://certified.registriastaging.com/your_account">RATING:</a></h1>
+      <div>
+        <span class="lit"></span>
+        <span class="lit"></span>
+        <span class="lit"></span>
+        <span class="partial"></span>
+        <span></span>
+      </div>
+      
+    </div>
+    
+  </section>
+
+  <ul>
+    
+    <li>
+      Buy Nest products:
+      <a href="http://certified.registriastaging.com/dashboard#distributors">Distributor finder<span></span></a>
+    </li>
+    
+    <li>
+      Join the conversation:
+      <a href="https://community.nest.com/community/certified-pros" target="_blank">Nest Community<span></span></a>
+    </li>
+    <li>
+      Get trained:
+      <a href="http://certified.registriastaging.com/organization_training">Online training<span></span></a>
+    </li>
+    <li>
+      Ask a question:
+      <a href="http://support.nest.com/certified" target="_blank">Certified Support<span></span></a>
+    </li>
+    
+    <li>
+      Pro installation guide:
+      <a href="http://support-assets.nest.com/images/pro-faq/Nest-Pro-Installer-Guide.pdf" target="_blank">Download and print<span></span></a>
+    </li>
+    
+  </ul>
+</aside>
+      <main>
+        
+
+        <section>
+          <h1>Recent Referrals</h1>
+          <table id="referrals" class="dynamic_data">
+            <tbody><tr>
+              <th>Referrals</th>
+              <th>Status</th>
+              <th>Respond by</th>
+              <th class="view_all"><a href="http://certified.registriastaging.com/referrals">All<span></span></a></th>
+            </tr>
+
+            
+              <tr id="caseHeader_not_available">
+                <td>No recent referrals</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            
+          </tbody></table>
+        </section>
+        <section class="stripe-container">
+          
+          <h1>Updates</h1>
+          <div>
+            <span class="date">December 20, 2013</span>
+            <h1>Get your hands on Nest Protect.</h1>
+            <p>
+              Starting this month, you can buy Nest Protect smoke and CO alarms at special wholesale prices through Nest Certified and from Nest's distribution partners:  
+            </p>
+            <table>
+              <tbody><tr>
+                <td>
+                  <a href="http://www.avad.com/">AVAD</a><br>
+                  <a href="http://www.carrierenterprise.com/">Carrier Enterprise</a><br>
+                  <a href="http://www.energyfederation.org/consumer/default.php">EFI</a><br>
+                  <a href="http://www.energysquad.com/">Energy Squad</a><br>
+                  <a href="http://www.famous-supply.com/">Famous Supply</a><br>
+                </td>
+                <td>
+                  <a href="http://www.gensco.com/">Gensco</a><br>
+                  <a href="http://gemaire.com/">Gemaire Distribution</a><br>
+                  <a href="http://gemaire.com/HeatingAndCoolingSupply/">Heating &amp; Cooling Supply</a><br>
+                  <a href="http://www.homans.com/">Homan's</a><br>
+                  <a href="http://www.wwgtotaline.ca/en/">WWG Totaline</a><br>
+                </td>
+              </tr>
+            </tbody></table>
+            <p>Just review the updated sales agreement to start selling Nest Protect and expanding to a new, year-round business.</p>
+            <a href="http://certified.registriastaging.com/review_reseller_agreement">Review the sales agreement<span></span></a>
+          </div>
+
+          
+          <div>
+            <span class="date">November 19, 2013</span>
+            <h1>Update pricing info to get more customers.</h1>
+            <p>
+              When customers search for professionals near them, they can contact you right from our Certified finder. The companies who have complete pricing and company details shoot to the top, then get prioritized by customer reviews. Move up in our finder by completing your profile. 
+            </p>
+            <a href="http://certified.registriastaging.com/finder_installation_pricing">Update your pricing<span></span></a>
+          </div>
+          
+
+          
+
+          <div>
+            <span class="date">November 19, 2013</span>
+            <h1>CO protection for your customers.</h1>
+            <p>
+              When your customers have both a Nest Thermostat and Nest Protect, they have extra protection against carbon monoxide poisoning. If Nest Protect's CO alarm goes off, the Nest Thermostat will automatically turn off fossil fuel heating systems without needing additional wiring.  Some states already require you to put in a CO alarm when installing a new furnace. Nest Protect and the Nest Thermostat can be easily connected through the Nest app to save time and keep your customers safe.   Remember, if your customers love their Nest Thermostat, they'll probably love Nest Protect. And you can install smoke alarms year-round.   
+            </p>
+          </div>
+          <div>
+            <span class="date">November 19, 2013</span>
+            <h1>Nest Protect Safety Letter</h1>
+            <p>
+              This letter clarifies cetain return requirements for resellers of Nest Protect to ensure the safety and quality of the product.  
+            </p>
+      <span class="links"><a class="registria_link" href="http://certified.registriastaging.com/resources/Authorized_Reseller_Safety_Letter.pdf" target="_blank">Read the Authorized Reseller Safety Letter<span></span></a><br></span>
+          </div>
+
+          <div>
+            <span class="date">November 19, 2013</span>
+            <h1>Software update for Nest Thermostat and app.</h1>
+            <p>
+              We're updating both the Nest Thermostat and the Nest app this week.  New features include
+            </p>
+            <ul class="copy-list">
+              <li>
+                Quiet Time is a brand new 4.0 feature that allows homeowners to set times when noisy stand-alone humidifiers and dehumidifiers won't turn on, regardless of the humidity level. That helps preserve the most precious thing in many homes: the kids' nap time.
+              </li>
+              <li> 
+                Heat Pump Balance improvements include more efficient Balanced and Comfort settings and pre-heating using multiple stages of heat.
+              </li>
+              <li> 
+                Our thermostat can now activate second and third stage heat more efficiently to avoid using auxiliary heat while maintaining comfort.
+              </li>
+              <li>
+                Nest will do a better job switching between fuel types in dual fuel systems to protect heating systems and provide more consistent heat.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <span class="date">October 8, 2013</span>
+            <h1>Meet the Nest Protect smoke and CO alarm</h1>
+            <p>
+              As a Nest Certified Professional, you’re vital to our business. So we wanted to make sure you were the first to know that our business, and yours, is growing:
+            </p>
+            <p>
+              Today, we’re reinventing the smoke alarm.
+            </p>
+            <p>
+              The Nest Protect smoke and carbon monoxide alarm quiets down when you wave, messages your phone when its batteries run low and tells you where the danger is in a human voice. It also connects to the Nest Learning Thermostat which will automatically turn off a gas furnace to prevent carbon monoxide poisoning.
+            </p>
+            <strong>Why should you care?</strong>
+            <p>
+              Your customers are going to ask you about Nest Protect. They’re going to want it in their homes along with their new Nest Thermostat. So make safety a part of your business.
+            </p>
+            <p>
+              Smoke and CO alarms are needed year-round and some states even require them when new furnaces are put in. And Nest Protect will deliver the same delightful experience, satisfied customers and new referrals as the thermostat.
+            </p>
+            <p>
+              You can pre-order Nest Protect now to try it out for yourself and soon you’ll be able to install it.
+            </p>
+            <a href="http://www.nest.com/smoke-co-alarm/life-with-nest-protect">Meet Nest Protect<span></span></a>
+          </div>
+
+          
+          
+        </section>
+
+        <!-- To prevent form errors -->
+        <span id="registria_form_placeholder"><form id="registria_form" enctype="multipart/form-data" novalidate="novalidate"><input name="extra_info" type="hidden" value="" class="registria_field"><input name="authenticity_token" type="hidden" value="HOC6gVL7EUUTRKJi/1rnTA+lEo8waLpM4VhBbSP1ZEQ=" class="registria_field"></form></span>
+
+      </main>
+
+      <div class="clear"></div>
+    </div> <!-- End Wrapper -->
+
+
+    <div id="footer-spacer"></div>
+    <footer>
+  
+
+  
+  <a href="http://certified.registriastaging.com/landing" class="logo"></a>
+  
+
+  <nav>
+    <ul>
+      <li><a href="http://nest.com/responsibility/">RESPONSIBILITY</a></li>
+      <li><a href="http://community.nest.com/welcome">Community</a></li>
+      <li><a href="http://nest.com/press/">PRESS</a></li>
+      <li><a href="http://nest.com/">nest.com</a></li>
+      <li><a href="http://nest.com/contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <small class="copywright">
+    © 2014 Nest Labs&nbsp;&nbsp;&nbsp;<a href="http://nest.com/legal/privacy-statement/" class="terms-links">Terms and privacy</a>&nbsp;&nbsp;&nbsp;<a href="https://nest.com/letter-from-the-ceo" class="terms-links">Nest Protect Safety Notice</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="terms-links">VIP SUPPORT (855) 847-6378</span>
+  </small>
+
+  
+
+  <script type="text/javascript"> adroll_adv_id = "WWHJVCQ6XBF2XKX7QPV6LE"; adroll_pix_id = "KGZXPFXMWRH4HC3BT7ODTT"; (function () {
+    var oldonload = window.onload; window.onload = function(){
+    __adroll_loaded=true;
+    var scr = document.createElement("script");
+    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" :
+    "http://a.adroll.com");
+    scr.setAttribute('async', 'true');
+    scr.type = "text/javascript";
+    scr.src = host + "/j/roundtrip.js"; ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr); if(oldonload){oldonload()}};
+    }());
+  </script>
+</footer>
+  </div>
+
+
+</body><div></div><div></div></html>
