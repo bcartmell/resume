@@ -680,7 +680,7 @@ table .details div {
 }
 
 table .details span {
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664542/system/images/2569/original/solid_arrow_right.png) 50% 50% no-repeat;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664542/system/images/2569/original/solid_arrow_right.png) 50% 50% no-repeat;
   display: inline-block;
   height: 10px;
   width: 6px;
@@ -1174,15 +1174,15 @@ header .certified-nav .buy a {
 }
 
 footer .certified-nav .buy {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664379/system/images/2550/original/white_cart.png) left 2px no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664379/system/images/2550/original/white_cart.png) left 2px no-repeat;
 }
 
 .certified-nav .buy:hover {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png) left 2px no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png) left 2px no-repeat;
 }
 
 footer .certified-nav .buy.current {
-  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png);
+  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png);
 }
 
 footer .certified-nav {
@@ -1382,7 +1382,7 @@ header #loginForm input[type="checkbox"]+label,
 
 header #loginForm input[type="checkbox"]:checked+label,
 #hide#fromIE8 {
-  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png);
+  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png);
 }
 
 header #loginForm a {
@@ -1490,7 +1490,7 @@ label {
 input[type="submit"] {
   font-family: "FullerSans", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', Helvetica, Arial, sans-serif;
   font-weight: bold;
-  background: #00B3DA url(//d191pq10p2mccv.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png) 80% 47% no-repeat;
+  background: #00B3DA url(//d27js68pcj6627.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png) 80% 47% no-repeat;
   border: none;
   color: white;
   display: block;
@@ -1572,7 +1572,7 @@ input[type="checkbox"]+label:hover,
 input[type="checkbox"]+label.invalid[generated="true"]+label:hover,
 #registria_form input[type="checkbox"]+label.invalid[generated="true"]+label:hover,
 #hide#fromIE8  {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
   color: #555555;
 }
 
@@ -1633,7 +1633,7 @@ input[type="radio"]~label:hover,
 input[type="radio"]~label:hover,
 #registria_form input[type="radio"]~label:hover,
 #hide#fromIE8 {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
 }
 
 input[type="radio"]:checked+label,
@@ -1772,7 +1772,7 @@ input[type="file"] {
 
 /* buttons */
 #next_button {
-  background: #FFA02F url(//d191pq10p2mccv.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png) 85% 49% no-repeat;
+  background: #FFA02F url(//d27js68pcj6627.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png) 85% 49% no-repeat;
   border: none;
   border-radius: 30px;
   color: #ffffff;
@@ -1797,7 +1797,7 @@ input[type="file"] {
 
 #next_button:hover,
 #next_button:focus {
-  background: #3D4247 url(//d191pq10p2mccv.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png) 90% 49% no-repeat;
+  background: #3D4247 url(//d27js68pcj6627.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png) 90% 49% no-repeat;
   outline: none;
 }
 
@@ -1859,7 +1859,7 @@ textarea {
 }
 
 #registria_form select {
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664345/system/images/1525/original/select-drop-down.png) right center no-repeat white;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664345/system/images/1525/original/select-drop-down.png) right center no-repeat white;
   border-radius: 0;
 }
 
@@ -1988,13 +1988,13 @@ aside section.organization_overvew h1 a:hover {
 }
 
 .star_rating span.lit {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664605/system/images/2650/original/star.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664605/system/images/2650/original/star.png);
 }
 
 .star_rating span.partial:after {
   content: ' ';
 
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664605/system/images/2650/original/star.png) left center no-repeat #fff;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664605/system/images/2650/original/star.png) left center no-repeat #fff;
   height: 27px;
   display: block;
   overflow: hidden;
@@ -2052,7 +2052,7 @@ aside section.organization_overvew h1 a:hover {
 
 .points_indicator .point-meter {
   background: #F0F3F5;
-  /* url(//d191pq10p2mccv.cloudfront.net/rel-1447664616/system/images/2657/original/points-indicator.png) left top no-repeat; */
+  /* url(//d27js68pcj6627.cloudfront.net/rel-1447664616/system/images/2657/original/points-indicator.png) left top no-repeat; */
 
   height: 30px;
   margin: 40px 0 20px 0;
@@ -2085,7 +2085,7 @@ aside section.organization_overvew h1 a:hover {
 
 .point-meter .point-meter-lights {
   background: #C0C0C0;
-  /* url(//d191pq10p2mccv.cloudfront.net/rel-1447664616/system/images/2657/original/points-indicator.png) left bottom no-repeat; */
+  /* url(//d27js68pcj6627.cloudfront.net/rel-1447664616/system/images/2657/original/points-indicator.png) left bottom no-repeat; */
 
   height: 100%;
   overflow: visible !important;
@@ -2235,7 +2235,7 @@ aside #forms_steps li.current ~ li {
 
 /* Watch the pros */
 #galleryStage .watch_pros {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664421/system/images/2639/original/gallery_play_button.png) left center no-repeat transparent;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664421/system/images/2639/original/gallery_play_button.png) left center no-repeat transparent;
   border-radius: 40px 0 0 40px;
   display:block;
   height: 77px;
@@ -2614,7 +2614,7 @@ img.vjs-poster {
 }
 
 .videoPoster span {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664531/system/images/2674/original/big_play_button_translucent.png) center center no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664531/system/images/2674/original/big_play_button_translucent.png) center center no-repeat;
   margin-top: -59px;
   margin-left: -59px;
   height: 117px;
@@ -3013,7 +3013,7 @@ section.stripe-container>div p {
 
 .certifiedProduct .increment,
 .certifiedProduct .increment4 {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664309/system/images/1450/original/increment.png) top left no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664309/system/images/1450/original/increment.png) top left no-repeat;
   cursor: pointer;
   height: 16px;
   left: 50px;
@@ -3070,7 +3070,7 @@ section.stripe-container>div p {
 
 #credit_card_selection tr:hover input[type="radio"]+label,
 #hide#fromIE8  {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
 }
 
 #credit_card_selection tr:hover input[type="radio"]:checked+label,
@@ -3222,7 +3222,7 @@ table#shipping_method th {
 
 table#shipping_method tr:hover input[type="radio"]+label,
 #hide#fromIE8  {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png);
   color: #555555;
 }
 
@@ -3323,11 +3323,11 @@ table#shipping_method tr:hover td {
 }
 
 .wrapper #blog_post h1#selling-your-first-nest {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664302/system/images/2683/original/selling-your-first-nest1.png) left top no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664302/system/images/2683/original/selling-your-first-nest1.png) left top no-repeat;
 }
 
 .wrapper #blog_post h1#try-something-new {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664424/system/images/2694/original/try-something-new1.png) left top no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664424/system/images/2694/original/try-something-new1.png) left top no-repeat;
 }
 
 .wrapper #blog_post h1#make_the_most_of_utility_rebates {
@@ -3436,7 +3436,7 @@ footer {
 }
 
 footer .logo {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664353/system/images/1422/original/logo_grey.jpeg) no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664353/system/images/1422/original/logo_grey.jpeg) no-repeat;
   display: block;
   height: 34px;
   width: 82px;
@@ -3572,16 +3572,16 @@ footer .validation-window {
 /* Preload images */
 /* because sprites with transitions slide instead of fade  */
 body:after {
-    content: url(//d27js68pcj6627.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png)
-             url(//d191pq10p2mccv.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png)
-             url(//d191pq10p2mccv.cloudfront.net/rel-1447664481/system/images/2560/original/mail_icon_hover.png)
-             url(//d27js68pcj6627.cloudfront.net/rel-1447664601/system/images/1865/original/arrow-right-darkish-gray.png)
-             url(//d27js68pcj6627.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png)
+    content: url(//d191pq10p2mccv.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png)
+             url(//d27js68pcj6627.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png)
+             url(//d27js68pcj6627.cloudfront.net/rel-1447664481/system/images/2560/original/mail_icon_hover.png)
+             url(//d191pq10p2mccv.cloudfront.net/rel-1447664601/system/images/1865/original/arrow-right-darkish-gray.png)
+             url(//d191pq10p2mccv.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png)
              url(//d191pq10p2mccv.cloudfront.net/rel-1447664423/system/images/2561/original/radioBackground.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664500/system/images/2587/original/select-drop-down-hover.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664511/system/images/2589/original/checkbox_unchecked.png)
-             url(//d191pq10p2mccv.cloudfront.net/rel-1447664609/system/images/2590/original/checkbox_checked.png)
-             url(//d191pq10p2mccv.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png)
+             url(//d27js68pcj6627.cloudfront.net/rel-1447664609/system/images/2590/original/checkbox_checked.png)
+             url(//d27js68pcj6627.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png)
              url(//d191pq10p2mccv.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664337/system/images/2571/original/solid_arrow_right_hover.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664299/system/images/2675/original/big_play_button_hover_translucent.png);
@@ -3594,153 +3594,3 @@ a[href^="mailto:"].imitationNextButton,
 a[href^="mailto:"].imitationNextButton:hover { 
   color: #ffffff; 
 }
-
-
-.responsive-modal-background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 10000;
-  background-color: transparent;
-  background-color: rgba(241, 245, 247, 0.5);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80F1F5F7,endColorstr=#80F1F5F7);
-  zoom: 1; }
-
-.responsive-modal-container {
-  position: absolute;
-  z-index: 10001;
-  width: 80%;
-  height: 80%;
-  top: 10%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%; }
-
-.responsive-modal-content {
-  max-height: 400px;
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  background: #FFFFFF;
-  position: absolute;
-  -webkit-box-shadow: #dbe3e5 2px 2px 10px;
-  box-shadow: #dbe3e5 2px 2px 10px;
-  width: 90%;
-  padding: 20px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity 300ms;
-  -moz-transition: opacity 300ms;
-  -o-transition: opacity 300ms;
-  transition: opacity 300ms; }
-  .responsive-modal-content.loading {
-    visibility: hidden;
-    opacity: 0; }
-  .responsive-modal-content .share_buttons {
-    height: 30px; }
-    .responsive-modal-content .share_buttons .fb-like {
-      margin-right: 23px; }
-  .responsive-modal-content iframe {
-    overflow: hidden; }
-
-#distributor_finder {
-  width: 800px;
-  height: 400px;
-  -webkit-font-smoothing: antialiased;
-  color: #8A9298;
-  line-height: 14px;
-  font-size: 12px;
-  }
-  #distributor_finder #widget-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
-    z-index: 10002;
-    background: #ecf2f3;
-    color: #7b858d;
-    cursor: pointer;
-    line-height: 24px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    content: '\d7'; }
-  #distributor_finder .large-header {
-    font-size: 2rem;
-    color: #00AFD8;
-    padding-bottom: 0.5em;
-    line-height: 1.1em;
-    font-weight: normal; }
-  #distributor_finder #distributor_panel {
-    height: 312px;
-    width: 250px;
-    float: left;
-    font-size: 12px;
-    overflow-y: auto; }
-    #distributor_finder #distributor_panel .location-search {
-      background: #FFFFFF;
-      position: absolute;
-      width: 230px; }
-      #distributor_finder #distributor_panel .location-search input {
-        border: 2px solid #acb4bc;
-        padding: 9px;
-        width: 208px;
-        margin-bottom: 9px;
-        margin-top: 0px; }
-    #distributor_finder #distributor_panel .store-list {
-      margin-top: 47px; }
-      #distributor_finder #distributor_panel .store-list li.store div.store {
-        width: 230px;
-        padding: 10px 0 10px 10px;
-        border-bottom: 1px solid #EEEEEE;
-        line-height: 14px;
-        cursor: pointer; }
-        #distributor_finder #distributor_panel .store-list li.store div.store .title {
-          font-weight: bold;
-          color: #00afd8;
-          font-size: 14px; }
-        #distributor_finder #distributor_panel .store-list li.store div.store .phone {
-          font-weight: bold; }
-        #distributor_finder #distributor_panel .store-list li.store div.store .features {
-          border-bottom: none;
-          margin-bottom: 0;
-          margin-top: 0;
-          padding-bottom: 0;
-          width: auto; }
-        #distributor_finder #distributor_panel .store-list li.store div.store:hover {
-          background: #EEEEEE; }
-      #distributor_finder #distributor_panel .store-list .no-stores {
-        display: none; }
-  #distributor_finder #distributor_map {
-    height: 312px;
-    width: 510px; }
-    #distributor_finder #distributor_map div.store {
-      width: 230px;
-      padding: 10px 0 10px 10px;
-      line-height: 14px; }
-      #distributor_finder #distributor_map div.store .title {
-        font-weight: bold;
-        color: #00afd8;
-        font-size: 14px; }
-      #distributor_finder #distributor_map div.store .phone {
-        font-weight: bold; }
-      #distributor_finder #distributor_map div.store .features {
-        border-bottom: none;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        width: auto; }
-      #distributor_finder #distributor_map div.store a {
-        width: 50%;
-        margin-top: 10px;
-        display: inline-block;
-        text-align: center; }
-      #distributor_finder #distributor_map div.store .directions, #distributor_finder #distributor_map div.store .zoomhere, #distributor_finder #distributor_map div.store .streetview {
-        display: none; }

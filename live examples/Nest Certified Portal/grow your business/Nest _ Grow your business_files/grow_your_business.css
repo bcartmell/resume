@@ -662,7 +662,7 @@ table .status.Accepted {
 }
 
 table tr:hover .status.expiring {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664392/system/images/2579/original/warning_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664392/system/images/2579/original/warning_hover.png);
 }
 
 table tr:hover .status.Accepted {
@@ -680,7 +680,7 @@ table .details div {
 }
 
 table .details span {
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664542/system/images/2569/original/solid_arrow_right.png) 50% 50% no-repeat;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664542/system/images/2569/original/solid_arrow_right.png) 50% 50% no-repeat;
   display: inline-block;
   height: 10px;
   width: 6px;
@@ -696,7 +696,7 @@ table .details span {
 }
 
 table tr:hover .details span {
-  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664337/system/images/2571/original/solid_arrow_right_hover.png);
+  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664337/system/images/2571/original/solid_arrow_right_hover.png);
   right: 7px;
 }
 
@@ -1166,7 +1166,7 @@ header .certified-nav a {
 }
 
 header .certified-nav .buy {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664491/system/images/2549/original/orange_cart.png) left 2px no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664491/system/images/2549/original/orange_cart.png) left 2px no-repeat;
 }
 
 header .certified-nav .buy a {
@@ -1371,7 +1371,7 @@ header #loginForm input[type="checkbox"]+label {
 }
 header #loginForm input[type="checkbox"]+label,
 #hide#fromIE8 {
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664423/system/images/2561/original/radioBackground.png) left 50% no-repeat;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664423/system/images/2561/original/radioBackground.png) left 50% no-repeat;
   padding-left: 28px;
 
   -webkit-transition: all 0.2s ease;
@@ -1382,7 +1382,7 @@ header #loginForm input[type="checkbox"]+label,
 
 header #loginForm input[type="checkbox"]:checked+label,
 #hide#fromIE8 {
-  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png);
+  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png);
 }
 
 header #loginForm a {
@@ -1581,7 +1581,7 @@ input[type="checkbox"]:checked+label,
 input[type="checkbox"]:checked+label.invalid[generated="true"]+label,
 #registria_form input[type="checkbox"]:checked+label.invalid[generated="true"]+label,
 #hide#fromIE8 {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
   color: #555555;
 }
 
@@ -1640,7 +1640,7 @@ input[type="radio"]:checked+label,
 #registria_form input[type="radio"]:checked+label,
 #registria_form input[type="radio"]:checked+label[generated="true"]+label,
 #hide#fromIE8 {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
   color: #555555;
 }
 
@@ -1897,7 +1897,7 @@ textarea:focus,
 #login_error_message { color: #FFA02F; }
 #registria_form label[generated="true"].invalid,
 #registria_form label[generated="true"].invalid:hover {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664417/system/images/1556/original/required.png) left 50% no-repeat #ffffff;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664417/system/images/1556/original/required.png) left 50% no-repeat #ffffff;
   box-shadow: 0 -3px 5px 3px white;
   color: #FFA02F;
   cursor: default;
@@ -1926,7 +1926,7 @@ aside {
 }
 
 aside #user_greeting {
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664498/system/images/2551/original/user_badge.png) left top no-repeat;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664498/system/images/2551/original/user_badge.png) left top no-repeat;
   display: block;
   line-height: 30px;
   margin-bottom: 10px;
@@ -1980,7 +1980,7 @@ aside section.organization_overvew h1 a:hover {
 
 .star_rating span {
   display: inline-block;
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664348/system/images/2651/original/star_disabled.png) left center no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664348/system/images/2651/original/star_disabled.png) left center no-repeat;
   margin-right: -3px;
   position: relative;
   height: 27px;
@@ -2235,7 +2235,7 @@ aside #forms_steps li.current ~ li {
 
 /* Watch the pros */
 #galleryStage .watch_pros {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664421/system/images/2639/original/gallery_play_button.png) left center no-repeat transparent;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664421/system/images/2639/original/gallery_play_button.png) left center no-repeat transparent;
   border-radius: 40px 0 0 40px;
   display:block;
   height: 77px;
@@ -2260,7 +2260,7 @@ aside #forms_steps li.current ~ li {
 
 
 #galleryStage .watch_pros:hover {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664451/system/images/2642/original/gallery_play_button_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664451/system/images/2642/original/gallery_play_button_hover.png);
   color: #555;
 }
 
@@ -2833,7 +2833,7 @@ section.stripe-container>div p {
 }
 
 .feature_list li {
-  background: url('//d191pq10p2mccv.cloudfront.net/rel-1447664512/system/images/2404/original/divider.png') right bottom no-repeat;
+  background: url('//d27js68pcj6627.cloudfront.net/rel-1447664512/system/images/2404/original/divider.png') right bottom no-repeat;
   line-height: 110px;
   padding-bottom: 2px;
   min-height: 106px;
@@ -3013,7 +3013,7 @@ section.stripe-container>div p {
 
 .certifiedProduct .increment,
 .certifiedProduct .increment4 {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664309/system/images/1450/original/increment.png) top left no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664309/system/images/1450/original/increment.png) top left no-repeat;
   cursor: pointer;
   height: 16px;
   left: 50px;
@@ -3025,7 +3025,7 @@ section.stripe-container>div p {
 
 .certifiedProduct .decrement,
 .certifiedProduct .decrement4 {
-  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664571/system/images/1451/original/decrement.png) top left no-repeat;
+  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664571/system/images/1451/original/decrement.png) top left no-repeat;
   cursor: pointer;
   height: 16px;
   left: 50px;
@@ -3075,7 +3075,7 @@ section.stripe-container>div p {
 
 #credit_card_selection tr:hover input[type="radio"]:checked+label,
 #hide#fromIE8  {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
 }
 
 #credit_card_selection table {
@@ -3143,7 +3143,7 @@ section.stripe-container>div p {
 
 #new-payment-method label[generated="true"].invalid,
 #new-payment-method label[generated="true"].invalid:hover {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664417/system/images/1556/original/required.png) left 50% no-repeat #f0f3f5;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664417/system/images/1556/original/required.png) left 50% no-repeat #f0f3f5;
   box-shadow: 0 -3px 5px 3px #f0f3f5;
   top:0;
 }
@@ -3228,7 +3228,7 @@ table#shipping_method tr:hover input[type="radio"]+label,
 
 table#shipping_method tr:hover input[type="radio"]:checked+label,
 #hide#fromIE8  {
-  background-image: url(//d191pq10p2mccv.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
+  background-image: url(//d27js68pcj6627.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png);
 }
 
 table#shipping_method .selected_ship_method {
@@ -3319,15 +3319,15 @@ table#shipping_method tr:hover td {
 }
 
 .wrapper #blog_post h1#reaching-new-customers {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664556/system/images/2682/original/reaching-new-customers.png) left top no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664556/system/images/2682/original/reaching-new-customers.png) left top no-repeat;
 }
 
 .wrapper #blog_post h1#selling-your-first-nest {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664302/system/images/2683/original/selling-your-first-nest1.png) left top no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664302/system/images/2683/original/selling-your-first-nest1.png) left top no-repeat;
 }
 
 .wrapper #blog_post h1#try-something-new {
-  background: url(//d27js68pcj6627.cloudfront.net/rel-1447664424/system/images/2694/original/try-something-new1.png) left top no-repeat;
+  background: url(//d191pq10p2mccv.cloudfront.net/rel-1447664424/system/images/2694/original/try-something-new1.png) left top no-repeat;
 }
 
 .wrapper #blog_post h1#make_the_most_of_utility_rebates {
@@ -3575,15 +3575,15 @@ body:after {
     content: url(//d27js68pcj6627.cloudfront.net/rel-1447664570/system/images/2558/original/dark_cart.png)
              url(//d191pq10p2mccv.cloudfront.net/rel-1447664376/system/images/1504/original/arrow-right-white.png)
              url(//d191pq10p2mccv.cloudfront.net/rel-1447664481/system/images/2560/original/mail_icon_hover.png)
-             url(//d27js68pcj6627.cloudfront.net/rel-1447664601/system/images/1865/original/arrow-right-darkish-gray.png)
-             url(//d27js68pcj6627.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png)
-             url(//d191pq10p2mccv.cloudfront.net/rel-1447664423/system/images/2561/original/radioBackground.png)
+             url(//d191pq10p2mccv.cloudfront.net/rel-1447664601/system/images/1865/original/arrow-right-darkish-gray.png)
+             url(//d191pq10p2mccv.cloudfront.net/rel-1447664374/system/images/2562/original/radioBackground_checked.png)
+             url(//d27js68pcj6627.cloudfront.net/rel-1447664423/system/images/2561/original/radioBackground.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664500/system/images/2587/original/select-drop-down-hover.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664511/system/images/2589/original/checkbox_unchecked.png)
              url(//d191pq10p2mccv.cloudfront.net/rel-1447664609/system/images/2590/original/checkbox_checked.png)
              url(//d191pq10p2mccv.cloudfront.net/rel-1447664391/system/images/2591/original/checkbox_unchecked_hover.png)
-             url(//d191pq10p2mccv.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png)
-             url(//d27js68pcj6627.cloudfront.net/rel-1447664337/system/images/2571/original/solid_arrow_right_hover.png)
+             url(//d27js68pcj6627.cloudfront.net/rel-1447664298/system/images/2592/original/checkbox_checked_hover.png)
+             url(//d191pq10p2mccv.cloudfront.net/rel-1447664337/system/images/2571/original/solid_arrow_right_hover.png)
              url(//d27js68pcj6627.cloudfront.net/rel-1447664299/system/images/2675/original/big_play_button_hover_translucent.png);
              
     display: none;
@@ -3594,6 +3594,507 @@ a[href^="mailto:"].imitationNextButton,
 a[href^="mailto:"].imitationNextButton:hover { 
   color: #ffffff; 
 }
+
+
+/*
+VideoJS Default Styles (http://videojs.com)
+Version GENERATED_AT_BUILD
+*/
+
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================ */
+/* When loading the player, the video tag is replaced with a DIV,
+   that will hold the video tag or object tag for other playback methods.
+   The div contains the video playback element (Flash or HTML5) and controls, and sets the width and height of the video.
+
+   ** If you want to add some kind of border/padding (e.g. a frame), or special positioning, use another containing element.
+   Otherwise you risk messing up control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #000; position: relative; padding: 0;
+
+  /* Start with 10px for base font size so other dimensions can be em based and easily calculable. */
+  font-size: 10px;
+
+  /* Allow poster to be vertially aligned. */
+  vertical-align: middle;
+  /*  display: table-cell; */ /*This works in Safari but not Firefox.*/
+}
+
+/* Playback technology elements expand to the width/height of the containing div. <video> or <object> */
+.video-js .vjs-tech { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when checking fullScreenEnabled. */
+.video-js:-moz-full-screen { position: absolute; }
+
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0; margin: 0;
+  height: 100%; overflow-y: auto; /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+}
+.video-js.vjs-fullscreen {
+  position: fixed; overflow: hidden; z-index: 1000; left: 0; top: 0; bottom: 0; right: 0; width: 100% !important; height: 100% !important;
+  _position: absolute; /* IE6 Full-window (underscore hack) */
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important; height: 100% !important;
+}
+
+/* Poster Styles */
+.vjs-poster {
+  margin: 0 auto; padding: 0; cursor: pointer;
+
+  /* Scale with the size of the player div. Works when poster is vertically shorter, but stretches when it's less wide. */
+  position: relative; width: 100%; max-height: 100%;
+}
+
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display { text-align: center; position: absolute; bottom: 4em; left: 1em; right: 1em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+/* Individual tracks */
+.video-js .vjs-text-track {
+  display: none; color: #fff; font-size: 1.4em; text-align: center; margin-bottom: 0.1em;
+  /* Transparent black background, or fallback to all black (IE6) */
+  background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.50);
+}
+.video-js .vjs-subtitles { color: #fff; }
+.video-js .vjs-captions { color: #fc6; }
+.vjs-tt-cue { display: block; }
+
+/* Fading sytles, used to fade control bar. */
+.vjs-fade-in {
+  visibility: visible !important; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1 !important;
+
+  -webkit-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -ms-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  transition: visibility 0s linear 0s, opacity 0.3s linear;
+}
+.vjs-fade-out {
+  visibility: hidden !important;
+  opacity: 0 !important;
+
+  -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -moz-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -ms-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -o-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+}
+
+/* DEFAULT SKIN (override in another file to create new skins)
+================================================================================
+Instead of editing this file, I recommend creating your own skin CSS file to be included after this file,
+so you can upgrade to newer versions easier. You can remove all these styles by removing the 'vjs-default-skin' class from the tag. */
+
+/* The default control bar. Created by bar.js */
+.vjs-default-skin .vjs-controls {
+  position: absolute;
+  bottom: 0; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  left: 0; right: 0; /* 100% width of div */
+  margin: 0; padding: 0; /* Controls are absolutely position, so no padding necessary */
+  height: 2.6em; /* Including any margin you want above or below control items */
+  color: #fff; border-top: 1px solid #404040;
+
+  /* CSS Gradient */
+  /* Can use the Ultimate CSS Gradient Generator: http://www.colorzilla.com/gradient-editor/ */
+  background: #242424; /* Old browsers */
+  background: -moz-linear-gradient(top, #242424 50%, #1f1f1f 50%, #171717 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(50%,#242424), color-stop(50%,#1f1f1f), color-stop(100%,#171717)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #242424 50%,#1f1f1f 50%,#171717 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #242424 50%,#1f1f1f 50%,#171717 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #242424 50%,#1f1f1f 50%,#171717 100%); /* IE10+ */
+  /* Filter was causing a lot of weird issues in IE. Elements would stop showing up, or other styles would break. */
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#171717',GradientType=0 );*/ /* IE6-9 */
+  background: linear-gradient(top, #242424 50%,#1f1f1f 50%,#171717 100%); /* W3C */
+
+  /* Start hidden and with 0 opacity. Opacity is used to fade in modern browsers. */
+  /* Can't use display block to hide initially because widths of slider handles aren't calculated and avaialbe for positioning correctly. */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* General styles for individual controls. */
+.vjs-default-skin .vjs-control {
+  position: relative; float: left;
+  text-align: center; margin: 0; padding: 0;
+  height: 2.6em; width: 2.6em;
+}
+
+.vjs-default-skin .vjs-control:focus {
+  outline: 0;
+/*  background-color: #555;*/
+}
+
+/* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
+.vjs-default-skin .vjs-control-text { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+
+/* Play/Pause
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-play-control { width: 5em; cursor: pointer !important; }
+/* Play Icon */
+.vjs-default-skin.vjs-paused .vjs-play-control div { width: 15px; height: 17px; background: url('/system/scripts/videojs/video-js.png'); margin: 0.5em auto 0; }
+.vjs-default-skin.vjs-playing .vjs-play-control div { width: 15px; height: 17px; background: url('/system/scripts/videojs/video-js.png') -25px 0; margin: 0.5em auto 0; }
+
+/* Rewind
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-rewind-control { width: 5em; cursor: pointer !important; }
+.vjs-default-skin .vjs-rewind-control div { width: 19px; height: 16px; background: url('/system/scripts/videojs/video-js.png'); margin: 0.5em auto 0; }
+
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-mute-control { width: 3.8em; cursor: pointer !important; float: right; }
+.vjs-default-skin .vjs-mute-control div { width: 22px; height: 16px; background: url('/system/scripts/videojs/video-js.png') -75px -25px; margin: 0.5em auto 0; }
+.vjs-default-skin .vjs-mute-control.vjs-vol-0 div { background: url('/system/scripts/videojs/video-js.png') 0 -25px; }
+.vjs-default-skin .vjs-mute-control.vjs-vol-1 div { background: url('/system/scripts/videojs/video-js.png') -25px -25px; }
+.vjs-default-skin .vjs-mute-control.vjs-vol-2 div { background: url('/system/scripts/videojs/video-js.png') -50px -25px; }
+
+
+.vjs-default-skin .vjs-volume-control { width: 5em; float: right; }
+.vjs-default-skin .vjs-volume-bar {
+  position: relative; width: 5em; height: 0.6em; margin: 1em auto 0; cursor: pointer !important;
+
+  -moz-border-radius: 0.3em; -webkit-border-radius: 0.3em; border-radius: 0.3em;
+
+  background: #666;
+  background: -moz-linear-gradient(top, #333, #666);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#666));
+  background: -webkit-linear-gradient(top, #333, #666);
+  background: -o-linear-gradient(top, #333, #666);
+  background: -ms-linear-gradient(top, #333, #666);
+  background: linear-gradient(top, #333, #666);
+}
+.vjs-default-skin .vjs-volume-level {
+  position: absolute; top: 0; left: 0; height: 0.6em;
+
+  -moz-border-radius: 0.3em; -webkit-border-radius: 0.3em; border-radius: 0.3em;
+
+  background: #fff;
+  background: -moz-linear-gradient(top, #fff, #ccc);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+  background: -webkit-linear-gradient(top, #fff, #ccc);
+  background: -o-linear-gradient(top, #fff, #ccc);
+  background: -ms-linear-gradient(top, #fff, #ccc);
+  background: linear-gradient(top, #fff, #ccc);
+}
+.vjs-default-skin .vjs-volume-handle {
+  position: absolute; top: -0.2em; width: 0.8em; height: 0.8em; background: #ccc; left: 0;
+  border: 1px solid #fff;
+  -moz-border-radius: 0.6em; -webkit-border-radius: 0.6em; border-radius: 0.6em;
+}
+
+/* Progress
+-------------------------------------------------------------------------------- */
+.vjs-default-skin div.vjs-progress-control {
+  position: absolute;
+  left: 4.8em; right: 4.8em; /* Leave room for time displays. */
+  height: 1.0em; width: auto;
+  top: -1.3em; /* Set above the rest of the controls. And leave room for 2px of borders (progress bottom and controls top). */
+  border-bottom: 1px solid #1F1F1F;
+  border-top: 1px solid #222;
+
+  /* CSS Gradient */
+  background: #333;
+  background: -moz-linear-gradient(top, #222, #333);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#333));
+  background: -webkit-linear-gradient(top, #222, #333);
+  background: -o-linear-gradient(top, #333, #222);
+  background: -ms-linear-gradient(top, #333, #222);
+  background: linear-gradient(top, #333, #222);
+
+
+  /* 1px top shadow */
+/*  -webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15);*/
+}
+
+/* Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-default-skin .vjs-progress-holder {
+  position: relative; cursor: pointer !important; /*overflow: hidden;*/
+  padding: 0; margin: 0; /* Placement within the progress control item */
+  height: 1.0em;
+  -moz-border-radius: 0.6em; -webkit-border-radius: 0.6em; border-radius: 0.6em;
+
+  /* CSS Gradient */
+  background: #111;
+  background: -moz-linear-gradient(top, #111, #262626);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#111), to(#262626));
+  background: -webkit-linear-gradient(top, #111, #262626);
+  background: -o-linear-gradient(top, #111, #262626);
+  background: -ms-linear-gradient(top, #111, #262626);
+  background: linear-gradient(top, #111, #262626);
+}
+.vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress { /* Progress Bars */
+  position: absolute; display: block; height: 1.0em; margin: 0; padding: 0;
+  left: 0; top: 0; /*Needed for IE6*/
+  -moz-border-radius: 0.6em; -webkit-border-radius: 0.6em; border-radius: 0.6em;
+
+  /*width: 0;*/
+}
+
+.vjs-default-skin .vjs-play-progress {
+  /* CSS Gradient. */
+  background: #fff; /* Old browsers */
+  background: -moz-linear-gradient(top, #fff 0%, #d6d6d6 50%, #fff 100%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%,#fff), color-stop(50%,#d6d6d6), color-stop(100%,#fff));
+  background: -webkit-linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
+  background: -o-linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
+  background: -ms-linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
+  background: linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
+
+  background: #efefef;
+  background: -moz-linear-gradient(top, #efefef 0%, #f5f5f5 50%, #dbdbdb 50%, #f1f1f1 100%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%,#efefef), color-stop(50%,#f5f5f5), color-stop(50%,#dbdbdb), color-stop(100%,#f1f1f1));
+  background: -webkit-linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
+  background: -o-linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
+  background: -ms-linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#f1f1f1',GradientType=0 );
+  background: linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
+}
+.vjs-default-skin .vjs-load-progress {
+  opacity: 0.8;
+
+  /* CSS Gradient */
+  background: #666;
+  background: -moz-linear-gradient(top, #666, #333);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#333));
+  background: -webkit-linear-gradient(top, #666, #333);
+  background: -o-linear-gradient(top, #666, #333);
+  background: -ms-linear-gradient(top, #666, #333);
+  background: linear-gradient(top, #666, #333);
+}
+
+.vjs-default-skin div.vjs-seek-handle {
+  position: absolute;
+  width: 16px; height: 16px; /* Match img pixles */
+  margin-top: -0.3em;
+  left: 0; top: 0; /*Needed for IE6*/
+
+  background: url('/system/scripts/videojs/video-js.png') 0 -50px;
+  /* CSS Curved Corners. Needed to make shadows curved. */
+  -moz-border-radius: 0.8em; -webkit-border-radius: 0.8em; border-radius: 0.8em;
+  /* CSS Shadows */
+  -webkit-box-shadow: 0 2px 4px 0 #000; -moz-box-shadow: 0 2px 4px 0 #000; box-shadow: 0 2px 4px 0 #000;
+}
+/* Time Display
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-time-controls {
+  position: absolute;
+  right: 0;
+  height: 1.0em; width: 4.8em;
+  top: -1.3em;
+  border-bottom: 1px solid #1F1F1F;
+  border-top: 1px solid #222;
+  background-color: #333;
+
+  font-size: 1em; line-height: 1.0em; font-weight: normal; font-family: Helvetica, Arial, sans-serif;
+
+  background: #333;
+  background: -moz-linear-gradient(top, #222, #333);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#333));
+  background: -webkit-linear-gradient(top, #222, #333);
+  background: -o-linear-gradient(top, #333, #222);
+  background: -ms-linear-gradient(top, #333, #222);
+  background: linear-gradient(top, #333, #222);
+
+  /* 1px top shadow */
+/*  -webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15);*/
+}
+
+.vjs-default-skin .vjs-current-time { left: 0; }
+
+.vjs-default-skin .vjs-duration { right: 0; display: none; }
+.vjs-default-skin .vjs-remaining-time { right: 0; }
+
+.vjs-time-divider { display:none; }
+
+.vjs-default-skin .vjs-time-control { font-size: 1em; line-height: 1; font-weight: normal; font-family: Helvetica, Arial, sans-serif; }
+.vjs-default-skin .vjs-time-control span { line-height: 25px; /* Centering vertically */ }
+
+/* Fullscreen
+-------------------------------------------------------------------------------- */
+.vjs-secondary-controls { float: right; }
+
+.vjs-default-skin .vjs-fullscreen-control { width: 3.8em; cursor: pointer !important; float: right; }
+.vjs-default-skin .vjs-fullscreen-control div { width: 16px; height: 16px; background: url('/system/scripts/videojs/video-js.png') -50px 0; margin: 0.5em auto 0; }
+
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control div { background: url('/system/scripts/videojs/video-js.png') -75px 0; }
+
+
+/* Big Play Button (at start)
+---------------------------------------------------------*/
+.vjs-default-skin .vjs-big-play-button {
+  display: block; /* Start hidden */ z-index: 2;
+  position: absolute; top: 50%; left: 50%; width: 8.0em; height: 8.0em; margin: -42px 0 0 -42px; text-align: center; vertical-align: center; cursor: pointer !important;
+  border: 0.2em solid #fff; opacity: 0.95;
+  -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px;
+
+  background: #454545;
+  background: -moz-linear-gradient(top, #454545 0%, #232323 50%, #161616 50%, #3f3f3f 100%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%,#454545), color-stop(50%,#232323), color-stop(50%,#161616), color-stop(100%,#3f3f3f));
+  background: -webkit-linear-gradient(top, #454545 0%,#232323 50%,#161616 50%,#3f3f3f 100%);
+  background: -o-linear-gradient(top, #454545 0%,#232323 50%,#161616 50%,#3f3f3f 100%);
+  background: -ms-linear-gradient(top, #454545 0%,#232323 50%,#161616 50%,#3f3f3f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454545', endColorstr='#3f3f3f',GradientType=0 );
+  background: linear-gradient(top, #454545 0%,#232323 50%,#161616 50%,#3f3f3f 100%);
+
+  /* CSS Shadows */
+  -webkit-box-shadow: 4px 4px 8px #000; -moz-box-shadow: 4px 4px 8px #000; box-shadow: 4px 4px 8px #000;
+}
+
+.vjs-default-skin div.vjs-big-play-button:hover {
+  -webkit-box-shadow: 0 0 80px #fff; -moz-box-shadow: 0 0 80px #fff; box-shadow: 0 0 80px #fff;
+}
+
+.vjs-default-skin div.vjs-big-play-button span {
+  position: absolute; top: 50%; left: 50%;
+  display: block; width: 35px; height: 42px;
+  margin: -20px 0 0 -15px; /* Using negative margin to center image. */
+  background: url('/system/scripts/videojs/video-js.png') -100px 0;
+}
+
+/* Loading Spinner
+---------------------------------------------------------*/
+/* CSS Spinners by Kilian Valkhof - http://kilianvalkhof.com/2010/css-xhtml/css3-loading-spinners-without-images/ */
+.vjs-loading-spinner {
+  display: none;
+  position: absolute; top: 50%; left: 50%; width: 55px; height: 55px;
+  margin: -28px 0 0 -28px;
+  -webkit-animation-name: rotatethis;
+  -webkit-animation-duration:1s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-name: rotatethis;
+  -moz-animation-duration:1s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+}
+
+@-webkit-keyframes rotatethis {
+  0% {-webkit-transform:scale(0.6) rotate(0deg); }
+  12.5% {-webkit-transform:scale(0.6) rotate(0deg); }
+  12.51% {-webkit-transform:scale(0.6) rotate(45deg); }
+  25% {-webkit-transform:scale(0.6) rotate(45deg); }
+  25.01% {-webkit-transform:scale(0.6) rotate(90deg);}
+  37.5% {-webkit-transform:scale(0.6) rotate(90deg);}
+  37.51% {-webkit-transform:scale(0.6) rotate(135deg);}
+  50% {-webkit-transform:scale(0.6) rotate(135deg);}
+  50.01% {-webkit-transform:scale(0.6) rotate(180deg);}
+  62.5% {-webkit-transform:scale(0.6) rotate(180deg);}
+  62.51% {-webkit-transform:scale(0.6) rotate(225deg);}
+  75% {-webkit-transform:scale(0.6) rotate(225deg);}
+  75.01% {-webkit-transform:scale(0.6) rotate(270deg);}
+  87.5% {-webkit-transform:scale(0.6) rotate(270deg);}
+  87.51% {-webkit-transform:scale(0.6) rotate(315deg);}
+  100% {-webkit-transform:scale(0.6) rotate(315deg);}
+}
+
+@-moz-keyframes rotatethis {
+  0% {-moz-transform:scale(0.6) rotate(0deg);}
+  12.5% {-moz-transform:scale(0.6) rotate(0deg);}
+  12.51% {-moz-transform:scale(0.6) rotate(45deg);}
+  25% {-moz-transform:scale(0.6) rotate(45deg);}
+  25.01% {-moz-transform:scale(0.6) rotate(90deg);}
+  37.5% {-moz-transform:scale(0.6) rotate(90deg);}
+  37.51% {-moz-transform:scale(0.6) rotate(135deg);}
+  50% {-moz-transform:scale(0.6) rotate(135deg);}
+  50.01% {-moz-transform:scale(0.6) rotate(180deg);}
+  62.5% {-moz-transform:scale(0.6) rotate(180deg);}
+  62.51% {-moz-transform:scale(0.6) rotate(225deg);}
+  75% {-moz-transform:scale(0.6) rotate(225deg);}
+  75.01% {-moz-transform:scale(0.6) rotate(270deg);}
+  87.5% {-moz-transform:scale(0.6) rotate(270deg);}
+  87.51% {-moz-transform:scale(0.6) rotate(315deg);}
+  100% {-moz-transform:scale(0.6) rotate(315deg);}
+}
+/* Each circle */
+div.vjs-loading-spinner .ball1 { opacity: 0.12; position:absolute; left: 20px; top: 0px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball2 { opacity: 0.25; position:absolute; left: 34px; top: 6px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball3 { opacity: 0.37; position:absolute; left: 40px; top: 20px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball4 { opacity: 0.50; position:absolute; left: 34px; top: 34px; width: 13px; height: 13px; background: #fff;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 15px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball5 { opacity: 0.62; position:absolute; left: 20px; top: 40px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball6 { opacity: 0.75; position:absolute; left: 6px; top: 34px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball7 { opacity: 0.87; position:absolute; left: 0px; top: 20px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; top: 6px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+/* Menu Buttons (Captions/Subtitles/etc.)
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-menu-button {
+  float: right; margin: 0.2em 0.5em 0 0; padding: 0; width: 3em; height: 2em; cursor: pointer !important;
+
+  border: 1px solid #111; -moz-border-radius: 0.3em; -webkit-border-radius: 0.3em; border-radius: 0.3em;
+
+  background: #4d4d4d;
+  background: -moz-linear-gradient(top,  #4d4d4d 0%, #3f3f3f 50%, #333333 50%, #252525 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d4d4d), color-stop(50%,#3f3f3f), color-stop(50%,#333333), color-stop(100%,#252525));
+  background: -webkit-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+  background: -o-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+  background: -ms-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+  background: linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+}
+/* Button Icon */
+.vjs-default-skin .vjs-menu-button div { background: url('/system/scripts/videojs/video-js.png') 0px -75px no-repeat; width: 16px; height: 16px; margin: 0.2em auto 0; padding: 0; }
+
+/* Button Pop-up Menu */
+.vjs-default-skin .vjs-menu-button ul {
+  display: none; /* Start hidden. Hover will show. */
+  opacity: 0.8;
+  padding: 0; margin: 0;
+  position: absolute; width: 10em; bottom: 2em; max-height: 15em;
+  left: -3.5em; /* Width of menu - width of button / 2 */
+  background-color: #111;
+  border: 2px solid #333;
+  -moz-border-radius: 0.7em; -webkit-border-radius: 1em; border-radius: .5em;
+  -webkit-box-shadow: 0 2px 4px 0 #000; -moz-box-shadow: 0 2px 4px 0 #000; box-shadow: 0 2px 4px 0 #000;
+  overflow: auto;
+}
+
+.vjs-default-skin .vjs-menu-button:focus ul,
+.vjs-default-skin .vjs-menu-button:hover ul { display: block; list-style: none; }
+.vjs-default-skin .vjs-menu-button ul li { list-style: none; margin: 0; padding: 0.3em 0 0.3em 20px; line-height: 1.4em; font-size: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left; }
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected { text-decoration: underline; background: url('/system/scripts/videojs/video-js.png') -125px -50px no-repeat; }
+.vjs-default-skin .vjs-menu-button ul li:focus,
+.vjs-default-skin .vjs-menu-button ul li:hover,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover { background-color: #ccc; color: #111; outline: 0; }
+.vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center; text-transform: uppercase; font-size: 1em; line-height: 2em; padding: 0; margin: 0 0 0.3em 0;
+
+  color: #fff; font-weight: bold;
+
+  cursor: default;
+
+  background: #4d4d4d;
+  background: -moz-linear-gradient(top,  #4d4d4d 0%, #3f3f3f 50%, #333333 50%, #252525 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d4d4d), color-stop(50%,#3f3f3f), color-stop(50%,#333333), color-stop(100%,#252525));
+  background: -webkit-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+  background: -o-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+  background: -ms-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+  background: linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
+}
+
+/* Subtitles Button */
+.vjs-default-skin .vjs-captions-button div { background-position: -25px -75px; }
+.vjs-default-skin .vjs-chapters-button div { background-position: -100px -75px; }
+.vjs-default-skin .vjs-chapters-button ul { width: 20em; left: -8.5em; /* Width of menu - width of button / 2 */ }
 
 
 .responsive-modal-background {
@@ -3744,3 +4245,373 @@ a[href^="mailto:"].imitationNextButton:hover {
         text-align: center; }
       #distributor_finder #distributor_map div.store .directions, #distributor_finder #distributor_map div.store .zoomhere, #distributor_finder #distributor_map div.store .streetview {
         display: none; }
+
+/* Magnific Popup CSS */
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+.mfp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1043;
+  position: fixed;
+  outline: none !important;
+  -webkit-backface-visibility: hidden; }
+
+.mfp-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.mfp-container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.mfp-align-top .mfp-container:before {
+  display: none; }
+
+.mfp-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1045; }
+
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
+  width: 100%;
+  cursor: auto; }
+
+.mfp-ajax-cur {
+  cursor: progress; }
+
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out; }
+
+.mfp-zoom {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in; }
+
+.mfp-auto-cursor .mfp-content {
+  cursor: auto; }
+
+.mfp-close, .mfp-arrow, .mfp-preloader, .mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.mfp-loading.mfp-figure {
+  display: none; }
+
+.mfp-hide {
+  display: none !important; }
+
+.mfp-preloader {
+  color: #cccccc;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  text-align: center;
+  margin-top: -0.8em;
+  left: 8px;
+  right: 8px;
+  z-index: 1044; }
+  .mfp-preloader a {
+    color: #cccccc; }
+    .mfp-preloader a:hover {
+      color: white; }
+
+.mfp-s-ready .mfp-preloader {
+  display: none; }
+
+.mfp-s-error .mfp-content {
+  display: none; }
+
+button.mfp-close, button.mfp-arrow {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  outline: none;
+  padding: 0;
+  z-index: 1046;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  padding: 0 0 18px 10px;
+  color: white;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace; }
+  .mfp-close:hover, .mfp-close:focus {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  .mfp-close:active {
+    top: 1px; }
+
+.mfp-close-btn-in .mfp-close {
+  color: #333333; }
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  color: white;
+  right: -6px;
+  text-align: right;
+  padding-right: 6px;
+  width: 100%; }
+
+.mfp-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #cccccc;
+  font-size: 12px;
+  line-height: 18px; }
+
+.mfp-arrow {
+  position: absolute;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  margin: 0;
+  top: 50%;
+  margin-top: -55px;
+  padding: 0;
+  width: 90px;
+  height: 110px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  .mfp-arrow:active {
+    margin-top: -54px; }
+  .mfp-arrow:hover, .mfp-arrow:focus {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  .mfp-arrow:before, .mfp-arrow:after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent; }
+  .mfp-arrow:after, .mfp-arrow .mfp-a {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px; }
+  .mfp-arrow:before, .mfp-arrow .mfp-b {
+    border-top-width: 21px;
+    border-bottom-width: 21px;
+    opacity: 0.7; }
+
+.mfp-arrow-left {
+  left: 0; }
+  .mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
+    border-right: 17px solid white;
+    margin-left: 31px; }
+  .mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
+    margin-left: 25px;
+    border-right: 27px solid #3f3f3f; }
+
+.mfp-arrow-right {
+  right: 0; }
+  .mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
+    border-left: 17px solid white;
+    margin-left: 39px; }
+  .mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
+    border-left: 27px solid #3f3f3f; }
+
+.mfp-iframe-holder {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .mfp-iframe-holder .mfp-content {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px; }
+  .mfp-iframe-holder .mfp-close {
+    top: -40px; }
+
+.mfp-iframe-scaler {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%; }
+  .mfp-iframe-scaler iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: black; }
+
+/* Main image in popup */
+img.mfp-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 0 40px;
+  margin: 0 auto; }
+
+/* The shadow behind the image */
+.mfp-figure {
+  line-height: 0; }
+  .mfp-figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #444444; }
+  .mfp-figure small {
+    color: #bdbdbd;
+    display: block;
+    font-size: 12px;
+    line-height: 14px; }
+  .mfp-figure figure {
+    margin: 0; }
+
+.mfp-bottom-bar {
+  margin-top: -36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto; }
+
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #f3f3f3;
+  word-wrap: break-word;
+  padding-right: 36px; }
+
+.mfp-image-holder .mfp-content {
+  max-width: 100%; }
+
+.mfp-gallery .mfp-image-holder .mfp-figure {
+  cursor: pointer; }
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+       * Remove all paddings around the image on small screen
+       */
+  .mfp-img-mobile .mfp-image-holder {
+    padding-left: 0;
+    padding-right: 0; }
+  .mfp-img-mobile img.mfp-img {
+    padding: 0; }
+  .mfp-img-mobile .mfp-figure:after {
+    top: 0;
+    bottom: 0; }
+  .mfp-img-mobile .mfp-figure small {
+    display: inline;
+    margin-left: 5px; }
+  .mfp-img-mobile .mfp-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    margin: 0;
+    top: auto;
+    padding: 3px 5px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .mfp-img-mobile .mfp-bottom-bar:empty {
+      padding: 0; }
+  .mfp-img-mobile .mfp-counter {
+    right: 5px;
+    top: 3px; }
+  .mfp-img-mobile .mfp-close {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    text-align: center;
+    padding: 0; } }
+
+@media all and (max-width: 900px) {
+  .mfp-arrow {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75); }
+  .mfp-arrow-left {
+    -webkit-transform-origin: 0;
+    transform-origin: 0; }
+  .mfp-arrow-right {
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%; }
+  .mfp-container {
+    padding-left: 6px;
+    padding-right: 6px; } }
+
+.mfp-ie7 .mfp-img {
+  padding: 0; }
+.mfp-ie7 .mfp-bottom-bar {
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 5px;
+  padding-bottom: 5px; }
+.mfp-ie7 .mfp-container {
+  padding: 0; }
+.mfp-ie7 .mfp-content {
+  padding-top: 44px; }
+.mfp-ie7 .mfp-close {
+  top: 0;
+  right: 0;
+  padding-top: 0; }
+

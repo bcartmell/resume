@@ -1,0 +1,12 @@
+header,
+footer,
+aside,
+#banner {
+  display: none;
+}
+
+.wrapper main { float: none; }
+
+.static_info { background: #fff; }
+
+.imitationNextButton { display: none; }
