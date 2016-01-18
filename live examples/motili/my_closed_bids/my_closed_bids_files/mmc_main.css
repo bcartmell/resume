@@ -1,0 +1,527 @@
+/* Clip-One overrides */
+table,
+.table {
+  font-size: 12px;
+}
+
+.activities li .time {
+  top: 10px;
+}
+
+body.login .box-login, body.login .box-forgot, body.login .box-register {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.32);
+}
+
+.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.self .messages {
+  background: #569099;
+  margin-right: 115px;
+}
+
+.other .messages {
+  margin-left: 115px;
+}
+
+.discussion .avatar {
+  width: 110px;
+}
+
+.discussion .avatar img {
+  width: 100% !important;
+}
+
+.self .messages:after {
+  border-color: #569099 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #569099;
+}
+
+select[multiple] {
+  height: 7.6em;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-group .btn-light-grey {
+  border-color: #666;
+}
+
+.swMain>ul li>a.selected:before, .swMain li>a.done:before {
+  border-color: #CED1D6;
+}
+
+/* Form validations */
+.required {
+  color: #E6674A;
+}
+
+label.invalid,
+body.login label.invalid {
+  color: #A94442;
+}
+
+input.invalid {
+  border-color: #A94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.checkbox-invalid {
+  margin-right: 5px;
+}
+
+a,
+.imitation-link {
+  color: #3794D8;
+}
+a:hover,a:focus,
+.imitation-link {
+  color:#5293C4;
+}
+.imitation-link:hover {
+  text-decoration: underline;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+}
+
+button a,
+button a:hover {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+.input-group label.invalid {
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+}
+
+.panel-scroll {
+  height: auto;
+  max-height: 400px;
+}
+
+.btn-block {
+  margin-bottom: 2em;
+}
+
+/* === Legal Doc formatting === */
+article {
+  margin-bottom: 2em;
+}
+
+article h3 {
+  text-align: center;
+}
+
+article p {
+  margin: 1em 0;
+}
+
+article ol {
+  margin-bottom: .6em;
+}
+
+article>ol {
+  list-style-type: decimal;
+}
+
+article>ol ol {
+  list-style-type: lower-alpha;
+}
+
+article>ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* === Custom Style === */
+.document {
+  height: 600px;
+  overflow-y: scroll;
+  padding: 40px;
+  margin-bottom: 30px;
+  background: #ECF2F3;
+  width: 100%;
+}
+
+.signup-navbar li {
+  color: #fff;
+  font-size: 16px;
+}
+
+.logo_field {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .signup-navbar li {
+    font-size: 14px;
+  }
+}
+
+.nav .org_logo img {
+  max-height: 46px;
+}
+
+.core-box {
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.core-box .heading h2 {
+  line-height: 25px !important;
+  min-height: 55px;
+  padding-top: 18px;
+}
+
+.core-box a {
+  display: block;
+  min-height: 270px;
+  padding: 30px;
+  width: 100%;
+
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+.core-box a:hover {
+  background: #F5F5F5;
+  text-decoration: none;
+}
+
+.discussion p {
+  max-height: 80px;
+  overflow: auto;
+  white-space: pre-line;
+}
+
+.discussion p.expanded {
+  max-height: auto;
+}
+
+tr.to-be-removed {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* === Form Errors === */
+.form_errors {
+  padding: .5em 1em;
+}
+
+.form_errors h2 {
+  font-size: 1.3em;
+}
+
+#errorExplanation ul {
+	list-style-type: none;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+#errorExplanation ul li:before {
+	font-family: FontAwesome;
+	display: inline-block;
+  margin-right: .5em;
+	content: "\f071";
+}
+
+.input-group label.invalid[for="logo"] {
+  position: relative;
+  left: 0;
+  bottom: 0px;
+}
+
+/* === Form Messages === */ 
+.form_messages:before {
+	font-family: FontAwesome;
+	display: inline-block;
+  margin-right: .5em;
+	content: "\f058";
+}
+
+/* === Chat Styles === */ 
+li#chat-status a.offline,
+li#chat-status a.offline i {
+ color: #C8C7CC;
+}
+
+div#chat-status {
+  background: url(//d2uru7posb5v6m.cloudfront.net/rel-1399918000/system/images/3743/original/chat-is-offline.png) left bottom no-repeat;
+  display: block;
+  height: 70px;
+  width: 100%;
+}
+
+div#chat-status.online {
+  background-image: url(//d2uru7posb5v6m.cloudfront.net/rel-1399918014/system/images/3742/original/chat-with-support-available.png);
+}
+
+div#chat-status h4 {
+  margin-top: 0;
+}
+
+/* === Shopping Cart === */
+
+.table-hover tr {
+  cursor: pointer;
+}
+
+.item-quantity .quantity {
+  cursor: pointer;
+}
+.item-quantity .quantity:hover {
+  color: #000;
+}
+.item-quantity {
+  max-height: 1em;
+  display: block;
+}
+.item-quantity .itemQuantity {
+  display: inline-block;
+  position: relative;
+    top: -1.1em;
+}
+.adjust-quantity {
+  display: inline-block;
+  position: relative;
+    top: -.3em;
+    left: 1em;
+}
+.adjust-quantity span {
+  display: block;
+  margin-top: 3px;
+  line-height: 1.3em;
+}
+
+.bid-total {
+  font-size: 1.6em;
+}
+
+/*.jGrowl-notification,
+.jGrowl-closer {
+  display: none !important;
+}*/
+
+button a.item_add {
+  display: inline-block;
+}
+
+/* ===== Helper Classes ===== */
+.text-hr {
+  border-top: 1px solid #BBB;
+  font-weight: 700;
+  color: #BBB;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.text-hr span {
+  background: #fff;
+  margin-left: -.5em;
+  padding: 0 .5em;
+  position: absolute;
+  top: -.73em;
+}
+
+.big-icon {
+  font-size: 2em;
+  float: left;
+  line-height: 1.3em;
+  margin-right: .15em;
+}
+/* ==== TABLES ===== */
+
+.billing-schedule-col-header {
+  text-transform: uppercase;
+  text-align: center;
+  background: #C8C7CC !important;
+}
+
+.billing-schedule-top-header {
+  background: #999;
+  color: #FFF !important;
+  text-align: center;
+  text-shadow: 0 0 1px #555;
+}
+
+.billing-schedule-top-header th {
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #DDD;
+  text-align: center;
+}
+
+thead .billing-schedule-top-header th.column-separator {
+  border-bottom: 1px solid #DDD !important;
+}
+
+.column-separator {
+  background: #fff !important;
+  border: none !important;
+  cursor: default !important;
+  width: .25em;
+}
+
+thead .column-separator {
+  background: inherit !important;
+}
+
+/*  I was going to fix styling of the inc and dec buttons,
+ *  but I cannot find where the markup comes from.
+.ssc-line-inc,
+.ssc-line-dec {
+  display: block;
+  text-align: center;
+}
+*/
+
+.fileupload .uneditable-input,
+.fileupload .form-control,
+.fileupload input.file-input, 
+input[type="file"] {
+  color: #555 !important;
+}
+
+/* ===== HACKS ===== */
+.chat-form button {
+  height: 34px;
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Form Wizard
+/* ---------------------------------------------------------------------- */
+/* 
+  IE9 was not styling the wizard.  Adding this CSS to the page fixes the issue.
+  I'm not sure why.
+ */
+#wizard>ul {
+	display: table;
+	list-style: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+#wizard>ul li {
+	display: table-cell;
+	text-align: center;
+	width: 1%;
+}
+#wizard>ul li>a:before {
+	border-top: 4px solid #CED1D6;
+	content: "";
+	display: block;
+	font-size: 0;
+	height: 1px;
+	overflow: hidden;
+	position: relative;
+	top: 21px;
+	width: 100%;
+	z-index: 1;
+}
+#wizard>ul li:first-child>a:before {
+	left: 50%;
+	max-width: 51%;
+}
+#wizard>ul li:last-child>a:before {
+	max-width: 50%;
+	width: 50%;
+}
+#wizard>ul li>a.selected:before, #wizard li>a.done:before {
+	border-color: #5293C4;
+}
+#wizard>ul .stepNumber {
+	background-color: #FFFFFF;
+	border: 5px solid #CED1D6;
+	border-radius: 100% 100% 100% 100%;
+	color: #546474;
+	display: inline-block;
+	font-size: 15px;
+	height: 40px;
+	line-height: 30px;
+	position: relative;
+	text-align: center;
+	width: 40px;
+	z-index: 2;
+}
+#wizard>ul li>a.selected .stepNumber {
+	border-color: #5293C4;
+}
+#wizard ul li>a.done .stepNumber {
+	border-color: #5293C4;
+	background-color: #5293C4;
+	color: #fff;
+	text-indent: -9999px;
+}
+#wizard ul li>a.done .stepNumber:before {
+	content: "\f00c";
+	display: inline;
+	float: right;
+	font-family: FontAwesome;
+	font-weight: 300;
+	height: auto;
+	text-shadow: none;
+	margin-right: 7px;
+	text-indent: 0;
+}
+#wizard ul li>a.done.wait .stepNumber {
+	background-color: #F6F6F6 !important;
+	color: #CCCCCC !important;
+	text-indent: -0px !important;
+}
+#wizard ul li>a.done.wait .stepNumber:before {
+	content: "" !important;
+}
+#wizard>ul li .stepDesc {
+	color: #949EA7;
+	display: block;
+	font-size: 14px;
+	margin-top: 4px;
+	max-width: 100%;
+	table-layout: fixed;
+	text-align: center;
+	word-wrap: break-word;
+	z-index: 104;
+}
+#wizard>ul li>a.selected .stepDesc, #wizard li>a.done .stepDesc {
+	color: #2B3D53;
+}
+#wizard>ul li>a:hover {
+	text-decoration: none;
+}
+#wizard>ul li>a.disabled {
+	cursor: default;
+}
+#wizard .progress {
+	margin-bottom: 30px;
+}
+#wizard .stepContainer {
+	height: auto !important;
+}
+#wizard .loader {
+	display: none;
+}
+#wizard [class^="button"], #wizard [class*=" button"] {
+	display: none;
+}
+#wizard .close {
+	display: none;
+}
+/*
+#wizard>ul li>a.selected:before, #wizard li>a.done:before {
+  border-color: #CED1D6;
+}
+*/
+
