@@ -1,14 +1,60 @@
-var Slide = function (content) {
-  if (content instanceof HTMLElement) {
-    var slide = document.createElement('li');
-    var contentIndex = content.getAttribute('data-slide-index');
-    if (contentIndex) slide.setAttribute('data-slide-index', contentIndex);
-    slide.appendChild(content.cloneNode(true));
-    return slide;
-  }
-  return false;
-}
+var okieSlides = (function() {
+  'use strict';
 
+  var Slide = function(content, index, stage) {
+    // Constructor function for individual slides
+    // content is what will appear inside of this slide.
+
+    var self = this;
+
+    this.content = content;
+    this.elem = document.createElement('div');
+    this.eleme.clsssList.add('okieSlides-slide');
+    this.eleme.clsssList.add('transition');
+    this.elem.setAttribute('data-slide-index', index);
+  };
+  Slide.prototype = {
+    exitStage: function(direction) {
+      direction = direction || 'left';
+      this.element.style.opacity = '0';
+      this.element.style[direction] = '150%';
+      setTimeout(function() {
+        // unset changed attributes
+        this.element.style.direction = '0';
+        this.element.style.zIndex = '0';
+      }, 300);
+    },
+    enterStage: function() {
+      // element should already have opacity of zero
+      this.element.style.zIndex = '1';
+      this.element.style.opacity = '1';
+    }
+  }
+  
+  var SlideShow = function(contentSource) {
+    var self = this;
+    this.stage = document.createElement('div');
+    this.stage.classList.add('okieSlides-stage');
+  };
+
+  return {
+    newShow: function() {
+    },
+    newSlide: function() {
+    }
+  }
+}();)
+
+
+
+/*
+ * Right now this is just carry-over from the original slideshow implementation
+ * on bcartmell.online, slightly modified to provide a nicer look-and-feel.
+ * 
+ * Eventually, it will be re-written as it's own proper slideshow module
+ * because that is exactly what the world needs, another slideshow plugin.
+ * 
+ */
 
 var Slideshow = function(contentSet) {
   var self = this;
@@ -20,7 +66,14 @@ var Slideshow = function(contentSet) {
   }
 
   function makeSlide(content) {
-    return new Slide(content);
+    if (content instanceof HTMLElement) {
+      var slide = document.createElement('li');
+      var contentIndex = content.getAttribute('data-slide-index');
+      if (contentIndex) slide.setAttribute('data-slide-index', contentIndex);
+      slide.appendChild(content.cloneNode(true));
+      return slide;
+    }
+    return false;
   }
 
   function makeSlides(contentSet) {
@@ -147,4 +200,3 @@ Slideshow.prototype = {
     this.toindex(newindex);
   }
 };
-
