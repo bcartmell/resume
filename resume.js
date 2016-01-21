@@ -38,7 +38,16 @@
     removeClass: function(target, className) {
       // remove a class from an element.
       target.classList.remove(target);
-    }
+    },
+
+    getOuterSize: function(target) {
+      var rect = target.getBoundingClientRect();
+      return {
+        width: rect.width || (rect.right-rect.left),   
+                             /* for IE 8 and below */
+        height: rect.height || (rect.bottom-rect.top) 
+      }
+    },
 
   };
 
@@ -320,6 +329,11 @@
       return this.findIndex(this.currentIndent());
     },
 
+    currentSlide: function() {
+      var index = this.currentIndex();
+      return this.element.querySelectorAll('li[data-slide-index="'+index+'"]')[0];
+    },
+
     // discover if current slide is the last one
     hasNext: function() {
       return (this.currentIndex() < (this.length-1));
@@ -329,6 +343,7 @@
     toIndex: function(index) {
       var newIndent = this.findIndent(index);
       this.slideContainer.setAttribute('style', 'text-indent:'+ newIndent +'%');
+      this.shrinkWrap();
     },
 
     // navigate to next slide
@@ -345,6 +360,83 @@
       if (this.currentIndex() === 0) newIndex = this.length-1; 
       else newIndex = this.currentIndex()-1;
       this.toIndex(newIndex);
+    },
+
+    shrinkWrap: function() {
+      var self = this;   
+      // Not used to seeing this outside of a constructor, are you?
+
+      var slide = this.currentSlide().querySelector('img').parentElement;
+      // There may be a scrollbar, so let's grap the li that contains the img
+
+      var stage = this.element.querySelector('ul')
+      var container = stage.parentElement.parentElement;
+      // first parent is the slideshow container,
+      // the Element housing the slideshow will be two parents up.
+
+      var transDuration = parseFloat(
+        getComputedStyle(stage).transitionDuration
+      ) * 1500;
+      // container.style.width = '';
+      // container.style.height = '';
+
+      // We need to wait for slide animations to finish
+      setTimeout(resize, transDuration , slide, stage, container);
+      function resize(slide) {
+        // unset any previously set values so we start from the natural state
+        // container is the modal that hosts the slideshow
+        // slide is the li element that represents our slide
+        // stage is the ul that represents the slideshow
+        // window is, well window.
+        var stage = self.slideContainer
+        var container = self.element;
+        var containingModal = container.parentElement;
+
+        var getSize = helpers.getOuterSize;  
+        // save our helper function to save typing (and a few cpu cycles too).
+
+
+        var slideInnerSize = getSize(slide.childNodes[0]);
+        // size of slide content
+        
+        var slideSize = getSize(slide);
+        // save size of the current slide
+
+        var windowSize = getSize(document.body);
+        // save width of the window
+
+        var containerSize = getSize(container);
+        // save size of the container
+
+        var stageSize = getSize(stage);
+        // get size of the stage for our slideshow
+        
+        var viewHeight = window.innerHeight ||
+            document.documentElement.clientHeight; //  for IE8
+
+        var setHeights = function(heightVal, elements) {
+          //  makes thing a little dryer than just setting the values by hand.
+          var elements = [slide, stage, container, containingModal];
+          elements.forEach(function(el) {
+            el.style.height = heightVal;
+          });
+        };
+
+        var heightsVal, accountForScroll;
+        // heightsVal will be passed to setHeights
+        if (slideInnerSize.height < stageSize.height) {
+          setHeights(slideInnerSize.height+'px')
+        } else  {
+          setHeights('inherit');
+        } 
+
+        if (slideInnerSize.width<windowSize.width*.9) {
+          container.style.width = slideSize.width+'px';
+          containingModal.style.width = slideSize.width+'px';
+        } 
+
+      }
+
     }
   };
 
