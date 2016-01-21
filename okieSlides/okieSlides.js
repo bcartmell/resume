@@ -36,6 +36,8 @@ var okieSlides = (function() {
     this.stage = document.createElement('div');
     this.stage.classList.add('okieSlides-stage');
   };
+  Slideshow.prototype {
+  }
 
   return {
     newShow: function() {
