@@ -53,6 +53,7 @@
 
 
   var modaller = (function() {
+    var curtainInstance;
     var Curtain = function(options) {
       if (!(this instanceof Curtain)) return new Curtain(options);
       var self = this;
@@ -86,10 +87,8 @@
     };
 
     function getCurtain() {
-      var curtain = new Curtain();
-      return (function() {
-        return curtain;
-      }());
+      if (!curtainInstance) curtainInstance = new Curtain();
+      return curtainInstance;
     }
 
     function hideElement(element) {

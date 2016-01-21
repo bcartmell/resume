@@ -226,6 +226,33 @@ header .contact-info {
   transition: all .3s ease-in-out;
 }
 
+.tags-list {
+  color: @black;
+  font-size: .8em;
+  margin: 0;
+}
+
+.tags-list li {
+  background: @light-neutral;
+  border: 1px solid @black;
+  border-radius: .3em;
+  display: inline-block;
+  padding: 0 .6em;
+  margin: .6em;
+  margin-left: 0;
+  position: relative;
+}
+/* .tags-list li:before { */
+  /* content: '●'; */
+  /* border-top: .5em transparent; */
+  /* border-right: .5em @light-neutral; */
+  /* border-bottom: .5em transparent; */
+  /* border-left: .5em transparent; */
+  /* display: block; */
+  /* position: absolute; */
+    /* left: -.3em; */
+/* } */
+
 /*
  *  Skills
  */
@@ -276,13 +303,13 @@ section div ul {
   margin: .3em 0;
 }
 
-section div li {
+section#work-experience div li {
   color: @dark-gray;
   padding-left: 3em;
   line-height: 2em;
 }
 
-section div li:before {
+section#work-experience div li:before {
   content: '\f00c';
   color: @green;
   font: normal normal normal 14px/1 FontAwesome;
