@@ -236,7 +236,6 @@ header .contact-info {
   will-change: opacity;
 }
 
-
 .tags-list {
   color: @black;
   font-size: .8em;
@@ -434,14 +433,22 @@ footer h4 {
   position: fixed;
     left: 0;
     top: 0;
-  height: 100%;
   text-align: center;
 
   width: 100%;
+
+  // forces curtain to extend past bottom of viewport
+  // in order to fix ios issue where curtain was smaller than viewport
+  // (because of safaris disapearing tab bar)
+  height: 200%;
 }
 #modal-curtain-inner {
   display: table-cell;
   vertical-align: middle;
+
+  // re-centers content after applying height fix on #modal-curtain
+  position: relative;
+  top: -25%;
 }
 
 .modal {
