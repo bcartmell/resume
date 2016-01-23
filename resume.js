@@ -48,7 +48,14 @@
       maxHeightMultiplier: function(element) {
         // allows us to sat heights and max-heights on elements
         // while still respecting percentage-based CSS max-height property
+
+        element.style.maxHeight = ''
+        // remove any max-height value that we previously set
+        // on the element
+
         var cssMaxHeight = getComputedStyle(element).maxHeight;
+        // getComputedStyle will get us the value from the stylesheet
+
         if (cssMaxHeight.indexOf('%') !== -1) {
           return parseFloat(cssMaxHeight)/100;
         }
