@@ -84,6 +84,12 @@
           hideElement(self.element);
         }
       });
+
+      Curtain.prototype.setHieght.call(this);
+      window.addEventListener('resize', function(){
+        self.setHieght.call(this);
+      });
+
       return this;
     };
     Curtain.prototype = {
@@ -96,6 +102,9 @@
         for (i=0; i<this.modals.length; i++) {
           hideElement(this.modals[i].element);
         }
+      },
+      setHieght: function() {
+        this.element.style.minHeight = helpers.getViewHeight();
       }
     };
 
