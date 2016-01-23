@@ -2,10 +2,10 @@ var Slide = function (contentSource, index) {
   var self = this;
   this.element = document.createElement('li');
   this.index = index;
-  contentSource.setAttribute('data-okie-slide-index', index);
   this.element.classList.add('slide');
   this.element.classList.add('transition');
   this.element.appendChild(contentSource.cloneNode(true));
+  contentSource.setAttribute('data-okie-slide-index', index);
 
   this.transDuration = function() {
     var duration = getComputedStyle(self.element).transitionDuration;
@@ -24,11 +24,12 @@ Slide.prototype = {
     setTimeout(function() {
       self.element.classList.remove('visible');
     }, self.transDuration());
-  }
+  },
 }
 
-var OkieShow = function(contentSource) {
+var OkieShow = function(contentSource, options) {
   var self = this;
+  options = options || {};
 
   function makeButton(btnClass) {
     var button = document.createElement('button');
@@ -36,6 +37,8 @@ var OkieShow = function(contentSource) {
     button.classList.add('transition');
     return button;
   }
+
+  this.animationType = options.animationType || 'fade';
 
   this.contentSet = [].filter.call(contentSource.childNodes, function(node) {
     return node instanceof Element;
@@ -76,6 +79,12 @@ var OkieShow = function(contentSource) {
     self.toSlide(targetIndex);
   }, false);
 
+  this.allowNav = true;
+  // We only want to allow one ongoing slide transition at time,
+  // this.allowNav will be set to false during a slide transition
+  // and returned to true afterword.  We will also check this.allowNav
+  // before begining a slide transition
+
   this.element.setAttribute('tabIndex', 0); 
   this.element.addEventListener('keyup', function(event) {
     switch(event.keyCode) {
@@ -107,30 +116,46 @@ OkieShow.prototype = {
     this.slides.push(newSlide);
     this.slideContainer.appendChild(newSlide.element)
   },
-  toSlide: function(slideIndex) {
+  fadeTo: function(slideIndex) {
     var self = this;
     var currentSlide = this.getCurrentSlide();
     var targetSlide = this.slides[slideIndex];
 
-    // Set element widths so they don't change when we add position:absolute
+    this.allowNav = false;
+    // Let's only allow one slide transition at time;
+
     this.element.style.width = getComputedStyle(this.element).width;
     this.element.style.height = getComputedStyle(this.element).height;
+    // Set element widths so they don't change when we add position:absolute
 
     if (!currentSlide) {
+      // If the show just opened and there is no 
+      // current slide, we can just fade it in can call it a day.
       targetSlide.show();
+      this.allowNav = true;
       return;
     }
 
+    // Set the stage:
+    currentSlide.element.style.zIndex = '1';
+    // make sure our currentSlide stacks on top of the targetSlide.
+
     currentSlide.element.style.position = 'absolute';
     targetSlide.element.style.position = 'absolute';
-
-    currentSlide.element.style.zIndex = '1';
+    // Slides will need to be absolutly positioned
+    // so that they stack on top of eachother
 
     targetSlide.element.classList.remove('transition');
+    // The targetSlide will not be visible until the currentSlide
+    // gets out of the way and only transitioning one element helps
+    // things run smoother and provides a better effect.
+
     targetSlide.show();
     currentSlide.hide();
+    // Do the thing
 
     setTimeout(function() {
+      // Let the transition run, and then clean up our mess
       currentSlide.element.style.position = 'relative';
       targetSlide.element.style.zIndex = '1';
       currentSlide.element.style.zIndex = '0';
@@ -139,14 +164,23 @@ OkieShow.prototype = {
 
       self.element.style.width = '';
       self.element.style.height = '';
-    }, currentSlide.transDuration()+50);
+
+      self.allowNav = true;
+    }, currentSlide.transDuration());
+  },
+  toSlide: function(slideIndex) {
+    var setStage = function() {
+    };
+    this[this.animationType+'To'](slideIndex);
   },
   nextSlide: function() {
+    if (!this.allowNav) return false;
     var targetIndex = this.getCurrentIndex() +1;
     if (targetIndex > this.slides.length-1) targetIndex = 0;
     this.toSlide(targetIndex);
   },
   prevSlide: function() {
+    if (!this.allowNav) return false;
     var targetIndex = this.getCurrentIndex()-1;
     if (targetIndex < 0) targetIndex = this.slides.length-1;
     this.toSlide(targetIndex);

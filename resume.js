@@ -1,7 +1,3 @@
-// JavaScript code for Brady Cartmell's Resumes site.
-// There is a lot here that jQuery and other tools
-// could simplify, but in addition to being a resume
-// site, it is also an exercise in practicing my JS skills
 // on a non-commercial project where time and compatibility
 // would warrant using known and tested libraries and frameworks
 
@@ -48,15 +44,21 @@
       
       getViewHeight: function() {
         return window.innerHeight || document.documentElement.clientHeight;
+      },
+      maxHeightMultiplier: function(element) {
+        // allows us to sat heights and max-heights on elements
+        // while still respecting percentage-based CSS max-height property
+        var cssMaxHeight = getComputedStyle(element).maxHeight;
+        if (cssMaxHeight.indexOf('%') !== -1) {
+          return parseFloat(cssMaxHeight)/100;
+        }
+        return 1;
       }
     };
   }());
 
 (function() {
   'use strict';
-
-
-
   var modaller = (function() {
     var curtainInstance;
     var Curtain = function(options) {
@@ -155,7 +157,7 @@
 
       // add close button
       this.closeButton = document.createElement('i');
-      helpers.addClass(this.closeButton, 'fa fa-close modal-close');
+      helpers.addClass(this.closeButton, 'ion-android-close modal-close');
       this.element.insertBefore(this.closeButton, this.element.firstChild);
 
       this.closeButton.addEventListener('click', function(){
@@ -216,7 +218,8 @@
         return this;
       },
       setMaxHeight: function() {
-        var maxHeight = helpers.getViewHeight() *0.96 +'px';
+        var maxHeightMultiplier = helpers.maxHeightMultiplier(this.element);
+        var maxHeight = helpers.getViewHeight() *maxHeightMultiplier +'px';
         this.element.style.maxHeight = maxHeight;
         this.setContentMaxHeight(maxHeight);
       },

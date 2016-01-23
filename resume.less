@@ -439,21 +439,24 @@ footer h4 {
   border-radius: .3em;
   box-shadow: 1px 0 16px -2px;
   display: inline-block;
-  max-width: 96%;
-  max-height: 96%;
+  max-width: 94%;
+  max-height: 94%;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
+
 i.modal-close {
-  background: @light-neutral;
+  background: @mid-gray;
   border-radius: 4em;
   box-shadow: 0 0 7px 3px @dark-gray;
+  color: @white;
   cursor: pointer;
-  font-size: .8em;
+  height: 1.6em;
+  font-size: 1em;
   position: absolute;
-  top: 0;
-  right: -0;
+    top: -0.8em;
+    right: -0.8em;
   padding: .3em;
   text-align: center;
   width: auto;
@@ -495,11 +498,12 @@ i.modal-close:before {
 }
 
 .okie-show img {
+  display: block;
   max-width: 100%;
 }
 
 .okie-show button {
-  background: @dark-gray;
+  background: fade(@dark-gray, 30%);
   border: none;
   height: 100%;
   outline: none;
@@ -512,13 +516,15 @@ i.modal-close:before {
 
   z-index: 10;
 }
+
 .okie-show:hover button {
-  opacity: .7;
+  opacity: 1;
 }
 button::-moz-focus-inner {
   border: none;
   outline: none;
 }
+
 .okie-show .prev-button {
   left: 0;
 }
@@ -526,28 +532,25 @@ button::-moz-focus-inner {
   right: 0;
 }
 
-.okie-show .next-button:after,
-.okie-show .next-button::after {
-  content: ' ';
-  box-shadow: -5px 0 2px -2px #131313;
+.okie-show button:after,
+.okie-show button::after {
+  content: '';
   display: inline-block;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-right: 20px solid transparent;
   border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+.okie-show .next-button:after,
+.okie-show .next-button::after {
+  box-shadow: -5px 0 2px -2px @mid-gray;
   border-left: 20px solid @white;
 }
 .okie-show .prev-button:after,
 .okie-show .prev-button::after {
-  content: ' ';
-  box-shadow: 5px 0 2px -2px #131313;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid transparent;
+  box-shadow: 5px 0 2px -2px @mid-gray;
   border-right: 20px solid @white;
 }
 
@@ -564,6 +567,19 @@ button::-moz-focus-inner {
 
   section div li {
     padding-left: 1.6em;
+  }
+
+  .okie-show button {
+    width: 10em;
+    // make slide-nav buttons bigger
+  }
+
+  i.modal-close {
+    font-size: 3em;
+    // make target bigger;
+    right: -0.4em;
+    // prevent bigger target from hanging off
+    // the edge of the screen
   }
 
   footer section {
