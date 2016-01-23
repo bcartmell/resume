@@ -415,28 +415,28 @@ footer h4 {
 /* Modaller */
 #modal-curtain {
   background: rgba(0,0,0,.618);
-  display: block;
-  height: 100%;
-  left: 0;
-  top: 0;
+  display: table;
+  text-align: center;
   position: fixed;
+    left: 0;
+    top: 0;
+  height: 100%;
   width: 100%;
+  text-align: center;
+}
+#modal-curtain-inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .modal {
   background: @dark-gray;
   border-radius: .3em;
   box-shadow: 1px 0 16px -2px;
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
+  max-width: 96%;
   position: relative;
-    top: 5%;
-    left: 2.5%;
-  overflow: visible;
-  height: 100%;
-  max-height: 90%;
-  max-width: 90%;
+  overflow: hidden;
 }
 
 i.modal-close {
@@ -446,12 +446,12 @@ i.modal-close {
   cursor: pointer;
   font-size: .8em;
   position: absolute;
-  top: -1em;
-  right: -0.2em;
+  top: 0;
+  right: -0;
   padding: .3em;
   text-align: center;
   width: auto;
-  z-index: 1;
+  z-index: 20;
 }
 i.modal-close:before {
   line-height: 1em !important;
@@ -459,73 +459,90 @@ i.modal-close:before {
   width: 1em;
 }
 
-/* Slideshow */
-.slideshow, .slideshow ul {
-  height: inherit;
-  width: 100%;
+/* Okie-Show styles */
+.okie-show {
+  display: inline-block;
   max-height: 100%;
+  max-width: 100%;
   overflow: hidden;
-  white-space: nowrap;
+  position: relative;
 }
 
-.slideshow li {
-  display: inline-block;
-  height: inherit;
+.okie-show .slide {
   max-height: 100%;
   max-width: 100%;
   overflow: auto;
   text-align: center;
   text-indent: 0;
-  vertical-align: top;
+  vertical-align: middle;
+
+  position: relative;
+  left: 0;
+
+  // defaults for page load
+  display: none;
+  opacity: 0;
 }
 
-.slideshow img {
+.okie-show .slide.visible {
+  display: inline-block;
+}
+
+.okie-show img {
   max-width: 100%;
 }
 
-.slideshow button {
+.okie-show button {
   background: @dark-gray;
   border: none;
   height: 100%;
-  opacity: .7;
   outline: none;
   position: absolute;
     top: 0;
-  width: 3.2em;
+  text-align: center;
+  width: 6.2em;
+  max-width: 24%;
+  opacity: 0;
+
+  z-index: 10;
+}
+.okie-show:hover button {
+  opacity: .7;
 }
 button::-moz-focus-inner {
   border: none;
   outline: none;
 }
-
-.slideshow .next-button {
+.okie-show .prev-button {
+  left: 0;
+}
+.okie-show .next-button {
   right: 0;
 }
-.slideshow .next-button:after,
-.slideshow .next-button::after {
-  content: ' ';
-  display: block;
 
+.okie-show .next-button:after,
+.okie-show .next-button::after {
+  content: ' ';
+  box-shadow: -5px 0 2px -2px #131313;
+  display: inline-block;
   width: 0;
   height: 0;
-
   border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 20px solid @white;
 }
-
-.slideshow .prev-button {
-  left: 0;
-}
-.slideshow .prev-button:after,
-.slideshow .prev-button::after {
+.okie-show .prev-button:after,
+.okie-show .prev-button::after {
   content: ' ';
-  display: block;
+  box-shadow: 5px 0 2px -2px #131313;
+  display: inline-block;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
-  border-right: 20px solid @white;
   border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid @white;
 }
 
 @media (max-width:768px) {

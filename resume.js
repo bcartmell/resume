@@ -44,7 +44,6 @@
       var rect = target.getBoundingClientRect();
       return {
         width: rect.width || (rect.right-rect.left),   
-                             /* for IE 8 and below */
         height: rect.height || (rect.bottom-rect.top) 
       }
     },
@@ -63,6 +62,12 @@
       this.element = document.createElement('div');
       this.element.id = 'modal-curtain';
       this.element.className = 'hidden transition';
+
+      this.alignmentCell = document.createElement('div');
+      this.alignmentCell.id = 'modal-curtain-inner';
+
+      this.element.appendChild(this.alignmentCell);
+
       document.getElementsByTagName('body')[0].appendChild(this.element);
 
       this.element.addEventListener('click', function(event) {
@@ -76,7 +81,7 @@
     Curtain.prototype = {
       addModal: function(modal) {
         this.modals.push(modal);
-        this.element.appendChild(modal.element);
+        this.alignmentCell.appendChild(modal.element);
       },
       hideModals: function() {
         var i;
@@ -342,7 +347,7 @@
     toIndex: function(index) {
       var newIndent = this.findIndent(index);
       this.slideContainer.setAttribute('style', 'text-indent:'+ newIndent +'%');
-      this.shrinkWrap();
+      // this.shrinkWrap();
     },
 
     // navigate to next slide
@@ -441,9 +446,9 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     var imageReels = document.getElementsByClassName('image-reel-window');
-    Array.prototype.forEach.call(imageReels, function(reel) {
+    [].forEach.call(imageReels, function(reel) {
       modaller.newModal({
-        content: new Slideshow(reel),
+        content: new OkieShow(reel),
         target: reel
       });
     });
