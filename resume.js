@@ -186,8 +186,6 @@
           self.hide();
         }
       }, false);
-
-      
     };
 
     Modal.prototype = {

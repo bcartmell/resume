@@ -3,7 +3,7 @@ var Slide = function (contentSource, index) {
   this.element = document.createElement('li');
   this.index = index;
   this.element.classList.add('slide');
-  this.element.classList.add('transition');
+  this.element.classList.add('transition-opacity');
   this.element.appendChild(contentSource.cloneNode(true));
   contentSource.setAttribute('data-okie-slide-index', index);
 
