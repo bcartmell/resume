@@ -415,14 +415,19 @@ footer h4 {
 /* Modaller */
 #modal-curtain {
   background: rgba(0,0,0,.618);
+
   display: table;
+  table-layout: fixed; /* max-width for Firefox */
+
   text-align: center;
   position: fixed;
     left: 0;
     top: 0;
   height: 100%;
-  width: 100%;
   text-align: center;
+
+  width: 100%;
+  /* max-width: -moz-max-content; */
 }
 #modal-curtain-inner {
   display: table-cell;
@@ -435,6 +440,7 @@ footer h4 {
   box-shadow: 1px 0 16px -2px;
   display: inline-block;
   max-width: 96%;
+  max-height: 96%;
   position: relative;
   overflow: hidden;
 }
@@ -461,7 +467,7 @@ i.modal-close:before {
 
 /* Okie-Show styles */
 .okie-show {
-  display: inline-block;
+  display: block;
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -471,7 +477,7 @@ i.modal-close:before {
 .okie-show .slide {
   max-height: 100%;
   max-width: 100%;
-  overflow: auto;
+  overflow: hidden;
   text-align: center;
   text-indent: 0;
   vertical-align: middle;
@@ -707,5 +713,4 @@ button::-moz-focus-inner {
   footer section {
     margin-bottom: 0;
   }
-
 }

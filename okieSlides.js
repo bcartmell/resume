@@ -46,6 +46,7 @@ var OkieShow = function(contentSource) {
 
   this.slideContainer = document.createElement('ul');
   this.slideContainer.classList.add('transition');
+  this.slideContainer.classList.add('slide-container');
   this.element.appendChild(this.slideContainer);
 
   this.slides = [];
@@ -149,6 +150,9 @@ OkieShow.prototype = {
     var targetIndex = this.getCurrentIndex()-1;
     if (targetIndex < 0) targetIndex = this.slides.length-1;
     this.toSlide(targetIndex);
+  },
+  setMaxHeight(maxHeight) {
+    this.element.style.maxHeight = maxHeight;
   }
 };
 
