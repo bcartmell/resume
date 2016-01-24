@@ -350,9 +350,6 @@ footer h4 {
 /* Modaller */
 #modal-curtain {
   background: rgba(0, 0, 0, 0.618);
-  display: table;
-  table-layout: fixed;
-  /* max-width for Firefox */
   position: fixed;
   left: 0;
   top: 0;
@@ -360,13 +357,20 @@ footer h4 {
   width: 100%;
   height: 200%;
 }
-#modal-curtain-inner {
-  display: table-cell;
-  vertical-align: middle;
+#modal-curtain-wrapper {
+  display: table;
+  table-layout: fixed;
   position: fixed;
   top: 3%;
+  height: 94%;
   max-height: 94%;
   max-width: 100%;
+}
+#modal-curtain-inner {
+  display: table-cell;
+  max-height: inherit;
+  vertical-align: middle;
+  text-align: center;
 }
 .modal {
   background: #474747;

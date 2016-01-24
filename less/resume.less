@@ -425,15 +425,11 @@ footer h4 {
 /* Modaller */
 #modal-curtain {
   background: rgba(0,0,0,.618);
-  display: table;
-  table-layout: fixed; /* max-width for Firefox */
-
   text-align: center;
   position: fixed;
     left: 0;
     top: 0;
   text-align: center;
-
   width: 100%;
 
   // forces curtain to extend past bottom of viewport
@@ -441,15 +437,23 @@ footer h4 {
   // (because of safaris disapearing tab bar)
   height: 200%;
 }
-#modal-curtain-inner {
-  display: table-cell;
-  vertical-align: middle;
 
-  // re-centers content after applying height fix on #modal-curtain
+#modal-curtain-wrapper {
+  display: table;
+  table-layout: fixed;
+
   position: fixed;
   top: 3%;
+  height: 94%;
   max-height: 94%;
   max-width: 100%;
+}
+
+#modal-curtain-inner {
+  display: table-cell;
+  max-height: inherit;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .modal {

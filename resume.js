@@ -75,10 +75,17 @@
       this.element.id = 'modal-curtain';
       this.element.className = 'hidden transition-opacity';
 
-      this.alignmentCell = document.createElement('div');
-      this.alignmentCell.id = 'modal-curtain-inner';
+      this.outerWrapper = document.createElement('div');
+      this.outerWrapper.id = 'modal-curtain-wrapper';
 
-      this.element.appendChild(this.alignmentCell);
+      // Yet another container in the curtain.
+      // fixed positioning messed up vertical center-align
+      // so now we need this container to fix it.
+      this.innerWrapper = document.createElement('div');
+      this.innerWrapper.id = 'modal-curtain-inner';
+
+      this.outerWrapper.appendChild(this.innerWrapper);
+      this.element.appendChild(this.outerWrapper);
 
       document.getElementsByTagName('body')[0].appendChild(this.element);
 
@@ -93,7 +100,7 @@
     Curtain.prototype = {
       addModal: function(modal) {
         this.modals.push(modal);
-        this.alignmentCell.appendChild(modal.element);
+        this.innerWrapper.appendChild(modal.element);
       },
       hideModals: function() {
         var i;
