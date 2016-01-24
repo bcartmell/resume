@@ -363,8 +363,10 @@ footer h4 {
 #modal-curtain-inner {
   display: table-cell;
   vertical-align: middle;
-  position: relative;
-  top: -25%;
+  position: fixed;
+  top: 3%;
+  max-height: 94%;
+  max-width: 100%;
 }
 .modal {
   background: #474747;
@@ -372,7 +374,7 @@ footer h4 {
   box-shadow: 1px 0 16px -2px;
   display: inline-block;
   max-width: 94%;
-  max-height: 94%;
+  max-height: inherit;
   position: relative;
   overflow: visible;
 }

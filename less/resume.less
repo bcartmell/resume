@@ -447,8 +447,10 @@ footer h4 {
   vertical-align: middle;
 
   // re-centers content after applying height fix on #modal-curtain
-  position: relative;
-  top: -25%;
+  position: fixed;
+  top: 3%;
+  max-height: 94%;
+  max-width: 100%;
 }
 
 .modal {
@@ -457,7 +459,7 @@ footer h4 {
   box-shadow: 1px 0 16px -2px;
   display: inline-block;
   max-width: 94%;
-  max-height: 94%;
+  max-height: inherit;
   position: relative;
   overflow: visible;
 }
