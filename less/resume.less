@@ -534,7 +534,7 @@ i.modal-close:before {
   z-index: 10;
 }
 
-.okie-show:hover button {
+.okie-show button:hover {
   opacity: 1;
 }
 button::-moz-focus-inner {
@@ -571,6 +571,26 @@ button::-moz-focus-inner {
   border-right: 20px solid @white;
 }
 
+
+.okie-show button:before,
+.okie-show button::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 204%;
+  position: absolute;
+  top: 0;
+}
+.okie-show .next-button:before,
+.okie-show .next-button::before {
+  left: -200%;
+}
+
+.okie-show .prev-button:before,
+.okie-show .prev-button::before {
+  right: -200%;
+}
+
 @media (max-width:768px) {
   h4 small {
     display: block;
@@ -595,6 +615,15 @@ button::-moz-focus-inner {
   .okie-show button {
     width: 8em;
     // make slide-nav buttons bigger
+  }
+
+  .okie-show:hover button {
+    opacity: 1;
+  }
+
+  .okie-show button:before,
+  .okie-show button::before {
+    display: none;
   }
 
   i.modal-close {
