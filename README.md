@@ -1,7 +1,6 @@
-# resume
-========
+# Resume
 
-My resume.  
+My resume site.  
 
 Implemented without any external library's or plugins (except LESS).
 
