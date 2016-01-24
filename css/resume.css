@@ -405,8 +405,11 @@ i.modal-close:before {
   overflow: hidden;
   position: relative;
 }
+.okie-show .slide-container {
+  max-height: inherit;
+}
 .okie-show .slide {
-  max-height: 100%;
+  max-height: inherit;
   max-width: 100%;
   overflow: hidden;
   text-align: center;

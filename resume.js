@@ -45,13 +45,10 @@
       getViewHeight: function() {
         return window.innerHeight || document.documentElement.clientHeight;
       },
+
       maxHeightMultiplier: function(element) {
         // allows us to sat heights and max-heights on elements
         // while still respecting percentage-based CSS max-height property
-
-        element.style.maxHeight = ''
-        // remove any max-height value that we previously set
-        // on the element
 
         var cssMaxHeight = getComputedStyle(element).maxHeight;
         // getComputedStyle will get us the value from the stylesheet
@@ -223,8 +220,10 @@
         return this;
       },
       setMaxHeight: function() {
-        var maxHeightMultiplier = helpers.maxHeightMultiplier(this.element);
-        var maxHeight = helpers.getViewHeight() *maxHeightMultiplier +'px';
+        if (!this.maxHeightMultiplier) {
+          this.maxHeightMultiplier = helpers.maxHeightMultiplier(this.element) 
+        }
+        var maxHeight = helpers.getViewHeight() *this.maxHeightMultiplier +'px';
         this.element.style.maxHeight = maxHeight;
         this.setContentMaxHeight(maxHeight);
       },

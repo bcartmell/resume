@@ -4,12 +4,13 @@ var Slide = function (contentSource, index) {
   this.index = index;
   this.element.classList.add('slide');
   this.element.classList.add('transition-opacity');
-  this.element.appendChild(contentSource.cloneNode(true));
+  this.slideContent = contentSource.cloneNode(true);
+  this.element.appendChild(this.slideContent);
   contentSource.setAttribute('data-okie-slide-index', index);
 
   this.transDuration = function() {
     var duration = getComputedStyle(self.element).transitionDuration;
-    return parseFloat(duration)*1000
+    return parseFloat(duration)*1000;
   };
 
 }
@@ -133,6 +134,15 @@ OkieShow.prototype = {
       // current slide, we can just fade it in can call it a day.
       targetSlide.show();
       this.allowNav = true;
+
+      setTimeout(function() {
+        // Clearly, we need to do some refactoring,
+        // but let's get this working first.
+        if (typeof dragLine !== 'undefined') {
+          dragLine(targetSlide.element.childNodes[0]);
+        } 
+      }, targetSlide.transDuration());
+
       return;
     }
 
@@ -166,7 +176,13 @@ OkieShow.prototype = {
       self.element.style.height = '';
 
       self.allowNav = true;
-    }, currentSlide.transDuration());
+
+      // Clearly, we need to do some refactoring,
+      // but let's get this working first.
+      if (typeof dragLine !== 'undefined') {
+        dragLine(targetSlide.element.childNodes[0]);
+      } 
+    }, targetSlide.transDuration());
   },
   toSlide: function(slideIndex) {
     var setStage = function() {
