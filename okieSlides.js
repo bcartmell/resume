@@ -135,13 +135,15 @@ OkieShow.prototype = {
       targetSlide.show();
       this.allowNav = true;
 
-      setTimeout(function() {
-        // Clearly, we need to do some refactoring,
-        // but let's get this working first.
-        if (typeof dragLine !== 'undefined') {
-          dragLine(targetSlide.element.childNodes[0]);
-        } 
-      }, targetSlide.transDuration());
+      /*
+       * setTimeout(function() {
+       *   // Clearly, we need to do some refactoring,
+       *   // but let's get this working first.
+       *   if (typeof dragLine !== 'undefined') {
+       *     dragLine(targetSlide.element.childNodes[0]);
+       *   } 
+       * }, targetSlide.transDuration());
+       */
 
       return;
     }
@@ -177,11 +179,13 @@ OkieShow.prototype = {
 
       self.allowNav = true;
 
-      // Clearly, we need to do some refactoring,
-      // but let's get this working first.
-      if (typeof dragLine !== 'undefined') {
-        dragLine(targetSlide.element.childNodes[0]);
-      } 
+      /*
+       * Clearly, we need to do some refactoring,
+       * but let's get this working first.
+       * if (typeof dragLine !== 'undefined') {
+       *   dragLine(targetSlide.element.childNodes[0]);
+       * } 
+       */
     }, targetSlide.transDuration());
   },
   toSlide: function(slideIndex) {

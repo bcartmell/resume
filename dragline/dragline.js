@@ -36,11 +36,11 @@ var dragLine = (function() {
       }, 300);
     }
 
-    var mouseUpListener = function() {
+    var endListener = function() {
       if (parseInt(element.style.top) > maxPos) bounceToBoundry(maxPos);
       if (parseInt(element.style.top) < minPos) bounceToBoundry(minPos);
       window.removeEventListener('mousemove', moveListener, false);
-      window.removeEventListener('mouseup', mouseUpListener, false);
+      window.removeEventListener('mouseup', endListener, false);
     }
 
     this.element.addEventListener('mousedown', function(event) {
@@ -50,7 +50,7 @@ var dragLine = (function() {
       };
       downPos =  {x: event.x, y:event.y}
       window.addEventListener('mousemove', moveListener, false);
-      window.addEventListener('mouseup', mouseUpListener, false);
+      window.addEventListener('mouseup', endListener, false);
     });
   };
 }());
