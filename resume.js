@@ -73,7 +73,7 @@
 
       this.element = document.createElement('div');
       this.element.id = 'modal-curtain';
-      this.element.className = 'hidden transition';
+      this.element.className = 'hidden transition-opacity';
 
       this.alignmentCell = document.createElement('div');
       this.alignmentCell.id = 'modal-curtain-inner';
