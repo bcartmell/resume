@@ -142,7 +142,7 @@
       // setup primary container
       this.element = document.createElement(options.tagName || 'div');
       this.element.id = options.id || '';
-      this.element.className = helpers.cleanSpaces('hidden transition modal '+ (options.className || ''));
+      this.element.className = helpers.cleanSpaces('hidden modal '+ (options.className || ''));
 
       // add content
 
