@@ -1,4 +1,7 @@
 /*
+ * Import prefixes
+*/
+/*
  *  Color Pallette:
  */
 /*@blue: @mid-gray;*/
@@ -7,6 +10,9 @@
 /*@brown: @mid-gray;*/
 /*
  *Fonts
+ */
+/*
+ * Mixins
  */
 .cambo {
   font-family: 'cambo' !important;
@@ -171,18 +177,58 @@ header .contact-info {
 .hidden {
   display: none !important;
 }
-.transition {
+.transition-all {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .transition-opacity {
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  will-change: opacity;
+}
+.transition-position {
+  -webkit-transition: right 0.3s ease-in-out;
+  -moz-transition: right 0.3s ease-in-out;
+  -o-transition: right 0.3s ease-in-out;
+  -ms-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+  -webkit-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  -ms-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+  -webkit-transition: bottom 0.3s ease-in-out;
+  -moz-transition: bottom 0.3s ease-in-out;
+  -o-transition: bottom 0.3s ease-in-out;
+  -ms-transition: bottom 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  -ms-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+.transition-size {
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  -ms-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  -moz-transition: max-height 0.3s ease-in-out;
+  -o-transition: max-height 0.3s ease-in-out;
+  -ms-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 .tags-list {
   color: #161616;
@@ -371,13 +417,14 @@ footer h4 {
   max-height: inherit;
   vertical-align: middle;
   text-align: center;
+  padding: 0 6%;
 }
 .modal {
   background: #474747;
   border-radius: .3em;
   box-shadow: 1px 0 16px -2px;
   display: inline-block;
-  max-width: 94%;
+  max-width: 100%;
   max-height: inherit;
   position: relative;
   overflow: visible;

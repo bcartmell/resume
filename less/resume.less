@@ -1,4 +1,9 @@
 /*
+ * Import prefixes
+*/
+@import "./prefixer.less";
+
+/*
  *  Color Pallette:
  */
 @white: #f9f9f9;
@@ -29,6 +34,11 @@
 @serif: 'cambo', Georgia, serif;
 @alt-serif: 'droid_serifitalic', Georgia, serif;
 @sans-serif: 'Open Sans', 'open_sans' Helvetica, Arial, sans-serif;
+
+/*
+ * Mixins
+ */
+@transition-defaults: .3s ease-in-out;
 
 .cambo {
   font-family: 'cambo' !important;
@@ -221,19 +231,24 @@ header .contact-info {
   display: none !important;
 }
 
-.transition {
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+.transition-all {
+  .transition(all @transition-defaults);
 }
 .transition-opacity {
-  -webkit-transition: opacity .3s ease-in-out;
-  -moz-transition: opacity .3s ease-in-out;
-  -o-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out;
+  .transition(opacity @transition-defaults);
+}
 
-  will-change: opacity;
+.transition-position {
+  .transition(right @transition-defaults);
+  .transition(left @transition-defaults);
+  .transition(bottom @transition-defaults);
+  .transition(top @transition-defaults);
+}
+
+.transition-size {
+  .transition(width @transition-defaults);
+  .transition(height @transition-defaults);
+  .transition(max-height @transition-defaults);
 }
 
 .tags-list {
@@ -454,6 +469,7 @@ footer h4 {
   max-height: inherit;
   vertical-align: middle;
   text-align: center;
+  padding: 0 6%;
 }
 
 .modal {
@@ -461,7 +477,7 @@ footer h4 {
   border-radius: .3em;
   box-shadow: 1px 0 16px -2px;
   display: inline-block;
-  max-width: 94%;
+  max-width: 100%;
   max-height: inherit;
   position: relative;
   overflow: visible;

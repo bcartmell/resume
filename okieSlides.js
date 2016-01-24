@@ -35,7 +35,7 @@ var OkieShow = function(contentSource, options) {
   function makeButton(btnClass) {
     var button = document.createElement('button');
     button.classList.add(btnClass);
-    button.classList.add('transition');
+    button.classList.add('transition-opacity');
     return button;
   }
 
@@ -47,9 +47,9 @@ var OkieShow = function(contentSource, options) {
 
   this.element = document.createElement('div');
   this.element.classList.add('okie-show');
+  this.element.classList.add('transition-size');
 
   this.slideContainer = document.createElement('ul');
-  this.slideContainer.classList.add('transition');
   this.slideContainer.classList.add('slide-container');
   this.element.appendChild(this.slideContainer);
 
@@ -122,31 +122,44 @@ OkieShow.prototype = {
     var currentSlide = this.getCurrentSlide();
     var targetSlide = this.slides[slideIndex];
 
-    this.allowNav = false;
-    // Let's only allow one slide transition at time;
-
-    this.element.style.width = getComputedStyle(this.element).width;
-    this.element.style.height = getComputedStyle(this.element).height;
-    // Set element widths so they don't change when we add position:absolute
-
-    if (!currentSlide) {
+    if (helpers.isVisible(this.slideContainer) === false) {
       // If the show just opened and there is no 
       // current slide, we can just fade it in can call it a day.
-      targetSlide.show();
-      this.allowNav = true;
 
-      /*
-       * setTimeout(function() {
-       *   // Clearly, we need to do some refactoring,
-       *   // but let's get this working first.
-       *   if (typeof dragLine !== 'undefined') {
-       *     dragLine(targetSlide.element.childNodes[0]);
-       *   } 
-       * }, targetSlide.transDuration());
-       */
+      var pattern = /(?:\s)(transition-\w+)/;
+      var transitionClass = targetSlide.element.className.match(pattern)[1];
+      transitionClass = transitionClass.replace(/\s|\b/g, '');
+      // Not sure why regex is capturing the 'non-capturing' space,
+      // but this will fix it.
+      
+      try {
+        targetSlide.element.classList.remove(transitionClass);
+        targetSlide.show();
+        targetSlide.element.classList.add(transitionClass);
+        this.allowNav = true;
+      } catch(error) {
+        debugger;
+      }
+
+      setTimeout(function() {
+        // Clearly, we need to do some refactoring,
+        // but let's get this working first.
+        if (typeof dragLine !== 'undefined') {
+          dragLine(targetSlide.element.childNodes[0]);
+        } 
+      }, targetSlide.transDuration());
 
       return;
     }
+
+    this.allowNav = false;
+    // Let's only allow one slide transition at time;
+
+    var elementSize = helpers.getOuterSize(this.element);
+    this.element.style.width = elementSize.width +'px';
+    this.element.style.height = elementSize.height +'px';
+    // Set element widths so they don't change when we add position:absolute
+
 
     // Set the stage:
     currentSlide.element.style.zIndex = '1';
@@ -154,6 +167,7 @@ OkieShow.prototype = {
 
     currentSlide.element.style.position = 'absolute';
     targetSlide.element.style.position = 'absolute';
+
     // Slides will need to be absolutly positioned
     // so that they stack on top of eachother
 
@@ -182,10 +196,10 @@ OkieShow.prototype = {
       /*
        * Clearly, we need to do some refactoring,
        * but let's get this working first.
-       * if (typeof dragLine !== 'undefined') {
-       *   dragLine(targetSlide.element.childNodes[0]);
-       * } 
        */
+      if (typeof dragLine !== 'undefined') {
+        dragLine(targetSlide.element.childNodes[0]);
+      } 
     }, targetSlide.transDuration());
   },
   toSlide: function(slideIndex) {
@@ -207,6 +221,6 @@ OkieShow.prototype = {
   },
   setMaxHeight(maxHeight) {
     this.element.style.maxHeight = maxHeight;
-  }
+  },
 };
 

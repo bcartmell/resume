@@ -29,11 +29,11 @@ var dragLine = (function() {
     }
 
     var bounceToBoundry = function(pos) {
-      element.classList.add('transition');
+      element.classList.add('transition-position');
       element.style.top = pos+'px';
       setTimeout(function() {
-        element.classList.remove('transition');
-      }, 300);
+        element.classList.remove('transition-position');
+      }, helpers.getTransDuration(element));
     }
 
     var endListener = function() {

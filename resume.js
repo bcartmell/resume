@@ -14,7 +14,7 @@
         // you can append strings together without worrying
         // about whether or not you should prepending/appending
         // spaces will help or hurt, just add the spaces and use this function.
-        return str.replace(/\W+/g,' ').trim();
+        return str.replace(/\s+/g,' ').trim();
       },
 
       addClass: function(target, newClass) {
@@ -41,6 +41,10 @@
           height: rect.height || (rect.bottom-rect.top) 
         }
       },
+
+      getTransDuration(element) {
+        return parseFloat(getComputedStyle(element).transitionDuration)*1000;
+      },
       
       getViewHeight: function() {
         return window.innerHeight || document.documentElement.clientHeight;
@@ -57,6 +61,10 @@
           return parseFloat(cssMaxHeight)/100;
         }
         return 1;
+      },
+
+      isVisible(element) {
+        return element.offsetWidth > 0 || element.offsetHeight > 0;
       }
     };
   }());
@@ -91,7 +99,6 @@
 
       this.element.addEventListener('click', function(event) {
         if (event.target === self.element) {
-          self.hideModals();
           hideElement(self.element);
         }
       });
@@ -102,12 +109,6 @@
         this.modals.push(modal);
         this.innerWrapper.appendChild(modal.element);
       },
-      hideModals: function() {
-        var i;
-        for (i=0; i<this.modals.length; i++) {
-          hideElement(this.modals[i].element);
-        }
-      }
     };
 
     function getCurtain() {
@@ -115,16 +116,16 @@
       return curtainInstance;
     }
 
-    function hideElement(element) {
+    function hideElement(element, callback) {
       var className = element.className || '';
       if (className.search('hidden') === -1) {
-        element.style.opacity = 1;
+        element.style.opacity = 0;
         window.setTimeout(function() {
           helpers.addClass(element, 'hidden');
-        },300);
+        },helpers.getTransDuration(element));
       }
       element.style.opacity = 0;
-      return element;
+      if (callback) callback();
     }
 
     function showElement(element) {
@@ -149,7 +150,7 @@
       // setup primary container
       this.element = document.createElement(options.tagName || 'div');
       this.element.id = options.id || '';
-      this.element.className = helpers.cleanSpaces('hidden modal '+ (options.className || ''));
+      this.element.className = helpers.cleanSpaces('hidden modal transition-all'+ (options.className || ''));
 
       // add content
 
@@ -218,8 +219,12 @@
         return this;
       },
       hide: function() {
-        hideElement(this.element);
-        hideElement(this.curtain.element);
+        var curtain = this.curtain;
+        var self = this;
+        hideElement(this.element, function() {
+          hideElement(curtain.element);
+          self.content.getCurrentSlide().hide();
+        });
 
         // undo prevent body scroll while modal is open
         document.body.classList.remove('modal-open');
