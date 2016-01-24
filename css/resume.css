@@ -425,7 +425,7 @@ i.modal-close:before {
   max-width: 100%;
 }
 .okie-show button {
-  background: rgba(22, 22, 22, 0.3);
+  background: rgba(71, 71, 71, 0.3);
   border: none;
   height: 100%;
   outline: none;
@@ -463,12 +463,12 @@ button::-moz-focus-inner {
 }
 .okie-show .next-button:after,
 .okie-show .next-button::after {
-  box-shadow: -5px 0 2px -2px #7A7A7A;
+  box-shadow: -5px 0 2px -2px rgba(22, 22, 22, 0.3);
   border-left: 20px solid #f9f9f9;
 }
 .okie-show .prev-button:after,
 .okie-show .prev-button::after {
-  box-shadow: 5px 0 2px -2px #7A7A7A;
+  box-shadow: 5px 0 2px -2px rgba(22, 22, 22, 0.3);
   border-right: 20px solid #f9f9f9;
 }
 @media (max-width: 768px) {
