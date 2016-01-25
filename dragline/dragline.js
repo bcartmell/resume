@@ -24,13 +24,20 @@ var dragLine = (function() {
     var minPos = calcMinPos(element);
 
     var moveListener = function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      var change =  {
-        x: downPos.x - (event.x || event.touches[0].clientX),
-        y: downPos.y - (event.y || event.touches[0].clientY)
+      if (event.touches && event.touches.length > 1) {
+      // if touchlength is greater than 1,
+      // the user is probably trying to zoom, 
+      // let's stay out of there way.
+
+      else {
+        event.preventDefault();
+        event.stopPropagation();
+        var change =  {
+          x: downPos.x - (event.x || event.touches[0].clientX),
+          y: downPos.y - (event.y || event.touches[0].clientY)
+        }
+        element.style.top = startPos.y - change.y +'px';
       }
-      element.style.top = startPos.y - change.y +'px';
     }
 
     var bounceToBoundry = function(pos) {
