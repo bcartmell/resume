@@ -411,6 +411,7 @@ footer h4 {
   height: 94%;
   max-height: 94%;
   max-width: 100%;
+  width: 100%;
 }
 #modal-curtain-inner {
   display: table-cell;
