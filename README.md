@@ -8,7 +8,7 @@ Because I wanted the challenge and the learning experience of doing it the hard
 way.
 
 
-### Things left to do
+#### Things left to do
 - [ ] Add touch events to dragLine so that mobile users can scroll images
 - [ ] Add thumnails and lazy-loading for images to improve load time and ios performance
 - [ ] Add swiping for changing slides, then remove those ugly next/previous buttons
