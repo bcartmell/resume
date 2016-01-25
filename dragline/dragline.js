@@ -27,8 +27,8 @@ var dragLine = (function() {
       event.preventDefault();
       event.stopPropagation();
       var change =  {
-        x: downPos.x - event.x,
-        y: downPos.y - event.y
+        x: downPos.x - (event.x || event.touches[0].clientX),
+        y: downPos.y - (event.y || event.touches[0].clientY)
       }
       element.style.top = startPos.y - change.y +'px';
     }
@@ -41,21 +41,42 @@ var dragLine = (function() {
       }, helpers.getTransDuration(element));
     }
 
-    var endMouseListener = function() {
+    var startScroll = function() {
+      startPos = {
+        x: parseInt(element.style.left) || 0,
+        y: parseInt(element.style.top) || 0
+      };
+    };
+
+    var endScroll = function() {
       if (parseInt(element.style.top) > maxPos) bounceToBoundry(maxPos);
       if (parseInt(element.style.top) < minPos) bounceToBoundry(minPos);
+    }
+
+    var endMouseListener = function() {
+      endScroll();
       window.removeEventListener('mousemove', moveListener, false);
       window.removeEventListener('mouseup', endMouseListener, false);
+    };
+
+    var endTouchListener = function() {
+      endScroll();
+      window.removeEventListener('touchmove', moveListener, false);
+      window.removeEventListener('touchend', endTouchListener, false);
     }
 
     this.element.addEventListener('mousedown', function(event) {
-      startPos = {
-        x: parseInt(this.style.left) || 0,
-        y: parseInt(this.style.top) || 0
-      };
+      startScroll();
       downPos =  {x: event.x, y:event.y}
       window.addEventListener('mousemove', moveListener, false);
       window.addEventListener('mouseup', endMouseListener, false);
+    });
+
+    this.element.addEventListener('touchstart', function(event) {
+      startScroll();
+      downPos =  {x: event.touches[0].clientX, y:event.touches[0].clientY }
+      window.addEventListener('touchmove', moveListener, false);
+      window.addEventListener('touchend', endTouchListener, false);
     });
 
     window.addEventListener('resize', function() {
