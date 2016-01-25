@@ -24,11 +24,10 @@ var dragLine = (function() {
     var minPos = calcMinPos(element);
 
     var moveListener = function(event) {
-      if (event.touches && event.touches.length > 1) {
+      if (event.touches && event.touches.length > 1) endScroll();
       // if touchlength is greater than 1,
       // the user is probably trying to zoom, 
       // let's stay out of there way.
-
       else {
         event.preventDefault();
         event.stopPropagation();
