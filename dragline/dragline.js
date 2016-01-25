@@ -73,10 +73,17 @@ var dragLine = (function() {
     });
 
     this.element.addEventListener('touchstart', function(event) {
-      startScroll();
-      downPos =  {x: event.touches[0].clientX, y:event.touches[0].clientY }
-      window.addEventListener('touchmove', moveListener, false);
-      window.addEventListener('touchend', endTouchListener, false);
+      if (event.touches.length > 1) endscroll(); 
+      // if touchlength is greater than 1,
+      // the user is probably trying to zoom, 
+      // let's stay out of there way.
+
+      else {
+        startScroll();
+        downPos =  {x: event.touches[0].clientX, y:event.touches[0].clientY }
+        window.addEventListener('touchmove', moveListener, false);
+        window.addEventListener('touchend', endTouchListener, false);
+      }
     });
 
     window.addEventListener('resize', function() {
