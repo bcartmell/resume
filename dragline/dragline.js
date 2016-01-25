@@ -5,6 +5,11 @@
 
 var dragLine = (function() {
   var draglineClassName = 'dragline-draggable';
+
+  var calcMinPos = function(element) {
+    return element.parentElement.clientHeight-element.scrollHeight;
+  };
+
   return function(element) {
     if (element.className.indexOf(draglineClassName) !== -1) {
       // We've done this before
@@ -16,7 +21,7 @@ var dragLine = (function() {
     var startPos;
     var downPos;
     var maxPos = 0;
-    var minPos = element.parentElement.clientHeight-element.scrollHeight;
+    var minPos = calcMinPos(element);
 
     var moveListener = function(event) {
       event.preventDefault();
@@ -36,11 +41,11 @@ var dragLine = (function() {
       }, helpers.getTransDuration(element));
     }
 
-    var endListener = function() {
+    var endMouseListener = function() {
       if (parseInt(element.style.top) > maxPos) bounceToBoundry(maxPos);
       if (parseInt(element.style.top) < minPos) bounceToBoundry(minPos);
       window.removeEventListener('mousemove', moveListener, false);
-      window.removeEventListener('mouseup', endListener, false);
+      window.removeEventListener('mouseup', endMouseListener, false);
     }
 
     this.element.addEventListener('mousedown', function(event) {
@@ -50,7 +55,11 @@ var dragLine = (function() {
       };
       downPos =  {x: event.x, y:event.y}
       window.addEventListener('mousemove', moveListener, false);
-      window.addEventListener('mouseup', endListener, false);
+      window.addEventListener('mouseup', endMouseListener, false);
+    });
+
+    window.addEventListener('resize', function() {
+      minPos = calcMinPos(element);
     });
   };
 }());
