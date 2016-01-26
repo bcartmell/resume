@@ -9,8 +9,7 @@ var Slide = function (contentSource, index) {
   if (this.slideContent.hasAttribute('data-thumb') && 
       this.slideContent.getAttribute('data-fullsize')) {
     var imgSrc = this.slideContent.getAttribute('data-fullsize');
-    this.slideContent.setAttribute('data-src', imgSrc);
-    this.slideContent.removeAttribute('src'); // we'll set this when the show opens
+    this.slideContent.setAttribute('src', imgSrc);
     this.slideContent.removeAttribute('data-thumb');
     this.slideContent.removeAttribute('data-fullsize');
   }
