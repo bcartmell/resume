@@ -28,7 +28,7 @@ var Slide = function (contentSource, index) {
     return parseFloat(duration)*1000;
   };
 
-}
+};
 Slide.prototype = {
   show: function() { 
     var el = this.element;
@@ -49,7 +49,7 @@ Slide.prototype = {
       self.element.classList.remove('visible');
     }, self.transDuration());
   },
-}
+};
 
 var OkieShow = function(contentSource, options) {
   var self = this;
@@ -132,13 +132,13 @@ OkieShow.prototype = {
     }
     return undefined;
   },
-  getCurrentIndex() {
+  getCurrentIndex: function() {
     return this.getCurrentSlide().index;
   },
   addSlide: function(contentSource) {
     var newSlide = new Slide(contentSource, this.slides.length);
     this.slides.push(newSlide);
-    this.slideContainer.appendChild(newSlide.element)
+    this.slideContainer.appendChild(newSlide.element);
   },
   fadeTo: function(slideIndex) {
     var self = this;
@@ -146,7 +146,7 @@ OkieShow.prototype = {
     var targetSlide = this.slides[slideIndex];
 
     if (targetSlide.slideContent.hasAttribute('data-src') && !targetSlide.slideContent.hasAttribute('src')) {
-      targetSlide.slideContent.setAttribute('src', targetSlide.slideContent.getAttribute('data-src'))
+      targetSlide.slideContent.setAttribute('src', targetSlide.slideContent.getAttribute('data-src'));
     }
 
     if (helpers.isVisible(this.slideContainer) === false) {
@@ -246,7 +246,7 @@ OkieShow.prototype = {
     if (targetIndex < 0) targetIndex = this.slides.length-1;
     this.toSlide(targetIndex);
   },
-  setMaxHeight(maxHeight) {
+  setMaxHeight: function(maxHeight) {
     this.element.style.maxHeight = maxHeight;
   },
 };
