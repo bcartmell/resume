@@ -28,7 +28,7 @@ var Slide = function (contentSource, index) {
     return parseFloat(duration)*1000;
   };
 
-};
+}
 Slide.prototype = {
   show: function() { 
     var el = this.element;
@@ -38,7 +38,10 @@ Slide.prototype = {
     } else {
       this.slideContent.addEventListener('load', function(event) {
         el.style.opacity = '1';
-        el.classList.remove('loading');
+        // el.classList.remove('loading');
+        if (typeof dragLine !== 'undefined') {
+          dragLine(this);
+        } 
       });
     }
   },
@@ -49,7 +52,7 @@ Slide.prototype = {
       self.element.classList.remove('visible');
     }, self.transDuration());
   },
-};
+}
 
 var OkieShow = function(contentSource, options) {
   var self = this;
@@ -132,13 +135,13 @@ OkieShow.prototype = {
     }
     return undefined;
   },
-  getCurrentIndex: function() {
+  getCurrentIndex() {
     return this.getCurrentSlide().index;
   },
   addSlide: function(contentSource) {
     var newSlide = new Slide(contentSource, this.slides.length);
     this.slides.push(newSlide);
-    this.slideContainer.appendChild(newSlide.element);
+    this.slideContainer.appendChild(newSlide.element)
   },
   fadeTo: function(slideIndex) {
     var self = this;
@@ -146,7 +149,7 @@ OkieShow.prototype = {
     var targetSlide = this.slides[slideIndex];
 
     if (targetSlide.slideContent.hasAttribute('data-src') && !targetSlide.slideContent.hasAttribute('src')) {
-      targetSlide.slideContent.setAttribute('src', targetSlide.slideContent.getAttribute('data-src'));
+      targetSlide.slideContent.setAttribute('src', targetSlide.slideContent.getAttribute('data-src'))
     }
 
     if (helpers.isVisible(this.slideContainer) === false) {
@@ -167,14 +170,6 @@ OkieShow.prototype = {
       } catch(error) {
         console.log(error);
       }
-
-      setTimeout(function() {
-        // Clearly, we need to do some refactoring,
-        // but let's get this working first.
-        if (typeof dragLine !== 'undefined') {
-          dragLine(targetSlide.element.childNodes[0]);
-        } 
-      }, targetSlide.transDuration());
 
       return;
     }
@@ -220,13 +215,6 @@ OkieShow.prototype = {
 
       self.allowNav = true;
 
-      /*
-       * Clearly, we need to do some refactoring,
-       * but let's get this working first.
-       */
-      if (typeof dragLine !== 'undefined') {
-        dragLine(targetSlide.element.childNodes[0]);
-      } 
     }, targetSlide.transDuration());
   },
   toSlide: function(slideIndex) {
@@ -246,7 +234,7 @@ OkieShow.prototype = {
     if (targetIndex < 0) targetIndex = this.slides.length-1;
     this.toSlide(targetIndex);
   },
-  setMaxHeight: function(maxHeight) {
+  setMaxHeight(maxHeight) {
     this.element.style.maxHeight = maxHeight;
   },
 };
