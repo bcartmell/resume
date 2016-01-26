@@ -4,6 +4,7 @@ var Slide = function (contentSource, index) {
   this.index = index;
   this.element.classList.add('slide');
   this.element.classList.add('transition-opacity');
+  this.element.classList.add('loading');
   this.slideContent = contentSource.cloneNode(true);
 
   if (this.slideContent.hasAttribute('data-thumb') && 
@@ -14,6 +15,10 @@ var Slide = function (contentSource, index) {
     this.slideContent.removeAttribute('data-thumb');
     this.slideContent.removeAttribute('data-fullsize');
   }
+
+  // this.loadingIndicator = document.createElement('i');
+  // this.loadingIndicator.classList.add('ion-load-c');
+  // this.element.appendChild(this.loadingIndicator);
 
   this.element.appendChild(this.slideContent);
   contentSource.setAttribute('data-okie-slide-index', index);
@@ -26,8 +31,16 @@ var Slide = function (contentSource, index) {
 }
 Slide.prototype = {
   show: function() { 
+    var el = this.element;
     this.element.classList.add('visible');
-    this.element.style.opacity = '1';
+    if (this.slideContent.complete) {
+      el.style.opacity = '1';
+    } else {
+      this.slideContent.addEventListener('load', function(event) {
+        el.style.opacity = '1';
+        el.classList.remove('loading');
+      });
+    }
   },
   hide: function() {
     var self = this;
