@@ -132,7 +132,7 @@
       element.style.opacity = 0;
       element.className = element.className.replace('hidden', '').trim();
       window.setTimeout(function() {
-        element.style.opacity = 1;
+      element.style.opacity = 1;
       }, 2);
       return element;
     }
