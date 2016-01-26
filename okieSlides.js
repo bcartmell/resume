@@ -9,7 +9,8 @@ var Slide = function (contentSource, index) {
   if (this.slideContent.hasAttribute('data-thumb') && 
       this.slideContent.getAttribute('data-fullsize')) {
     var imgSrc = this.slideContent.getAttribute('data-fullsize');
-    this.slideContent.setAttribute('src', imgSrc);
+    this.slideContent.setAttribute('data-src', imgSrc);
+    this.slideContent.removeAttribute('src'); // we'll set this when the show opens
     this.slideContent.removeAttribute('data-thumb');
     this.slideContent.removeAttribute('data-fullsize');
   }
@@ -131,6 +132,10 @@ OkieShow.prototype = {
     var currentSlide = this.getCurrentSlide();
     var targetSlide = this.slides[slideIndex];
 
+    if (targetSlide.slideContent.hasAttribute('data-src') && !targetSlide.slideContent.hasAttribute('src')) {
+      targetSlide.slideContent.setAttribute('src', targetSlide.slideContent.getAttribute('data-src'))
+    }
+
     if (helpers.isVisible(this.slideContainer) === false) {
       // If the show just opened and there is no 
       // current slide, we can just fade it in can call it a day.
@@ -147,7 +152,7 @@ OkieShow.prototype = {
         targetSlide.element.classList.add(transitionClass);
         this.allowNav = true;
       } catch(error) {
-        debugger;
+        console.log(error);
       }
 
       setTimeout(function() {
