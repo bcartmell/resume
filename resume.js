@@ -39,10 +39,10 @@
         return {
           width: rect.width || (rect.right-rect.left),   
           height: rect.height || (rect.bottom-rect.top) 
-        }
+        };
       },
 
-      getTransDuration(element) {
+      getTransDuration: function(element) {
         return parseFloat(getComputedStyle(element).transitionDuration)*1000;
       },
       
@@ -63,7 +63,7 @@
         return 1;
       },
 
-      isVisible(element) {
+      isVisible: function(element) {
         return element.offsetWidth > 0 || element.offsetHeight > 0;
       }
     };
@@ -191,10 +191,10 @@
       this.element.setAttribute('tabIndex', 0); 
 
       this.element.addEventListener('keydown', function(event) {
-        event = event || window.event
+        event = event || window.event;
         if (event.keyCode === 27)  {
-          try {event.preventDefault()} // Standards-compliant 
-          catch(err){ event.returnValue=false} // IE8
+          try {event.preventDefault();} // Standards-compliant 
+          catch(err){ event.returnValue=false;} // IE8
           self.hide();
         }
       }, false);
@@ -233,7 +233,7 @@
       },
       setMaxHeight: function() {
         if (!this.maxHeightMultiplier) {
-          this.maxHeightMultiplier = helpers.maxHeightMultiplier(this.element) 
+          this.maxHeightMultiplier = helpers.maxHeightMultiplier(this.element);
         }
         var maxHeight = helpers.getViewHeight() *this.maxHeightMultiplier +'px';
         this.element.style.maxHeight = maxHeight;
