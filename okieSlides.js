@@ -5,6 +5,16 @@ var Slide = function (contentSource, index) {
   this.element.classList.add('slide');
   this.element.classList.add('transition-opacity');
   this.slideContent = contentSource.cloneNode(true);
+
+  if (this.slideContent.hasAttribute('data-thumb') && 
+      this.slideContent.getAttribute('data-fullsize')) {
+    var imgSrc = this.slideContent.getAttribute('data-fullsize');
+    this.slideContent.setAttribute('data-src', imgSrc);
+    this.slideContent.removeAttribute('src'); // we'll set this when the show opens
+    this.slideContent.removeAttribute('data-thumb');
+    this.slideContent.removeAttribute('data-fullsize');
+  }
+
   this.element.appendChild(this.slideContent);
   contentSource.setAttribute('data-okie-slide-index', index);
 
