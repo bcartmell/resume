@@ -67,7 +67,7 @@ body {
   color: #161616;
   padding: 0 12px;
   font-size: 16px;
-  font-family: 'Open Sans', 'open_sans' Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   line-height: 1.6em;
   vertical-align: baseline;
 }
@@ -130,7 +130,7 @@ small {
 em,
 #work-examples p {
   color: #7A7A7A;
-  font-family: 'droid_serifitalic', Georgia, serif;
+  font-family: 'droid_serif, italic', Georgia, serif;
   font-style: italic;
   font-size: .8em;
 }
@@ -621,6 +621,9 @@ button::-moz-focus-inner {
   right: -200%;
 }
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
   h4 small {
     display: block;
     overflow: hidden;

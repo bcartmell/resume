@@ -32,8 +32,8 @@
  */
 
 @serif: 'cambo', Georgia, serif;
-@alt-serif: 'droid_serifitalic', Georgia, serif;
-@sans-serif: 'Open Sans', 'open_sans' Helvetica, Arial, sans-serif;
+@alt-serif: 'droid_serif, italic', Georgia, serif;
+@sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
 
 /*
  * Mixins
@@ -679,6 +679,14 @@ button::-moz-focus-inner {
 }
 
 @media (max-width:768px) {
+  body{ 
+    padding: 0;
+  }
+
+  #container {
+    padding: 0 1.2em;
+  }
+
   h4 small {
     display: block;
     overflow: hidden;
