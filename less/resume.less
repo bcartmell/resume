@@ -269,6 +269,7 @@ header .contact-info {
 }
 .transition-opacity {
   .transition(opacity @transition-defaults);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .transition-position {
@@ -276,12 +277,15 @@ header .contact-info {
   .transition(left @transition-defaults);
   .transition(bottom @transition-defaults);
   .transition(top @transition-defaults);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .transition-size {
   .transition(width @transition-defaults);
   .transition(height @transition-defaults);
   .transition(max-height @transition-defaults);
+  .transition(max-width @transition-defaults);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .tags-list {
