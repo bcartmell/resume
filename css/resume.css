@@ -238,7 +238,6 @@ header .contact-info {
   -o-transition: opacity 0.3s ease-in-out;
   -ms-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 .transition-position {
   -webkit-transition: right 0.3s ease-in-out;
@@ -261,7 +260,6 @@ header .contact-info {
   -o-transition: top 0.3s ease-in-out;
   -ms-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 .transition-size {
   -webkit-transition: width 0.3s ease-in-out;
@@ -284,7 +282,6 @@ header .contact-info {
   -o-transition: max-width 0.3s ease-in-out;
   -ms-transition: max-width 0.3s ease-in-out;
   transition: max-width 0.3s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 .tags-list {
   color: #161616;
