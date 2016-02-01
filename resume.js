@@ -169,7 +169,7 @@
 
       // add close button
       this.closeButton = document.createElement('i');
-      helpers.addClass(this.closeButton, 'ion-android-close modal-close');
+      helpers.addClass(this.closeButton, 'fa fa-close modal-close');
       this.element.insertBefore(this.closeButton, this.element.firstChild);
 
       this.closeButton.addEventListener('click', function(){
