@@ -14,6 +14,12 @@
 /*
  * Mixins
  */
+.spin {
+  -webkit-animation: spin 0.6s steps(8) infinite;
+  -moz-animation: spin 0.6s steps(8) infinite;
+  -mw-animation: spin 0.6s steps(8) infinite;
+  animation: spin 0.6s steps(8) infinite;
+}
 .cambo {
   font-family: 'cambo' !important;
 }
@@ -39,10 +45,10 @@
 }
 @-o-keyframes spin {
   from {
-    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
   }
   to {
-    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
 }
 @-ms-keyframes spin {
@@ -54,10 +60,10 @@
   }
 }
 keyframes spin from {
-  -webkit-transform: rotate(0deg);
+  -transform: rotate(0deg);
 }
 keyframes spin to {
-  -webkit-transform: rotate(360deg);
+  -transform: rotate(360deg);
 }
 /*
  *  Structural Elements
@@ -472,6 +478,29 @@ footer h4 {
   position: relative;
   overflow: visible;
 }
+/* modal loading spinner */
+.modal i.loading {
+  color: #7A7A7A;
+  font-size: 3em;
+  -webkit-animation: spin 0.6s steps(8) infinite;
+  -moz-animation: spin 0.6s steps(8) infinite;
+  -mw-animation: spin 0.6s steps(8) infinite;
+  animation: spin 0.6s steps(8) infinite;
+  -webkit-transform-origin: 1.6em 1.57em;
+  -moz-transform-origin: 1.6em 1.57em;
+  -ms-transform-origin: 1.6em 1.57em;
+  -o-transform-origin: 1.6em 1.57em;
+  transform-origin: 1.6em 1.57em;
+  position: absolute;
+  left: 40%;
+  left: -webkit-calc(50% - 1.5em);
+  left: -moz-calc(50% - 1.5em);
+  left: calc(50% - 1.5em);
+  top: 30%;
+  top: -webkit-calc(50% - 1.5em);
+  top: -moz-calc(50% - 1.5em);
+  top: calc(50% - 1.5em);
+}
 i.modal-close {
   background: #7A7A7A;
   border-radius: 4em;
@@ -514,47 +543,15 @@ i.modal-close:before {
   position: relative;
   left: 0;
   display: none;
-  opacity: 0;
+  /* opacity: 0; */
 }
-/* 
-.okie-show .slide i {
-  display: none;
-}
- */
-/* 
-.okie-show i {
-  color: @light-gray;
-  position: absolute;
-    top: 15%;
-  font-size: 6em;
-  display: block;
-  padding: 0;
-  -webkit-animation-name: spin; 
-  -webkit-animation-duration: 1300ms;
-  -webkit-animation-iteration-count: infinite; 
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: spin; 
-  -moz-animation-duration: 1300ms;
-  -moz-animation-iteration-count: infinite; 
-  -moz-animation-timing-function: linear;
-  -ms-animation-name: spin; 
-  -ms-animation-duration: 1300ms;
-  -ms-animation-iteration-count: infinite; 
-  -ms-animation-timing-function: linear;
-  animation-name: spin; 
-  animation-duration: 1300ms;
-  animation-iteration-count: infinite; 
-  animation-timing-function: linear;
-  text-align: center;
-  width: 100%;
-}
- */
 .okie-show .slide.visible {
   display: inline-block;
 }
 .okie-show img {
   display: block;
   max-width: 100%;
+  opacity: 0;
 }
 .okie-show button {
   background: rgba(71, 71, 71, 0.3);
