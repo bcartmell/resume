@@ -252,9 +252,9 @@
   }());
 
   document.addEventListener('DOMContentLoaded', function() {
-
     var imageReels = [];
     [].forEach.call(document.getElementsByClassName('image-reel-window'), function(reel, index) {
+
       var reelObj = imageReels[index] = {
         element: reel,
         images: [].filter.call(reel.childNodes, function(node) {
@@ -267,7 +267,13 @@
         reelObj.fire('imgClick', [].indexOf.call(reelObj.images, event.target));
       });
 
-      reelObj.targetShow = new OkieShow(reel);
+      reelObj.targetShow = new OkieShow();
+
+      reelObj.images.forEach(function(image) {
+        var slideContent = image.cloneNode(false);
+        reelObj.targetShow.addSlide(slideContent);
+      });
+
       reelObj.modal = modaller.newModal({
         content: reelObj.targetShow
       });
@@ -277,14 +283,4 @@
     });
   }, false);
 
-  /*
-   *   var imageReels = ;
-   *   [].forEach.call(imageReels, function(reel) {
-   *     modaller.newModal({
-   *       content: new OkieShow(reel),
-   *       target: reel
-   *     });
-   *   });
-   * }, false);
-   */
 }());
