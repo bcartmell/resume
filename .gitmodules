@@ -1,0 +1,6 @@
+[submodule "okie-pub"]
+	path = okie-pub
+	url = git@github.com:bcartmell/okie-pub.git
+[submodule "okie-show"]
+	path = okie-show
+	url = git@github.com:bcartmell/okie-show.git
