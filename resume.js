@@ -252,12 +252,39 @@
   }());
 
   document.addEventListener('DOMContentLoaded', function() {
-    var imageReels = document.getElementsByClassName('image-reel-window');
-    [].forEach.call(imageReels, function(reel) {
-      modaller.newModal({
-        content: new OkieShow(reel),
-        target: reel
+
+    var imageReels = [];
+    [].forEach.call(document.getElementsByClassName('image-reel-window'), function(reel, index) {
+      var reelObj = imageReels[index] = {
+        element: reel,
+        images: [].filter.call(reel.childNodes, function(node) {
+          return node instanceof Element;
+        })
+      }
+
+      okiePub.makePublisher(reelObj);
+      reel.addEventListener('click', function(event) {
+        reelObj.fire('imgClick', [].indexOf.call(reelObj.images, event.target));
       });
+
+      reelObj.targetShow = new OkieShow(reel);
+      reelObj.modal = modaller.newModal({
+        content: reelObj.targetShow
+      });
+
+      reelObj.on('imgClick', reelObj.targetShow.toSlide, reelObj.targetShow);
+      reelObj.on('imgClick', reelObj.modal.show, reelObj.modal);
     });
   }, false);
+
+  /*
+   *   var imageReels = ;
+   *   [].forEach.call(imageReels, function(reel) {
+   *     modaller.newModal({
+   *       content: new OkieShow(reel),
+   *       target: reel
+   *     });
+   *   });
+   * }, false);
+   */
 }());
