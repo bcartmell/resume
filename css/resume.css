@@ -95,6 +95,9 @@ section {
 /*
  *  Common Elements
  */
+section {
+  margin-bottom: 2.5em;
+}
 ul {
   list-style-type: none;
 }
@@ -116,7 +119,7 @@ h3 {
   font-family: 'cambo', Georgia, serif;
   font-size: 1.6em;
   line-height: 1.6em;
-  margin: 1.6em 0 .8em 0;
+  margin: 0 0 .8em 0;
 }
 h4 {
   color: #474747;
@@ -298,20 +301,10 @@ header .contact-info {
   margin-left: 0;
   position: relative;
 }
-/* .tags-list li:before { */
-/* content: '●'; */
-/* border-top: .5em transparent; */
-/* border-right: .5em @light-neutral; */
-/* border-bottom: .5em transparent; */
-/* border-left: .5em transparent; */
-/* display: block; */
-/* position: absolute; */
-/* left: -.3em; */
-/* } */
 /*
  *  Skills
  */
-.skills dd {
+.skills li {
   display: inline-block;
   margin: 0;
   width: 49%;
@@ -320,7 +313,6 @@ header .contact-info {
   display: none;
 }
 .skills .icon-container {
-  color: #269228;
   border-radius: 3em;
   display: inline;
   padding: 2px .3em 0 0;
@@ -329,10 +321,16 @@ header .contact-info {
 }
 .skills .icon-container i {
   background: #f9f9f9;
-  color: #269228;
   padding-left: 0;
   padding-right: .3em;
   width: auto;
+}
+.skills .expert i {
+  color: #269228;
+}
+.skills .novice i {
+  color: #FFF64D;
+  text-shadow: 0 0 1px #7A7A7A;
 }
 .skills .icon-container .overlay {
   position: absolute;
@@ -344,7 +342,7 @@ header .contact-info {
 /*
  *  Work History
  */
-section div {
+#work-experience div {
   margin: 1.6em 0 4em 0;
 }
 section div ul {
@@ -371,23 +369,20 @@ section#work-experience div li:before {
   font-weight: bold;
   font-style: italic;
   color: #7a7a7a;
-  margin-bottom: -1em;
-  margin-top: .6em;
   display: block;
 }
 /*
  *  Work Examples
  */
-#work-examples dt {
-  clear: both;
-  displlay: block;
-}
 #work-examples em {
   word-spacing: .08em;
 }
+#work-examples-list > li {
+  padding: 0;
+  margin-bottom: 4em;
+}
 .image-reel {
   position: relative;
-  margin-bottom: 4em;
 }
 .image-reel:before,
 .image-reel:after {
@@ -527,6 +522,103 @@ i.modal-close:before {
   height: 1em;
   width: 1em;
 }
+/* Okie-Show styles */
+.okie-show {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.okie-show .slide-container {
+  max-height: inherit;
+}
+.okie-show .slide {
+  max-height: inherit;
+  max-width: 100%;
+  min-width: 19em;
+  min-height: 12em;
+  overflow: hidden;
+  text-align: center;
+  text-indent: 0;
+  vertical-align: middle;
+  position: relative;
+  left: 0;
+  display: none;
+  /* opacity: 0; */
+}
+.okie-show .slide.visible {
+  display: inline-block;
+}
+.okie-show img {
+  display: block;
+  max-width: 100%;
+  opacity: 0;
+}
+.okie-show button {
+  background: rgba(71, 71, 71, 0.3);
+  border: none;
+  height: 100%;
+  outline: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 10%;
+  max-width: 24%;
+  opacity: 0;
+  z-index: 10;
+}
+.okie-show button:hover {
+  opacity: 1;
+}
+button::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+.okie-show .prev-button {
+  left: 0;
+}
+.okie-show .next-button {
+  right: 0;
+}
+.okie-show button:after,
+.okie-show button::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+.okie-show .next-button:after,
+.okie-show .next-button::after {
+  box-shadow: -5px 0 2px -2px rgba(22, 22, 22, 0.3);
+  border-left: 20px solid #f9f9f9;
+}
+.okie-show .prev-button:after,
+.okie-show .prev-button::after {
+  box-shadow: 5px 0 2px -2px rgba(22, 22, 22, 0.3);
+  border-right: 20px solid #f9f9f9;
+}
+.okie-show button:before,
+.okie-show button::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 204%;
+  position: absolute;
+  top: 0;
+}
+.okie-show .next-button:before,
+.okie-show .next-button::before {
+  left: -200%;
+}
+.okie-show .prev-button:before,
+.okie-show .prev-button::before {
+  right: -200%;
+}
 @media (max-width: 768px) {
   body {
     padding: 0;
@@ -539,7 +631,7 @@ i.modal-close:before {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .skills dd {
+  .skills li {
     text-align: center;
     margin-bottom: 1.6em;
   }
@@ -550,7 +642,16 @@ i.modal-close:before {
   section div li {
     padding-left: 1.6em;
   }
-
+  .okie-show button {
+    width: 8em;
+  }
+  .okie-show:hover button {
+    opacity: 1;
+  }
+  .okie-show button:before,
+  .okie-show button::before {
+    display: none;
+  }
   i.modal-close {
     font-size: 1.6em;
     right: -0.4em;
@@ -564,6 +665,7 @@ i.modal-close:before {
 @media print {
   body {
     background: none;
+    height: 99%;
     font-size: 12pt;
     padding: 0;
   }
@@ -587,9 +689,6 @@ i.modal-close:before {
   a:after {
     display: none;
   }
-  h4 a {
-    padding-left: 1em;
-  }
   h4 {
     color: #161616;
   }
@@ -603,13 +702,16 @@ i.modal-close:before {
   h3 small {
     font-weight: normal;
   }
+  .print-hide {
+    display: none;
+  }
   .print-show-block {
     display: block;
   }
   .print-show-inline-block {
     display: inline-block;
   }
-  .skills dd {
+  .skills li {
     line-height: 1em;
     text-align: left !important;
     padding: 0;
@@ -618,8 +720,8 @@ i.modal-close:before {
     vertical-align: baseline;
   }
   .skills i {
+    background: none;
     box-shadow: none;
-    color: #474747;
     display: inline;
     height: auto;
     padding: 0;
@@ -627,14 +729,19 @@ i.modal-close:before {
     width: auto;
     vertical-align: middle;
   }
-  .skills .expert i {
-    color: #269228;
+  .skills .novice i {
+    color: #D1C700;
+    text-shadow: none;
   }
-  section ul,
-  section > dl,
-  section > div,
-  #work-examples dd {
+  #technical-strengths {
+    page-break-after: always;
+  }
+  #work-experience div,
+  #work-examples li {
     page-break-inside: avoid;
+  }
+  #work-examples-list > li {
+    margin-bottom: 2em;
   }
   #work-examples dt {
     margin: 0;
@@ -674,9 +781,12 @@ i.modal-close:before {
   }
   footer li {
     display: inline-block;
-    width: 32%;
+    width: 49%;
   }
   footer section {
-    margin-bottom: 0;
+    margin-bottom: -1em;
+  }
+  footer .extra-links li {
+    width: 24%;
   }
 }
