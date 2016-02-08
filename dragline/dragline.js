@@ -61,6 +61,7 @@ var dragLine = (function() {
 
     var endMouseListener = function() {
       endScroll();
+      event.target.classList.remove('dragLine-dragging');
       window.removeEventListener('mousemove', moveListener, false);
       window.removeEventListener('mouseup', endMouseListener, false);
     };
@@ -73,6 +74,7 @@ var dragLine = (function() {
 
     this.element.addEventListener('mousedown', function(event) {
       startScroll();
+      event.target.classList.add('dragLine-dragging');
       downPos =  {x: event.x, y:event.y}
       window.addEventListener('mousemove', moveListener, false);
       window.addEventListener('mouseup', endMouseListener, false);
