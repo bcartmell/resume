@@ -2,13 +2,8 @@
  * DragLine -- A simple plugin to allow for drag scrolling
  */
 
-
 var dragLine = (function() {
   var draglineClassName = 'dragline-draggable';
-
-  var calcMinPos = function(element) {
-    return element.parentElement.clientHeight-element.scrollHeight;
-  };
 
   return function(element) {
     if (element.className.indexOf(draglineClassName) !== -1) {
@@ -21,61 +16,12 @@ var dragLine = (function() {
     var startPos;
     var downPos;
     var maxPos = 0;
-    var minPos = calcMinPos(element);
-
-    var moveListener = function(event) {
-      if (event.touches && event.touches.length > 1) endScroll();
-      // if touchlength is greater than 1,
-      // the user is probably trying to zoom, 
-      // let's stay out of there way.
-      else {
-        event.preventDefault();
-        event.stopPropagation();
-        var change =  {
-          x: downPos.x - (event.x || event.touches[0].clientX),
-          y: downPos.y - (event.y || event.touches[0].clientY)
-        }
-        element.style.top = startPos.y - change.y +'px';
-      }
-    }
-
-    var bounceToBoundry = function(pos) {
-      element.classList.add('transition-position');
-      element.style.top = pos+'px';
-      setTimeout(function() {
-        element.classList.remove('transition-position');
-      }, helpers.getTransDuration(element));
-    }
-
-    var startScroll = function() {
-      startPos = {
-        x: parseInt(element.style.left) || 0,
-        y: parseInt(element.style.top) || 0
-      };
-    };
-
-    var endScroll = function() {
-      if (parseInt(element.style.top) > maxPos) bounceToBoundry(maxPos);
-      if (parseInt(element.style.top) < minPos) bounceToBoundry(minPos);
-    }
-
-    var endMouseListener = function() {
-      endScroll();
-      event.target.classList.remove('dragLine-dragging');
-      window.removeEventListener('mousemove', moveListener, false);
-      window.removeEventListener('mouseup', endMouseListener, false);
-    };
-
-    var endTouchListener = function() {
-      endScroll();
-      window.removeEventListener('touchmove', moveListener, false);
-      window.removeEventListener('touchend', endTouchListener, false);
-    }
 
     this.element.addEventListener('mousedown', function(event) {
+      helpers.stopEvent(event);
       startScroll();
       event.target.classList.add('dragLine-dragging');
-      downPos =  {x: event.x, y:event.y}
+      downPos =  {x: event.clientX, y:event.clientY}
       window.addEventListener('mousemove', moveListener, false);
       window.addEventListener('mouseup', endMouseListener, false);
     });
@@ -94,8 +40,74 @@ var dragLine = (function() {
       }
     });
 
-    window.addEventListener('resize', function() {
-      minPos = calcMinPos(element);
-    });
+    this.element.addEventListener('wheel', function(event) {
+      startPos = getPosition();
+      scrollY(-event.wheelDeltaY);
+
+      // calling endscroll immediately doesn't provide
+      // a chance for our bounce animation to run, so we set a very small delay.
+      setTimeout(endScroll, 3);
+    }, false);
+
+    function minPos() {
+      return element.parentElement.clientHeight-element.scrollHeight;
+    }
+
+    function scrollY(ammount) {
+      element.style.top = startPos.y - ammount +'px';
+    }
+
+    function moveListener(event) {
+      helpers.stopEvent(event);
+      if (event.touches && event.touches.length > 1) endScroll();
+      // if touchlength is greater than 1,
+      // the user is probably trying to zoom, 
+      // let's stay out of there way.
+      else {
+        var change =  {
+          x: downPos.x - (event.clientX || event.touches[0].clientX),
+          y: downPos.y - (event.clientY || event.touches[0].clientY)
+        };
+        scrollY(change.y);
+      }
+    }
+
+    function getPosition() {
+      return {
+        x: parseInt(element.style.left) || 0,
+        y: parseInt(element.style.top) || 0
+      }
+    }
+
+    function bounceToBoundry(pos) {
+      element.classList.add('transition-position');
+      element.style.top = pos+'px';
+      setTimeout(function() {
+        element.classList.remove('transition-position');
+      }, helpers.getTransDuration(element));
+    }
+
+    function startScroll() {
+      startPos = getPosition();
+    };
+
+    function endScroll() {
+      if (parseInt(element.style.top) > maxPos) bounceToBoundry(maxPos);
+      if (parseInt(element.style.top) < minPos()) bounceToBoundry(minPos());
+    }
+
+    function endMouseListener(event) {
+      endScroll();
+      event.target.classList.remove('dragLine-dragging');
+      window.removeEventListener('mousemove', moveListener, false);
+      window.removeEventListener('mouseup', endMouseListener, false);
+    };
+
+    function endTouchListener() {
+      endScroll();
+      window.removeEventListener('touchmove', moveListener, false);
+      window.removeEventListener('touchend', endTouchListener, false);
+    }
+
   };
 }());
