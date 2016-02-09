@@ -42,7 +42,12 @@ var dragLine = (function() {
 
     this.element.addEventListener('wheel', function(event) {
       startPos = getPosition();
-      scrollY(-event.wheelDeltaY);
+      var deltaVal = (function() {
+        if (event.deltaMode === 0) return event.deltaY;
+        if (event.deltaMode === 1) return event.deltaY * 20;
+      }())
+
+      scrollY(deltaVal);
 
       // calling endscroll immediately doesn't provide
       // a chance for our bounce animation to run, so we set a very small delay.
