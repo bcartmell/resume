@@ -65,7 +65,14 @@
 
       isVisible: function(element) {
         return element.offsetWidth > 0 || element.offsetHeight > 0;
+      },
+
+      stopEvent: function(event) {
+        if (event.preventDefault) event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
       }
+
     };
   }());
 
