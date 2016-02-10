@@ -4,3 +4,6 @@
 [submodule "okie-show"]
 	path = okie-show
 	url = https://github.com/bcartmell/okie-show.git
+[submodule "okie-serv"]
+	path = okie-serv
+	url = https://github.com/bcartmell/okie-serv.git

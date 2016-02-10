@@ -1,3 +1,5 @@
-var server = require('./server/server.js');
+'use strict'
+var server = require('./okie-serv/server.js').server;
 var portNumber = 8020;
-server.server.start(portNumber);
+var defaultPage = 'resume.html';
+server.start(portNumber);
