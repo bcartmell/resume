@@ -1,6 +1,3 @@
-// on a non-commercial project where time and compatibility
-// would warrant using known and tested libraries and frameworks
-
   var helpers = (function() {
     'use strict';
     return {
@@ -267,7 +264,7 @@
         images: [].filter.call(reel.childNodes, function(node) {
           return node instanceof Element;
         })
-      }
+      };
 
       okiePub.makePublisher(reelObj);
       reel.addEventListener('click', function(event) {
